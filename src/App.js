@@ -1,9 +1,9 @@
-function App() {
-  return (
-    <div>
-      Hello world!
-    </div>
-  );
-}
+import Register from "./components/Register";
 
-export default App;
+export default function App() {
+  return (
+    <>
+      <Register />
+    </>
+  )
+}
