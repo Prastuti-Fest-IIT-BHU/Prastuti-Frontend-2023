@@ -1,7 +1,9 @@
+import Sponsor from "./components/Sponsor";
+
 function App() {
   return (
     <div>
-      Hello world!
+      <Sponsor></Sponsor>
     </div>
   );
 }
