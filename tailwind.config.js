@@ -11,8 +11,13 @@ module.exports = {
       'neon-tint': '#29ffff',
     },
     backgroundImage: {
-      blob: "url('./assets/magicpattern-blob-1671897586972 (1).png')",
-      blob_small: "url('./assets/magicpattern-blob-1671897586972 (1) (1).png')"
+      blob: "url('./assets/Register/magicpattern-blob-1671897586972 (1).png')",
+      blob_small: "url('./assets/Register/magicpattern-blob-1671897586972 (1) (1).png')"
+    },
+    screens: {
+      'sm': '520px',
+      'md': '768px',
+      'lg': '1100px',
     },
     plugins: [],
   }

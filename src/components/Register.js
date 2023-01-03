@@ -1,10 +1,10 @@
 import React from "react";
-import teaser from "../assets/prastuti teaser draft 5.mp4";
-import image from "../assets/logo.png";
+import teaser from "../assets/Register/prastuti teaser draft 5.mp4";
+import image from "../assets/Register/logo.png";
 
 const Register = () => {
   return (
-    <div className="flex min-h-screen min-w-full items-center bg-new-white md:bg-blob_small bg-no-repeat bg-auto bg-center lg:bg-blob bg-no-repeat bg-auto bg-center ">
+    <div className="flex min-h-screen min-w-full items-center bg-new-white md:bg-blob_small bg-no-repeat bg-auto bg-center lg:bg-blob">
 
       <div className="z-10  relative flex h-[40rem] w-[70rem] max-w-sm mx-auto overflow-hidden bg-new-white shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 dark:bg-gray-800 lg:max-w-4xl">
         <div className="hidden bg-cover lg:block lg:w-1/2">
