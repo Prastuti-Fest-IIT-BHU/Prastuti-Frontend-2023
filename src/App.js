@@ -1,11 +1,14 @@
 import Sponsor from "./components/Sponsor";
 
-function App() {
+import Register from "./components/Register";
+import Teams from "./components/Teams";
+
+export default function App() {
   return (
-    <div>
+    <>
+      <Register />
+      <Teams />
       <Sponsor></Sponsor>
-    </div>
+    </>
   );
 }
-
-export default App;
