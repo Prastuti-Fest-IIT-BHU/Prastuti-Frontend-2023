@@ -7,6 +7,5 @@ export default function App() {
       <Register />
       <Teams />
     </>
->>>>>>> f8bd79b70edf372fa6b51b25bf1ee6945ff12d58
   )
 }
