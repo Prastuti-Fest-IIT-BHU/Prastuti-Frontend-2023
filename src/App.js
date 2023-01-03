@@ -4,6 +4,7 @@ import Events from "./components/Events";
 export default function App() {
   return (
     <>
+    <Register/>
       <Events/>
     </>
   )
