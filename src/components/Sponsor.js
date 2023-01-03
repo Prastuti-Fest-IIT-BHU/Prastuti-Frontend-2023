@@ -8,7 +8,7 @@ import { Navigation, Mousewheel, Keyboard} from 'swiper';
 export default function Sponsor() {
   return (
     <>
-      <div class="inner-container">
+      <div class="inner-container" style={{margin: '40px'}}>
         <div class="section-text-mask" style={{
           padding: "30px"
         }}>
@@ -19,6 +19,7 @@ export default function Sponsor() {
         </div>
       </div>
       <Swiper
+      style={{padding: '30px'}}
         cssMode={true}
         mousewheel={true}
         keyboard={true}
@@ -33,7 +34,7 @@ export default function Sponsor() {
             padding: "20px",
           }}
         >
-          <div className="inner-container hidden">
+          <div className="inner-container">
             <div className="inner-container">
               <a
                 // href="http://codepen.io/rickzanutta/pen/yjaeB"
@@ -127,7 +128,7 @@ export default function Sponsor() {
             padding: "20px",
           }}
         >
-          <div className="inner-container hidden">
+          <div className="inner-container">
             <div className="inner-container">
               <a
                 // href="http://codepen.io/rickzanutta/pen/yjaeB"
