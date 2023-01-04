@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope&display=swap");
+
+body {
+    /* background-image: url('./prastuti5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
+    font-family: 'Catamaran', sans-serif;
+}
+
+.app {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    margin-top: 60px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+}
+
+.faqs {
+    width: 100%;
+    margin: 0px auto;
+    padding: 15px;
+}
+
+.faq {
+    margin: 15px;
+    color: white;
+    padding: 20px;
+}
+
+.faq-question {
+    position: relative;
+    font-size: 20px;
+    padding: 8px;
+    transition: all 2s ease;
+}
+
+br {
+    content: "";
+}
+
+br:after {
+    content: " ";
+}
+
+
+.faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 2s ease;
+    position: relative;
+    left: 10px;
+}
+
+.faq-question::after {
+    content: ' ';
+    position: relative;
+    float: right;
+    left: 60px;
+    transition: translateY(-50%);
+    width: 40px;
+    height: 40px;
+
+    background-image: url('./down-arrow.png');
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease-out;
+
+}
+
+.faq .faq.open .faq-question {
+    margin-bottom: 0px;
+}
+
+.faq .faq.open .faq-question::after {
+    transform: rotate(180deg);
+}
+
+.faq .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+@media (max-width:1028px) {
+    .faq-answer {
+        font-size: 17px;
+
+
+    }
+
+    .faq-question {
+        font-size: 18px;
+        ;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+
+    }
+
+    .faq-question::after {
+        left: 9px;
+        width: 30px;
+        height: 30px;
+
+    }
+
+    br {
+        all: revert;
+    }
+
+    .ask {
+        background-color: white;
+        color: #000;
+        color: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
+
+        padding: 5px;
+    }
+}
