@@ -1,104 +1,58 @@
 import React from "react";
-import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import "./SponsorCss.css";
+import Particles from "react-particles-js";
+import { TypeAnimation } from "react-type-animation";
+import particlesConfig from "../../particlesConfig";
+import Register from "../Register";
 
-const ParticleAnimation = (props) => {
-  const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
-
+function ParticleAnimation() {
   return (
-    <Particles
-      style={{ height: "10px" }}
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        height: props.height,
-        background: {
-          color: {
-            value:
-              "radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);",
-          },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            resize: true,
-          },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: "#000000",
-          },
-          links: {
-            color: "#000000",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
-          },
-          move: {
-            directions: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 4,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
-        },
-        detectRetina: true,
-      }}
-    />
+    <div className="App" style={{ position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute" }}>
+        <Particles height="100vh" width="100vw" params={particlesConfig} />
+      </div>
+      <header className="App-header" style={{ justifyContent: "center" }}>
+        <div
+          className="flex min-h-screen min-w-full bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%)"
+        >
+          <div className="z-10  relative flex h-[40rem] w-[40rem] max-w-sm mx-auto overflow-hidden bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%) shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 dark:bg-gray-800 lg:max-w-4xl">
+            <div className="w-full content-center px-6 py-8 md:px-8">
+              <p className="text-xl text-center text-gray-600 dark:text-gray-200 relative top-1/2">
+                <TypeAnimation
+                  // Same String at the start will only be typed once, initially
+                  sequence={[
+                    "PRASTUTI",
+                    1000,
+                    "IIT BHU",
+                    1000,
+                    "ELECTRICAL ENGINEERING",
+                    1000,
+                    "TECH FEST",
+                    1000,
+                  ]}
+                  speed={30} // Custom Speed from 1-99 - Default Speed: 40
+                  style={{ fontSize: "2em" }}
+                  wrapper="span" // Animation will be rendered as a <span>
+                  repeat={Infinity} // Repeat this Animation Sequence infinitely
+                />
+              </p>
+              <div className="flex items-center justify-center mt-4"></div>
+
+              <span
+                className="flex justify-center w-5/6 px-4 py-3 font-bold text-center absolute"
+                style={{ top: "80%" }}
+              >
+                <a href="/register"
+                  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                >
+                  REGISTER
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
   );
-};
+}
 
 export default ParticleAnimation;

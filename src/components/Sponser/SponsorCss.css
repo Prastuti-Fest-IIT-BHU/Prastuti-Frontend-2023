@@ -287,7 +287,6 @@ a {
 }
 
 .inner-container {
-  width: 100%;
   position: relative;
 }
 .section-title {
@@ -300,3 +299,7 @@ a {
   transition-delay: 0.18s;
 }
 
+.my-canvas {
+  width: 400px !important;
+  height: 300px !important;
+}

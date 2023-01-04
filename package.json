@@ -10,10 +10,10 @@
         "particle.js": "^1.0.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-particles": "^2.7.1",
+        "react-particles-js": "^2.4.0-beta.10",
         "react-scripts": "5.0.1",
+        "react-type-animation": "^2.1.2",
         "swiper": "^8.4.5",
-        "tsparticles": "^2.7.1",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
