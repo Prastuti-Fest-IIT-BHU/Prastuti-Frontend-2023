@@ -1,6 +1,5 @@
 import React from "react";
 import { Data } from './Data';
-import './Event.css';
 import PropTypes from "prop-types";
 import { motion, useScroll, useSpring } from "framer-motion";
 

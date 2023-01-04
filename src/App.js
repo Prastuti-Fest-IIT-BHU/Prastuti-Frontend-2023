@@ -12,7 +12,6 @@ export default function App() {
       <Events/>
       <Teams />
       <Faq/>
-      <Sponsor/>
 
     </>
   );
