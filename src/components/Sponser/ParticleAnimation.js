@@ -11,12 +11,10 @@ function ParticleAnimation() {
         <Particles height="100vh" width="100vw" params={particlesConfig} />
       </div>
       <header className="App-header" style={{ justifyContent: "center" }}>
-        <div
-          className="flex min-h-screen min-w-full bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%)"
-        >
-          <div className="z-10  relative flex h-[40rem] w-[40rem] max-w-sm mx-auto overflow-hidden bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%) shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 dark:bg-gray-800 lg:max-w-4xl">
+        <div className="flex min-h-screen min-w-full bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%)">
+          <div className="z-10  relative flex h-[40rem] w-[40rem] max-w-sm mx-auto overflow-hidden bg-radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%) shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 dark:bg-gray-800 lg:max-w-4xl bg-opacity-25">
             <div className="w-full content-center px-6 py-8 md:px-8">
-              <p className="text-xl text-center text-gray-600 dark:text-gray-200 relative top-1/2">
+              <p className="text-xl text-center text-white-600 dark:text-gray-200 relative top-1/2">
                 <TypeAnimation
                   // Same String at the start will only be typed once, initially
                   sequence={[
@@ -41,8 +39,9 @@ function ParticleAnimation() {
                 className="flex justify-center w-5/6 px-4 py-3 font-bold text-center absolute"
                 style={{ top: "80%" }}
               >
-                <a href="/register"
-                  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                <a
+                  href="/register"
+                  class="bg-rgba(185,250,255,1) hover:bg-white text-white-700 font-semibold hover:text-black py-2 px-4 border border-white hover:border-white rounded"
                 >
                   REGISTER
                 </a>

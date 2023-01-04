@@ -10,7 +10,7 @@ export default function SponsorCard(props) {
       className="experiment"
     >
       <div className="experiment-mask"></div>
-      <div className="experiment-number-mask">
+      <div className="experiment-number-mask" style={{position: props.position, left: props.left, fontSize: props.size}}>
         <span>{props.number}</span>
       </div>
       <div className="experiment-circle">
