@@ -9,6 +9,7 @@ import Login from './components/Login'
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
+import PrastutiTeam from "./components/Team/Teams"
 export default function App() {
   return (
     <>   
@@ -24,6 +25,7 @@ export default function App() {
           <Teams />
           <Faq/>
           {/* <Sponsor/> */}
+          <About/>
           <Footer/>
           </>
         }></Route>
@@ -34,6 +36,7 @@ export default function App() {
         <Route path='/consilium' element={<Separate_Event data={eventData.consilium} />}></Route>
         <Route path='/oscillion' element={<Separate_Event data={eventData.oscillion} />}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/team' element={<PrastutiTeam/>}></Route>
       </Routes>
     </Router>
     </>
