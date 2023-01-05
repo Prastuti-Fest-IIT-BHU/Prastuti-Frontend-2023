@@ -5,7 +5,7 @@ import Faq from '././components/Faq'
 import About from './components/About'
 import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
-import Login from './components/Login' 
+
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
@@ -35,7 +35,7 @@ export default function App() {
         <Route path='/simulim' element={<Separate_Event data={eventData.simulim} />}></Route>
         <Route path='/consilium' element={<Separate_Event data={eventData.consilium} />}></Route>
         <Route path='/oscillion' element={<Separate_Event data={eventData.oscillion} />}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/login' element={<Register/>}></Route>
         <Route path='/team' element={<PrastutiTeam/>}></Route>
       </Routes>
     </Router>
