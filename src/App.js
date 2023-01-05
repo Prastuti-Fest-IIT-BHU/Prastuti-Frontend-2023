@@ -26,7 +26,7 @@ export default function App() {
             <Register />
           <Teams />
           <Faq/>
-          {/* <Sponsor/> */}
+          <Sponsor/>
           <About/>
           <Footer/>
           </>

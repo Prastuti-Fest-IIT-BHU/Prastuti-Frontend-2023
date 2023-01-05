@@ -56,7 +56,7 @@ a {
   position: relative;
   overflow: hidden;
   text-align: center;
-  background-color: #4B7CB2;
+  background-color: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);;
   box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.45s ease;
 }
@@ -67,7 +67,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #DBF2FF;
+  background-color: #1b799b;
   transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -78,7 +78,7 @@ a {
 .experiment .experiment-number-mask span {
   position: absolute;
   top: 10px;
-  color: #DBF2FF;
+  color:#1b799b;
   right: -20px;
   line-height: 1;
   font-size: 8.125em;
@@ -114,6 +114,7 @@ a {
   left: 12%;
   text-align: left;
   z-index: 10;
+  color: #fff;
 }
 .experiment .experiment-title-area .experiment-title-label {
   position: relative;
@@ -128,7 +129,7 @@ a {
   top: 0.6em;
   left: -12px;
   height: 1px;
-  background-color: #1c1d25;
+  background-color: #fff;
   width: 7px;
 }
 .experiment .experiment-title-area .experiment-title {
@@ -147,7 +148,7 @@ a {
   content: "";
   top: 45%;
   height: 2px;
-  background-color: #1c1d25;
+  background-color: #fff;
   width: 30px;
 }
 .experiment .experiment-number-area:after,
@@ -227,7 +228,6 @@ a {
 }
  .showOnMobile {
     display: block;
-    background: #685EDA;
   }
   .experiment {
     height: 320px;
@@ -291,11 +291,12 @@ a {
 }
 .section-title {
   font-family: 'Caterman', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 70px;
-  color: #4B7CB2;
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
   transition-delay: 0.18s;
 }
 
