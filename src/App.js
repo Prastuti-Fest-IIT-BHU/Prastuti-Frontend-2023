@@ -2,6 +2,7 @@ import Sponsor from "./components/Sponsor";
 import Register from "./components/Register";
 import Teams from "./components/Teams";
 import Faq from '././components/Faq'
+import About from './components/About'
 import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
 import Login from './components/Login' 
@@ -10,8 +11,7 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 export default function App() {
   return (
-    <>
-    
+    <>   
     <Router>
     <div className="sticky top-0 z-20">
             <Navbar/>
@@ -36,8 +36,6 @@ export default function App() {
         <Route path='/login' element={<Login/>}></Route>
       </Routes>
     </Router>
-
-
     </>
   );
 }
