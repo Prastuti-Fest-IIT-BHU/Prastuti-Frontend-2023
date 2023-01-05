@@ -16,12 +16,18 @@ svg:not(:root) {
   box-sizing: border-box;
 }
 body {
-  background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
+  background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
   color: #000000;
 }
 body.is-mobile-menu-open,
 body.overflow {
   overflow: hidden;
+}
+.showOnMobile {
+  display: none;
+}
+.mainSponsor {
+  display: block;
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -50,7 +56,7 @@ a {
   position: relative;
   overflow: hidden;
   text-align: center;
-  background-color: #4B7CB2;
+  background-color: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);;
   box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.45s ease;
 }
@@ -61,7 +67,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #DBF2FF;
+  background-color: #1b799b;
   transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -72,7 +78,7 @@ a {
 .experiment .experiment-number-mask span {
   position: absolute;
   top: 10px;
-  color: #DBF2FF;
+  color:#1b799b;
   right: -20px;
   line-height: 1;
   font-size: 8.125em;
@@ -102,79 +108,13 @@ a {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.experiment:nth-child(1) .experiment-image {
-  background-image: url(https://media.istockphoto.com/id/1135820309/photo/amber-fort-and-maota-lake-jaipur-rajasthan-india.jpg?s=612x612&w=0&k=20&c=raUKDB1Mris9Z7SjvuuTieZRzF2-CaKukGvTC8t1kuo=);
-}
-@media only screen and (min-width: 64em) {
-  /* .experiment:first-child .experiment-image {
-    background-image: url(../img/codepen-loader.gif);
-  }
-  .experiment:nth-child(2) .experiment-image {
-    background-image: url(../img/search-context.gif);
-  }
-  .experiment:last-child .experiment-image {
-    background-image: url(../img/x-times.gif);
-  } */
-}
-@media only screen and (max-width: 63.9375em) {
-  /* .experiment:first-child .experiment-image {
-    background-image: url(../img/codepen-loader.png);
-  }
-  .experiment:nth-child(2) .experiment-image {
-    background-image: url(../img/search-context.png);
-  }
-  .experiment:last-child .experiment-image {
-    background-image: url(../img/x-times.png);
-  } */
-}
-.experiment .experiment-image2 {
-  width: 230px;
-  height: 230px;
-  background-color: #1c1d25;
-  border-radius: 50%;
-  display: block;
-  margin: 45px auto 30px;
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-.experiment:nth-child(1) .experiment-image2 {
-  background-image: url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg);
-}
-@media only screen and (min-width: 64em) {
-  /* .experiment:first-child .experiment-image2 {
-    background-image: url(../img/codepen-loader.gif);
-  }
-  .experiment:nth-child(2) .experiment-image2 {
-    background-image: url(../img/search-context.gif);
-  }
-  .experiment:last-child .experiment-image2 {
-    background-image: url(../img/x-times.gif);
-  } */
-}
-@media only screen and (max-width: 63.9375em) {
-  /* .experiment:first-child .experiment-image2 {
-    background-image: url(../img/codepen-loader.png);
-  }
-  .experiment:nth-child(2) .experiment-image2 {
-    background-image: url(../img/search-context.png);
-  }
-  .experiment:last-child .experiment-image2 {
-    background-image: url(../img/x-times.png);
-  } */
-}
 .experiment .experiment-title-area {
   position: absolute;
   top: 85%;
   left: 12%;
   text-align: left;
   z-index: 10;
+  color: #fff;
 }
 .experiment .experiment-title-area .experiment-title-label {
   position: relative;
@@ -189,7 +129,7 @@ a {
   top: 0.6em;
   left: -12px;
   height: 1px;
-  background-color: #1c1d25;
+  background-color: #fff;
   width: 7px;
 }
 .experiment .experiment-title-area .experiment-title {
@@ -204,19 +144,11 @@ a {
   transform: rotate(90deg);
   z-index: 10;
 }
-.experiment .experiment-number-area2 {
-  position: absolute;
-  top: 90%;
-  right: 10%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  z-index: 10;
-}
 .experiment .experiment-number-area:before {
   content: "";
   top: 45%;
   height: 2px;
-  background-color: #1c1d25;
+  background-color: #fff;
   width: 30px;
 }
 .experiment .experiment-number-area:after,
@@ -227,62 +159,13 @@ a {
   right: 112%;
   transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
 }
-.experiment .experiment-number-area2:after {
-  top: 5px;
-  content: "01";
-  text-align: right;
-  font-size: 8px;
-  font-weight: 700;
-  padding-right: 40px;
-}
-.experiment .experiment-number-area2:before {
-  content: "";
-  top: 45%;
-  height: 2px;
-  background-color: #1c1d25;
-  width: 30px;
-}
-.experiment .experiment-number-area2:after,
-.experiment .experiment-number-area2:before {
-  position: absolute;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  right: 112%;
-  transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-}
 .experiment .experiment-number-area:after {
   top: 5px;
-  content: "01";
+  content: "";
   text-align: right;
   font-size: 8px;
   font-weight: 700;
   padding-right: 40px;
-}
-.experiment:nth-child(2) .experiment-number-area:after {
-  content: "02";
-}
-.experiment:nth-child(3) .experiment-number-area:after {
-  content: "03";
-}
-.experiment:nth-child(4) .experiment-number-area:after {
-  content: "04";
-}
-.experiment .experiment-number-area2:after {
-  top: 5px;
-  content: "05";
-  text-align: right;
-  font-size: 8px;
-  font-weight: 700;
-  padding-right: 40px;
-}
-.experiment:nth-child(2) .experiment-number-area2:after {
-  content: "06";
-}
-.experiment:nth-child(3) .experiment-number-area2:after {
-  content: "07";
-}
-.experiment:nth-child(4) .experiment-number-area2:after {
-  content: "08";
 }
 .experiment:hover .experiment-mask {
   -webkit-transform: scaleX(1);
@@ -302,15 +185,6 @@ a {
   transform: scaleX(1.3);
 }
 .experiment:hover .experiment-number-area:after {
-  -webkit-transform: translateX(-15px);
-  transform: translateX(-15px);
-  transition-delay: 0.12s;
-}
-.experiment:hover .experiment-number-area2:before {
-  -webkit-transform: scaleX(1.3);
-  transform: scaleX(1.3);
-}
-.experiment:hover .experiment-number-area2:after {
   -webkit-transform: translateX(-15px);
   transform: translateX(-15px);
   transition-delay: 0.12s;
@@ -349,6 +223,12 @@ a {
   }
 }
 @media only screen and (max-width: 64em) {
+  .mainSponsor {
+  display: none;
+}
+ .showOnMobile {
+    display: block;
+  }
   .experiment {
     height: 320px;
   }
@@ -367,14 +247,12 @@ a {
   .experiment .experiment-number-area {
     display: none;
   }
-  .experiment .experiment-number-area2 {
-    display: none;
-  }
   .experiment .experiment-number-mask {
     display: block;
   }
 }
 @media only screen and (max-width: 51.875em) {
+
   .experiment {
     float: left;
     clear: none;
@@ -409,16 +287,20 @@ a {
 }
 
 .inner-container {
-  width: 100%;
   position: relative;
 }
 .section-title {
   font-family: 'Caterman', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 70px;
-  color: #4B7CB2;
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
   transition-delay: 0.18s;
 }
 
+.my-canvas {
+  width: 400px !important;
+  height: 300px !important;
+}

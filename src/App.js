@@ -1,4 +1,4 @@
-import Sponsor from "./components/Sponsor";
+import Sponsor from "./components/Sponser/Sponsor";
 import Register from "./components/Register";
 import Teams from "./components/Teams";
 import Faq from '././components/Faq'
@@ -10,6 +10,8 @@ import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import PrastutiTeam from "./components/Team/Teams"
+import Intro from "./components/Intro";
+
 export default function App() {
   return (
     <>   
@@ -20,15 +22,19 @@ export default function App() {
       <Routes>
         <Route path='/' element={
           <>
-          
-    <Register />
+            <Intro />
+            <Register />
           <Teams />
           <Faq/>
-          {/* <Sponsor/> */}
+          <Sponsor/>
           <About/>
           <Footer/>
           </>
         }></Route>
+        <Route
+            path="/register"
+            element={<Register/>}
+          ></Route>
         <Route path='/codigo' element={<Separate_Event data={eventData.codigo}/>}></Route>
         <Route path='/hackoverflow' element={<Separate_Event data={eventData.hackoverflow} />}></Route>
         <Route path='/recognizance' element={<Separate_Event data={eventData.recognizance} />}></Route>
