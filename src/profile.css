@@ -1,0 +1,156 @@
+.Pmaincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgb(46, 50, 50);
+  }
+  .Pvideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+  .psubchild{
+    background-color: rgb(52, 199, 215);
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background: rgba(239, 235, 235, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.6px);
+    -webkit-backdrop-filter: blur(9.6px);
+    border: 1px solid rgba(239, 235, 235, 0.1);
+  }
+  .psubchild1{
+    height: 40rem;
+    width:22rem;
+  }
+  .Psubparent{
+    height: 40rem;
+    width:30rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .psubchild2{
+    height: 18rem;
+    width:28rem;
+  }
+  .psubchild3{
+    height: 18rem;
+    width:28rem;
+  }
+  .Pimage{
+    display: block;
+    width: 70%;
+    height: 35%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10%;
+
+  }
+  .Profiledetail{
+    margin: 1rem;
+    font-size: larger;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    padding-left: 1rem;
+    color: white;
+
+
+  }
+  .Pspan{
+  padding: 1rem 0;
+  display: block;
+  color: white;
+  }
+  .Peventol{
+    padding-left: 9rem;
+    margin: 1rem;
+    font-size: larger;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    color: white;
+
+  }
+  .Peventol li{
+    margin: 1rem;
+  }
+  .Pteamol{
+    font-size: larger;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    margin: 1rem;
+    color: white;
+
+  }
+
+  @media screen and (max-width:935px) {
+    .psubchild1{
+        height: 39rem;
+        width:28rem;
+    }
+    .psubchild2 and .psubchild3{
+        width: 93%;
+        margin: 3.5%;
+     }  
+     .Pimage{
+        width: 50%;
+     }
+
+  }
+  @media screen and (max-width:518px) {
+    .Pmaincontainer{
+        display: block;
+        padding:2rem 1rem;
+    }
+    .Psubparent{
+        display: block;
+        width: 100%;
+
+    }
+    .psubchild1{
+        width: 93%;
+        height: 30rem;
+        margin:1.2rem auto;
+
+    }
+    .psubchild2{
+        width: 93%;
+        margin:1.2rem auto;
+    }
+    .psubchild3{
+        width: 93%;
+        margin: 1.2rem auto;
+    }
+    .Pspan{
+        padding: 0;
+     }
+     .Peventol{
+        padding-left:1rem;
+     }
+     .Pteamol{
+        margin: 0;
+     }
+
+  } 
+  @media screen and (max-width:390px) {
+    .Pimage{
+        height: 30%;
+        width: 55%;
+    }
+    .Pteamol{
+        font-size: medium;
+    }
+  }

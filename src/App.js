@@ -6,17 +6,25 @@ import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
 import Login from './components/Login' 
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
 export default function App() {
   return (
     <>
+    
     <Router>
+    <div className="sticky top-0 z-20">
+            <Navbar/>
+    </div>
       <Routes>
         <Route path='/' element={
           <>
-          <Register />
+          
+    <Register />
           <Teams />
           <Faq/>
-          <Sponsor/>
+          {/* <Sponsor/> */}
+          <Footer/>
           </>
         }></Route>
         <Route path='/codigo' element={<Separate_Event data={eventData.codigo}/>}></Route>
@@ -28,6 +36,8 @@ export default function App() {
         <Route path='/login' element={<Login/>}></Route>
       </Routes>
     </Router>
+
+
     </>
   );
 }
