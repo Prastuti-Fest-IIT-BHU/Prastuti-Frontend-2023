@@ -11,15 +11,19 @@ import Navbar from "./components/Navbar"
 export default function App() {
   return (
     <>
+    
     <Router>
+    <div className="sticky top-0 z-20">
+            <Navbar/>
+    </div>
       <Routes>
         <Route path='/' element={
           <>
-        <Navbar/>
+          
     <Register />
           <Teams />
           <Faq/>
-          <Sponsor/>
+          {/* <Sponsor/> */}
           <Footer/>
           </>
         }></Route>

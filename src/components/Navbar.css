@@ -7,12 +7,12 @@
 .social-links::after{
     background-color: #DBF2FF;
     content:"";
-    height:0.25rem;
+    height:0.1rem;
 }
 
 .social-links:hover::after{
     display:block;
-    animation: left-to-right 0.25s cubic-bezier(.694,.048,.335,1) ;
+    animation: left-to-right 0.25s cubic-bezier(.694,.048,.335,1) ;    
 }
 
 @keyframes left-to-right{
@@ -24,7 +24,6 @@
         width:100%;
     }
 }
-
 /* @media (max-width: 1100px){
     .footer ul{
         display:block;
