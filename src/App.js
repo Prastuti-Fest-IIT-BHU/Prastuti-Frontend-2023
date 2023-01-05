@@ -7,10 +7,11 @@ import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
 import Login from './components/Login' 
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
+import Project from "./components/Project";
 export default function App() {
   return (
     <>
-    <Router>
+     <Router>
       <Routes>
         <Route path='/' element={
           <>
@@ -29,7 +30,8 @@ export default function App() {
         <Route path='/oscillion' element={<Separate_Event data={eventData.oscillion} />}></Route>
         <Route path='/login' element={<Login/>}></Route>
       </Routes>
-    </Router>
+    </Router> 
+  
     </>
   );
 }

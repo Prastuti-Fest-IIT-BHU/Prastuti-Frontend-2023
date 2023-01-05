@@ -1,33 +1,44 @@
 import React from "react";
 import { Data } from './Data';
-import PropTypes from "prop-types";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
+// import { motion, useScroll, useSpring } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-const boxVariant = {
-   visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-   hidden: { opacity: 0, scale: 0 }
-};
+
+
 const Card = (prop) => {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  const [hover, setHover] = useState(false);
+  
+  // const { scrollYProgress } = useScroll();
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001,
+  // });
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+    //console.log(hover);
+  }, []);
 
 
   return (
-    <div className="animate-slide" style={{background:' linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
+    <div  style={{background:' linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     {Data.map((item, index) => (
     <>
     
-        <motion.div 
+        <div 
           class="pt-2 pb-12 bg-gray-300 x"
-
-          variants={boxVariant}
-          initial="hidden"
-          whileInView={"visible"}
-          style={{ color: "#003247" }}
+          data-aos={item.slide}
+          data-aos-duration="1000"
+          // variants={boxVariant}
+          // initial="hidden"
+          // whileInView={"visible"}
+          style={{ color: "#003247"}}
         >
           <div id="card" class="">
             <h2
@@ -69,8 +80,8 @@ const Card = (prop) => {
               </div>
             </div>
           </div>
-        </motion.div>
-
+        </div>
+{/* 
         <motion.div
           className="progress"
           style={{
@@ -82,7 +93,7 @@ const Card = (prop) => {
             backgroundColor: "black",
             bottom: "10px",
           }}
-        />
+        /> */}
         
     </>
     ))}
