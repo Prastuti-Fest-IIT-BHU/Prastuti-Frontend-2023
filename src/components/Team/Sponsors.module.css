@@ -6,19 +6,19 @@
   overflow: hidden;
 }
 .sidebar {
-  height: 82%;
+  height: 96%;
   max-width: 30vw;
   position: fixed;
-  top: 9%;
+  top:2%;
   width: 300px;
   left: 1px;
   border-radius: 0;
   background-color: #DBF2FF;
   overflow-x: hidden;
-  padding-top: 5px;
+  padding-top: 3px;
   text-align: left;
   line-height: 1.5;
-  font-size: 1.1em;
+  font-size: 1em;
   border-right: 2px solid black;
   text-transform: uppercase;
   font-weight: 600;

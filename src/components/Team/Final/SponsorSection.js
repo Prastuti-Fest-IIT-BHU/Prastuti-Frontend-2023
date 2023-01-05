@@ -1,6 +1,7 @@
+
 import Card from './Card.js';
 import classes from './SponsorSection.module.css';
-import data from '../TeamData';
+import data from '../TeamData'
 
 function PosSection(props) {
   return (
@@ -8,9 +9,9 @@ function PosSection(props) {
       <div className={classes.pos_title} id="pos_1">
         <h1>Convenors</h1>
 
-        <div className={classes.cards}>
-          {data.convenor.map((item, index) => (
-            <Card img={item.img} position={item.position} name={item.name} key={item.id} />
+        <div className={classes.cards} id="pos_1">
+          {data.convener.map((item, index) => (
+            <Card img={item.img} position={item.position} name={item.name} key={index} />
           ))}
         </div>
       </div>
@@ -60,7 +61,7 @@ function PosSection(props) {
         </div>
       </div>
       <div className={classes.pos_title} id="pos_7">
-        <h1 id="pos_3">Public Relations Team</h1>
+        <h1 id="pos_3">Finance Team</h1>
         <div className={classes.cards}>
           {data.pr.map((item, index) => (
             <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -83,7 +84,38 @@ function PosSection(props) {
           ))}
         </div>
       </div>
-    {/* </div> */}
+      <div className={classes.pos_title} id="pos_10">
+        <h1>E-Sport Team</h1>
+        <div className={classes.cards}>
+          {data.sport.map((item, index) => (
+            <Card img={item.img} position={item.position} name={item.name} key={index} />
+          ))}
+        </div>
+      </div>
+      <div className={classes.pos_title} id="pos_11">
+        <h1>Workshop Heads</h1>
+        <div className={classes.cards}>
+          {data.workshop.map((item, index) => (
+            <Card img={item.img} position={item.position} name={item.name} key={index} />
+          ))}
+        </div>
+        <div className={classes.pos_title} id="pos_10">
+       <h1>E-Sport Team</h1>
+       <div className={classes.cards}>
+         {data.sport.map((item, index) => (
+           <Card img={item.img} position={item.position} name={item.name} key={index} />
+         ))}
+       </div>
+     </div>
+     <div className={classes.pos_title} id="pos_11">
+       <h1>Workshop Heads</h1>
+       <div className={classes.cards}>
+         {data.workshop.map((item, index) => (
+           <Card img={item.img} position={item.position} name={item.name} key={index} />
+         ))}
+        </div>
+        </div>
+      </div>
     </>
   );
 }

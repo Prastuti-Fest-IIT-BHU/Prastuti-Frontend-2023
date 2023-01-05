@@ -12,18 +12,22 @@ const listnamess = {
   pos_8: null,
   pos_9: null,
   pos_10: null,
+  pos_11: null,
+  pos_12: null,
 };
 
 const listnamesNames = {
-  pos_1: 'Convenors',
+  pos_1: 'Convener',
   pos_2: 'Content Team',
   pos_3: 'Design',
   pos_4: 'Event',
   pos_5: 'Marketing',
   pos_6: 'Publicity',
-  pos_7: 'Public Relations',
+  pos_7: 'Finance',
   pos_8: 'Social Media',
   pos_9: 'Tech',
+  pos_10: 'E-Sports',
+  pos_11: 'Workshop',
 };
 function List() {
   const [Curr, setCurr] = useState('pos_1');

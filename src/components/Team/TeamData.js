@@ -1,176 +1,154 @@
+import c2 from './prastuti-photos/VaibhavSingh.jpg'
+import c4 from './prastuti-photos/Akshit.jpg'
+import c5 from './prastuti-photos/Alluru.jpg'
+import c6 from './prastuti-photos/ASHWANI.jpg'
+import c7 from './prastuti-photos/Astitva.jpg'
+import c8 from './prastuti-photos/HarshGoyal.jpg'
+import c9 from './prastuti-photos/HarshVerma.jpg'
+import c10 from './prastuti-photos/Krishanpal.jpg'
+import c11 from './prastuti-photos/Nilay.jpg'
+import c12 from './prastuti-photos/Piyush.jpg'
+import c13 from './prastuti-photos/Smriti.jpg'
+import c14 from './prastuti-photos/Sriraj.jpg'
+import c15 from './prastuti-photos/Sumant.jpg'
+import c16 from './prastuti-photos/Vidit.png'
+import c17 from './prastuti-photos/Vikram.png'
+import c18 from './prastuti-photos/Yash.jpeg'
+import c19 from './prastuti-photos/ayush.png'
+import c20 from './prastuti-photos/kunal.png'
+
 const data = {
-  convenor: [
+  convener: [
     {
       id: 1,
-      img: '',
-      position: 'Convenor',
+      img:c12,
+      position: 'Co-Convenor- Piyush Yadav',
       name:''
     },
     {
       id: 2,
-      img: '',
-      position: 'Co-Convenor',
+      img:c2,
+      position: 'Convenor- Vaibhav Singh',
       name:''
     },
     {
       id: 3,
-      img: '',
-      position: 'Co-Convenor',
+      img: c17,
+      position: 'Co-Convenor- Vikram Pratap Singh',
       name: ''
     }
   ],
   content: [
     {
       id: 4,
-      img: '',
-      position: 'Content Head',
-      name: 'efwc2'
+      img: c20,
+      position: 'Content Head- Kunal Yewale',
+      name: ''
     },
-    {
-      id: 5,
-      img: '',
-      position: 'Content Head',
-      name: 'efc23'
-    }
   ],
   public: [
     {
-      id: 8,
-      img: '',
-      position: 'Publicity Head',
-      name: ''
-    },
-    {
-      id: 9,
-      img: '',
-      position: 'Publicity Head',
-      name: ''
-    },
-    {
-      id: 10,
-      img: '',
-      position: 'Publicity Head',
+      id: 5,
+      img: c10,
+      position: 'PR and Publicity Head- Krishanpal Dudi',
       name: ''
     }
   ],
   marketing: [
     {
-      id: 1,
-      img: '',
-      position: 'Marketing Head-ABC',
+      id: 6,
+      img: c18,
+      position: 'Marketing Head- Yash Varshney',
       name: 'njk'
-    },
-    {
-      id: 2,
-      img: '',
-      position: 'Marketing Head',
-      name: 'xwc'
-    },
-    {
-      id: 3,
-      img: '',
-      position: 'Marketing Head',
-      name: 'cefew'
     },
   ],
   socialMedia: [
     {
-      id: 13,
-      img: '',
-      position: 'Social Media Head',
+      id: 7,
+      img: c13,
+      position: 'Social Media Head- Smriti Jain',
       name: ''
     },
-    {
-      id: 14,
-      img: '',
-      position: 'Social Media Head',
-      name: ''
-    },
-    {
-      id: 15,
-      img: '',
-      position: 'Social Media Head',
-      name: ''
-    },
-    {
-      id: 16,
-      img: '',
-      position: 'Social Media Head',
-      name: ''
-    },
-    {
-      id: 17,
-      img: '',
-      position: 'Social Media Head',
-      name: ''
-    }
   ],
   pr: [
     {
-      id: 11,
-      img: '',
-      position: 'Public Relations Head',
+      id: 12,
+      img: c8,
+      position: 'Finance Head- Harsh Goyal',
       name: ''
     },
-    {
-      id: 12,
-      img: '',
-      position: 'Public Relations Head',
-      name: ''
-    }
   ],
 
   design: [
     {
-      id: 21,
-      img: '',
-      position: 'Design Head',
+      id: 8,
+      img: c5,
+      position: 'Design Head- Alluru Sai Rushitha',
       name:''
     },
-    {
-      id: 22,
-      img: '',
-      position: 'Design Head',
-      name: ''
-    }
   ],
   event: [
     {
-      id: 23,
-      img: '',
-      position: 'Event Head',
-      name:''
-    },
-    {
-      id: 24,
-      img:'',
-      position: 'Event Head',
+      id: 9,
+      img: c4,
+      position: 'Event Head- Akshit Sharma',
       name:''
     }
   ],
-  
   tech: [
     {
-      id: 18,
-      img: '',
-      position: 'Tech Head',
+      id: 10,
+      img: c14,
+      position: 'Tech Head (App)- Sriraj',
       name: ''
     },
     {
-      id: 19,
-      img: '',
-      position: 'Tech Head',
-      name:''
-    },
-    {
-      id: 20,
-      img: '',
-      position: 'Tech Head',
+      id: 11,
+      img: c15,
+      position: 'Tech Head (Web)- Sumant Chaudhary',
       name:''
     }
   ],
-  
-
+  sport: [
+    {
+      id: 13,
+      img: c9,
+      position: 'E-Sports Head- Harsh Verma',
+      name:''
+    }
+  ],
+  workshop: [
+    {
+      id: 14,
+      img: c11,
+      position: 'Hackoverflow- Nilay Mundra',
+      name:''
+    },
+    {
+      id: 15,
+      img: c16,
+      position: 'Recognizance- Vidit Agarwal',
+      name:''
+    },
+    {
+      id: 16,
+      img: c19,
+      position: 'Consillium- Ayush Pal',
+      name:''
+    },
+    {
+      id: 17,
+      img: c7,
+      position: 'Simulim- Astitva Gupta',
+      name:''
+    },
+    {
+      id: 18,
+      img: c6,
+      position: 'Codigo- Ashwani',
+      name:''
+    },
+  ],
 };
 
 export default data;
