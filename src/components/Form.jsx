@@ -37,7 +37,7 @@ const Form1 = () => {
   };
   return (
     <div>
-      <section className="min-h-screen bg-cover " style={divStyle}>
+      <section className="bg-cover -z-10 h-full" style={divStyle}>
         <div className="flex flex-col min-h-screen bg-black/60">
           <div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
             <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
@@ -142,31 +142,31 @@ const Form1 = () => {
               </div>
 
               <div className="mt-8 lg:w-1/2 block h-[42rem] lg:mx-6 overflow-y-scroll scroll-smooth">
-                <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl rounded-xl dark:bg-gray-900  lg:max-w-xl">
-                  <h1 className="text-2xl font-Manrope font-semibold text-gray-700 dark:text-gray-200">
+                <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl rounded-xl lg:max-w-xl">
+                  <h1 className="text-2xl font-Manrope font-semibold text-gray-700 ">
                     Interest form
                   </h1>
 
-                  <p className="mt-4 font-Catamaran text-gray-500 dark:text-gray-400">
+                  <p className="mt-4 font-Catamaran text-gray-500 ">
                     Tell us everything and we would love to hear from you
                   </p>
 
                   <form className="mt-6">
                     <div className="block overflow-y-scroll">
                       <div className="flex-1">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           Full Name<span style={{ color: "red" }}>*</span>
                         </label>
                         <input
                           type="text"
                           placeholder="Balveer Singh Rao"
                           required
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
 
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           Mobile Number<span style={{ color: "red" }}>*</span>
                         </label>
                         <input
@@ -174,62 +174,67 @@ const Form1 = () => {
                           placeholder="7823422345"
                           pattern="[0-9]{10}"
                           required
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
 
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
                           College Name
                         </label>
                         <input
                           type="text"
                           placeholder="IIT (BHU) Varanasi"
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                         />
                       </div>
 
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           Instagram Handle
                         </label>
                         <input
                           type="text"
                           placeholder="https://www.instagram.com/balveersinghrao2021/"
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
                           LinkedIn Handle
                         </label>
                         <input
                           type="text"
                           placeholder="https://www.linkedin.com/in/balveer-singh-rao-636449229/"
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           GitHub Handle
                         </label>
                         <input
                           type="text"
                           placeholder="https://github.com/Veer0x1"
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
                       {/* Gender */}
 
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
-                          Gender
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
+                          Gender<span style={{ color: "red" }}>*</span>
                         </label>
 
                         <select
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                           id="gender"
+                          placeholder="Select your gender"
+                          required
                         >
+                          <option disabled selected className="text-gray-700 font-Catamaran">
+                            Select your gender
+                          </option>
                           <option>Male</option>
                           <option>Female</option>
                           <option>Other</option>
@@ -237,7 +242,7 @@ const Form1 = () => {
                       </div>
 
                       <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600 dark:text-gray-200">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
                           Interest
                         </label>
                         <div className="mt-1 ml-4  p-1 flex flex-wrap">
@@ -270,14 +275,14 @@ const Form1 = () => {
                                     selectionArray[index]
                                       ? "border-[#004C7D]"
                                       : ""
-                                  } justify-center pl-2 pr-2 items-center align-middle text-sm font-medium text-gray-900 dark:text-gray-300 p-1 font-Catamaran bg-[#DBF2FF] dark:bg-gray-900 dark rounded-xl `}
+                                  } justify-center pl-2 pr-2 items-center align-middle text-sm font-medium text-gray-900 p-1 font-Catamaran bg-[#DBF2FF] dark rounded-xl `}
                                 >
                                   {interest}
                                   <div>
                                     <span
                                       className={`${
                                         selectionArray[index] ? "" : "hidden"
-                                      } material-symbols-outlined flex items-center ml-1 text-sm hover:bg-red-800`}
+                                      } material-symbols-outlined flex items-center ml-1 text-sm hover:bg-gray-100`}
                                     >
                                       close
                                     </span>
@@ -286,38 +291,9 @@ const Form1 = () => {
                               </>
                             );
                           })}
-
-                          {/* <span
-                            onClick={interestArray.push("Reading")}
-                            className="mr-6 m-1 border-2 flex border-indigo-600 justify-center items-center align-middle text-sm font-medium text-gray-900 dark:text-gray-300 p-1 font-Catamaran bg-red-400 rounded-xl "
-                          >
-                            Reading
-                            <span
-                              onClick={interestArray.filter(
-                                (interest) => interest !== "Reading"
-                              )}
-                              className="material-symbols-outlined text-sm ml-1 hover:text-base"
-                            >
-                              close
-                            </span>
-                          </span> */}
                         </div>
                       </div>
 
-                      {/* <div className="w-full mt-6">
-                      <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                        Interests
-                      </label>
-                      <select
-                        className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-
-                        multiple
-                      >
-                        <option value="Web Dev">Web Development</option>
-                        <option value="CP">CP</option>
-                        <option value="ML">ML</option>
-                      </select>
-                    </div> */}
                       {/* <Link to="/thankyou"> */}
                       <button className="w-full bg-[#004C7D] font-Manrope font-semibold px-6 py-3 mt-6 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform rounded-md hover:bg-[#053a5e] focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
                         Submit
