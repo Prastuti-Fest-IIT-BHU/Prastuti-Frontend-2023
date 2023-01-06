@@ -18,52 +18,54 @@ const Card = (prop) => {
 
   return (
 
-    <div  style={{background:' linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
+    <div  style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     {Data.map((item, index) => (
     <>
     
         <div
           id="card" 
-          class="pt-2 pb-12  x  {item.float}"
+          class="pt-2 pb-12 x  {item.float}"
           data-aos={item.slide}
           data-aos-duration="1000"
           // variants={boxVariant}
           // initial="hidden"
           // whileInView={"visible"}
-          style={{ color: "#003247"}}
+          
         >
             <h2
               class="text-center  text-4xl xl:text-5xl"
-              style={{ fontFamily: "Manrope" }}
+              style={{ fontFamily: "Manrope" ,color: '#fff',
+              textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6'}}
             >
               {item.title}
             </h2>
-            <div class="container w-100 lg:w-4/5 mx-auto flex flex-col">
+            <div class="container w-100 lg:w-4/5 mx-auto shadow-md flex flex-col rounded-lg" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}} >
               <div
                 v-for="card in cards"
                 class="flex flex-col md:flex-row overflow-hidden
-                                        bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
+                                    rounded-lg mt-4 w-100 mx-2"
               >
                 <div class="h-64 w-auto md:w-1/2">
                   <img
-                    class="inset-0 h-full w-full object-cover object-center" alt="event pic"
+                    class="inset-0 h-full w-full object-cover object-center rounded-lg" alt="event pic"
                     src={item.image}
                   />
                 </div>
 
-                <div class="w-full py-4 px-6 text-gray-800 flex flex-col justify-between">
+                <div class="w-full py-4 px-6 text-gray-800 flex flex-col justify-between" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}} >
                   <h3
                     class="text-lg leading-tight truncate"
-                    style={{ fontFamily: "Catarman" }}
+                    style={{ fontFamily: "Catarman" , color: "#003247"}}
+                    
                   >
                     {item.info}
                   </h3>
-                  <p class="mt-2" style={{ fontFamily: "Catarman" }}>
+                  <p class="mt-2" style={{ fontFamily: "Catarman" ,color: "#003247"}}>
                     {item.information}
                   </p>
                   <p
                     class="text-sm text-gray-700 tracking-wide font-semibold mt-2"
-                    style={{ fontFamily: "Catarman" }}
+                    style={{ fontFamily: "Catarman",color: "#003247" }}
                   >
                     {item.infoinfo}
                   </p>
