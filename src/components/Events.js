@@ -33,7 +33,7 @@ const Card = (prop) => {
           
         >
             <motion.div class="container w-100 lg:w-4/5 mx-auto shadow-md flex flex-col rounded-lg" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
-            whileHover={{ scale: 1.125 }}
+            whileHover={{ scale: 1.05 }}
             >
               <a
               href="/"
