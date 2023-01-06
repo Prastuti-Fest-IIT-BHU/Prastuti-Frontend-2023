@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Manrope:wght@300&&display=swap');
+.profilecontainer{
+    width: 100%;
+    height: 100%;
+   font-family: 'Catamaran', sans-serif;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%);
+
+
+    }
+.myprofile{
+ 
+  background: linear-gradient(360deg, #134e76b8 0%, #004c7d 100%);
+
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.imgprofile{
+  width: 8rem;
+  overflow: hidden;
+  border-radius: 4rem;
+  height: 8rem;
+}
+.Prodetails{
+  display: block;
+  margin:0 .8rem;
+  color: white;
+  font-size: 1.1rem;
+}
+.Phr{
+  background: linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%);
+
+}
+.profilenav{
+  background: linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%);
+
+    height: 3rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.Pnavchild{
+   margin: 1rem;
+   font-size: 1.5rem;
+   padding: 10px;
+   font-family: 'Manrope', sans-serif;
+   /* border: 1px solid  red; */
+   /* border-bottom:2px solid #dbf3ff; */
+}
+
+.Pnavchild {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+  .Pnavchild:hover{
+    color:#cfa744 ;
+  }
+  
+  .Pnavchild:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cfa744;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .Pnavchild:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .Pcontainer{
+    min-height: 20rem;
+    background: linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .Pchild{
+    margin: 2rem;
+     width: 20rem;
+     min-height: 10rem;
+    
+  background: linear-gradient(270deg, rgba(219,242,255,1) 0%, #b5c8e8 100%);
+
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: rgba(86, 87, 87, 0.832) 5px 6px 7px 1px;
+  }
+  .psubchild{
+    position: absolute;
+    right: 15%;
+    top: 5%;
+   
+  }
+  .psubchild1{
+    position: absolute;
+    left: -15%;
+    top: 20%;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%);
+    background-position: center center;
+    background-size: cover;
+    height: 60%;
+    width: 30%;
+    box-shadow: rgba(110, 109, 109, 0.832) 5px 6px 7px 1px;
+    overflow: hidden;
+  }
+  .eventinfo div{
+    display: inline-block !important;
+  }
+  .eventname{display: block;
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+  .eventteam{
+    font-size: 1.2rem;
+    display: block;
+    color: #004c7d;
+  }
+  .eventinfo{
+    display: block;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
+  .onclicknav{
+    color:#cfa744 ;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .onclicknav:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cfa744;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+@media screen and (max-width:450px){
+  .Prodetails{
+    margin:5px;
+    font-size: .8rem;
+    margin-left: 10px;
+  }
+  .imgprofile{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+  .myprofile{
+    height: 7rem;
+  }
+  .Pchild{
+    width: 15rem;
+    /* margin: auto; */
+    min-height: 8rem;
+  }
+  .eventname{
+    font-size: 1.5rem;
+  }
+  .eventteam{
+    font-size: 1rem;
+  }
+  .eventinfo{
+    font-size: 1rem;
+  }
+  
+  
+  .psubchild1{
+    width: 5rem;
+    height: 6rem;
+    top: 10%;
+  } 
+  .psubchild{
+    
+    right: 10px;
+    top: 5%;
+   
+  }
+  
+}
+@media screen and (max-width:410px){
+.Pnavchild{margin :.8rem;
+  font-size:1.3rem;
+}}
+@media screen and (max-width:300px){
+  .Pchild{
+    margin-right: 10px;
+  }
+  .psubchild1{
+    left:-10%;
+  }
+}
+@media screen and (max-width:350px){
+    .Pnavchild{
+      padding: 0;
+      margin: .5rem;
+    }
+    .imgprofile{
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 1.75rem;
+    }
+}
