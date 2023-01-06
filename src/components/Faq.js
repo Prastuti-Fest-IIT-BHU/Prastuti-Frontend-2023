@@ -31,7 +31,7 @@ const Faq = () => {
 
   const toggleFAQ = (index) => {
     setfaqs(faqs.map((faq, i) => {
-      if (i == index) {
+      if (i === index) {
         faq.open = !faq.open;
       } else {
         faq.open = false;
