@@ -15,13 +15,13 @@ const particlesConfig = {
       },
     },
     color: {
-      value: "#000000"
+      value: "#ffffff"
     },
     shape: {
       type: "circle",
       stroke: {
         width: 0,
-        color: "#000000"
+        color: "#ffffff"
       },
       polygon: {
         nb_sides: 5,
@@ -55,7 +55,7 @@ const particlesConfig = {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#000000",
+      color: "#ffffff",
       opacity: 0.4,
       width: 1,
     },
