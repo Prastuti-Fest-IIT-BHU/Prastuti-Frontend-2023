@@ -7,7 +7,7 @@ import img6 from "../assets/Eventspage/Simulium.png";
 export const Data = [
     {
         title:'Codigo',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrsvtdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
@@ -17,7 +17,7 @@ export const Data = [
     },
     {
         title:'Consolium',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
@@ -27,7 +27,7 @@ export const Data = [
     },
     {
         title:'Cryptx',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
@@ -37,7 +37,7 @@ export const Data = [
     },
     {
         title:'Hackoverflow',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
@@ -47,7 +47,7 @@ export const Data = [
     },
     {
     title:'Recognizance',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
@@ -57,7 +57,7 @@ export const Data = [
     },
     {
         title:'Simulium',
-      info: 'easgffkghkufdtrdt strsdyftrstdhj',
+      //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
