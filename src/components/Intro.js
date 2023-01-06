@@ -1,9 +1,10 @@
 import React from 'react'
+import ParticleAnimation from './Sponser/ParticleAnimation';
 
 const Intro = () => {
   return (
-    <div>Intro</div>
-  )
+    <ParticleAnimation/>
+  );
 }
 
-export default Intro
+export default Intro;
