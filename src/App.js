@@ -5,8 +5,12 @@ import Faq from '././components/Faq'
 import About from './components/About'
 import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
+
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Events from "./components/Events";
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
+
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import PrastutiTeam from "./components/Team/Teams"
@@ -15,6 +19,7 @@ import { Component } from "react";
 
 export default function App() {
   return (
+
     <>   
     <Router>
     <div className="sticky top-0 z-20">
