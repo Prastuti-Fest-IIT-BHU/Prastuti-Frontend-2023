@@ -3,23 +3,33 @@ import Register from "./components/Register";
 import Events from "./components/Events";
 import Teams from "./components/Teams";
 import Faq from '././components/Faq'
+import Project from "./components/Project";
+import About from './components/About'
 import Separate_Event from './components/Separate_Event';
 import eventData from './components/Eventdata';
 import Login from './components/Login' 
 import {BrowserRouter as Router , Routes ,Route } from 'react-router-dom'
-import Project from "./components/Project";
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
 export default function App() {
   return (
-    <>
-     <Router>
+    <>   
+    <Router>
+    <div className="sticky top-0 z-20">
+            <Navbar/>
+    </div>
       <Routes>
         <Route path='/' element={
           <>
-          <Register />
-          <Events/>
+          
+    <Register />
+  <Events/>
           <Teams />
+        
           <Faq/>
-          <Sponsor/>
+          
+          {/* <Sponsor/> */}
+          <Footer/>
           </>
         }></Route>
         <Route path='/codigo' element={<Separate_Event data={eventData.codigo}/>}></Route>

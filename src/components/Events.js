@@ -1,38 +1,26 @@
 import React from "react";
 import { Data } from './Data';
-import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
+
+
 // import { motion, useScroll, useSpring } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
+AOS.init();
 
 
 const Card = (prop) => {
-  const [hover, setHover] = useState(false);
-  
-  // const { scrollYProgress } = useScroll();
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-    //console.log(hover);
-  }, []);
+
 
 
   return (
+
     <div  style={{background:' linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     {Data.map((item, index) => (
     <>
     
-        <div 
-          class="pt-2 pb-12 bg-gray-300 x"
+        <div
+          id="card" 
+          class="pt-2 pb-12  x w-1/2 {item.float}"
           data-aos={item.slide}
           data-aos-duration="1000"
           // variants={boxVariant}
@@ -40,7 +28,6 @@ const Card = (prop) => {
           // whileInView={"visible"}
           style={{ color: "#003247"}}
         >
-          <div id="card" class="">
             <h2
               class="text-center  text-4xl xl:text-5xl"
               style={{ fontFamily: "Manrope" }}
@@ -80,7 +67,6 @@ const Card = (prop) => {
               </div>
             </div>
           </div>
-        </div>
 {/* 
         <motion.div
           className="progress"
@@ -97,8 +83,9 @@ const Card = (prop) => {
         
     </>
     ))}
+
     </div>
-  );
+   );
 };
 
 export default Card;

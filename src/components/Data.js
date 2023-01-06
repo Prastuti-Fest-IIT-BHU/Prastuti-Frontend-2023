@@ -12,7 +12,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img1,
-        slide:'fade-left'
+        slide:'fade-left',
+        float:'float-left'
     },
     {
         title:'Consolium',
@@ -21,7 +22,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img2,
-        slide:'fade-right'
+        slide:'fade-right',
+        float:'float-right'
     },
     {
         title:'Cryptx',
@@ -30,7 +32,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img3,
-        slide:'fade-left'
+        slide:'fade-left',
+        float:'float-left'
     },
     {
         title:'Hackoverflow',
@@ -39,7 +42,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img4,
-        slide:'fade-right'
+        slide:'fade-right',
+        float:'float-right'
     },
     {
     title:'Recognizance',
@@ -48,7 +52,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img5,
-        slide:'fade-left'
+        slide:'fade-left',
+        float:'float-left'
     },
     {
         title:'Simulium',
@@ -57,7 +62,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img6,
-        slide:'fade-right'
+        slide:'fade-right',
+        float:'float-right'
     },
   
   ];
