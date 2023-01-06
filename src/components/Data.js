@@ -9,11 +9,11 @@ export const Data = [
         title:'Codigo',
       info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
-        'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
+        'easgffkghkufdtrdt strsdyftrsvtdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img1,
-        slide:'fade-left',
-        float:'float-left'
+        slide:'fade-up',
+        
     },
     {
         title:'Consolium',
@@ -22,8 +22,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img2,
-        slide:'fade-right',
-        float:'float-right'
+        slide:'fade-down',
+        
     },
     {
         title:'Cryptx',
@@ -32,8 +32,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img3,
-        slide:'fade-left',
-        float:'float-left'
+        slide:'fade-up',
+        
     },
     {
         title:'Hackoverflow',
@@ -42,8 +42,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img4,
-        slide:'fade-right',
-        float:'float-right'
+        slide:'fade-down',
+        
     },
     {
     title:'Recognizance',
@@ -52,8 +52,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img5,
-        slide:'fade-left',
-        float:'float-left'
+        slide:'fade-up',
+        
     },
     {
         title:'Simulium',
@@ -62,8 +62,8 @@ export const Data = [
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
         infoinfo:'jshkdshflisdjlijsd.',
         image:img6,
-        slide:'fade-right',
-        float:'float-right'
+        slide:'fade-down',
+        
     },
   
   ];

@@ -2,14 +2,18 @@ import React from "react";
 import { Data } from './Data';
 
 
-// import { motion, useScroll, useSpring } from "framer-motion";
+ import { motion, useScroll, useSpring } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
 
-
 const Card = (prop) => {
-
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
 
   return (
@@ -20,7 +24,7 @@ const Card = (prop) => {
     
         <div
           id="card" 
-          class="pt-2 pb-12  x w-1/2 {item.float}"
+          class="pt-2 pb-12  x  {item.float}"
           data-aos={item.slide}
           data-aos-duration="1000"
           // variants={boxVariant}
@@ -67,7 +71,7 @@ const Card = (prop) => {
               </div>
             </div>
           </div>
-{/* 
+
         <motion.div
           className="progress"
           style={{
@@ -79,7 +83,7 @@ const Card = (prop) => {
             backgroundColor: "black",
             bottom: "10px",
           }}
-        /> */}
+        /> 
         
     </>
     ))}
