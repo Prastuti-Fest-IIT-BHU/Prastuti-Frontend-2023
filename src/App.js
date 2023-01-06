@@ -20,14 +20,7 @@ export default function App() {
           <Navbar />
         </div>
         <Routes>
-          <Route path='/' element={
-            <>
-              <Intro />
-              <Register />
-            </>
-          }>
-
-          </Route>
+          <Route path='/' element={<Intro />}></Route>
           <Route path='/teams' element={<Teams />}></Route>
           <Route path='/faq' element={<Faq />}></Route>
           <Route path='/sponsors' element={<Sponsor />}></Route>

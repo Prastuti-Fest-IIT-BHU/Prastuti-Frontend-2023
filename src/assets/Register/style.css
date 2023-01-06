@@ -5,21 +5,23 @@
   box-sizing: border-box;
 }
 
-body {
+.main {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
   display: grid;
   place-items: center;
   max-height: 100vh;
-  /* background: #1A2A3A; */
-  color: #FFF;
   scroll-behavior: smooth;
 }
 
 .blob {
   max-height: 90vh;
   width: 90vw;
+}
+
+.dark {
+  background-color: #003247;
 }
 
 .blob path {
