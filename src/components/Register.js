@@ -12,12 +12,12 @@ const Register = () => {
         </svg>
       </span >
       <div className="flex flex-col items-center justify-center h-screen w-screen">
-        <div className="absolute z-10 flex h-[37rem] w-[30rem] max-w-sm  mt-30   bg-[#DBF2FF] mx-auto shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 dark:bg-gray-800 lg:max-w-4xl">
+        <div className="absolute z-10 flex h-[37rem] w-[30rem] max-w-sm  mt-30   bg-[#DBF2FF] mx-auto shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 lg:max-w-4xl">
           <div className="absolute w-full content-center p-6 md:px-8 ">
-            <h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">
+            <h2 className="text-2xl font-semibold text-center text-gray-700">
               Brand
             </h2>
-            <p className="text-xl text-center text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-center text-gray-600">
               Welcome back!
             </p>
             <div className="flex items-center justify-center mt-4">
