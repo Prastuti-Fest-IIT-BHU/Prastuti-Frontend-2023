@@ -1,9 +1,4 @@
-*,
-*:before,
-*:after {
-  position: relative;
-  box-sizing: border-box;
-}
+
 
 .main {
   margin: 0;

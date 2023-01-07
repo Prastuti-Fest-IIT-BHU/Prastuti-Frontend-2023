@@ -51,7 +51,7 @@ const Navbar = () =>{
                         <Link to="#sponsors">Sponsors</Link>
                     </li>
                     <li className="px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l" href="#">
-                        <Link to="#team">Team</Link>
+                        <Link to="team">Team</Link>
                     </li>
                     
                 </ul>
