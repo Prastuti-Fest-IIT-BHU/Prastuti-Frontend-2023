@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/About.css'
-import bgv from "../assets/bgv.mp4"
 const About = () => {
   return (
     <>
