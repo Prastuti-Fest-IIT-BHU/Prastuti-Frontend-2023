@@ -1,0 +1,75 @@
+/*======================
+    404 page
+=======================*/
+
+
+.page_404 {
+    padding: 40px 0;
+    background: #fff;
+    font-family: 'Arvo', serif;
+    height: 100vh;
+    color: #003247;
+}
+
+.page_404 img {
+    width: 100%;
+}
+
+.page_404 .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.four_zero_four_bg {
+
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.four_zero_four_bg h1 {
+    font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+    font-size: 80px;
+}
+
+.link_404 {
+    margin-top: 40px;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    color: #000;
+    background-color: #DBF2FF;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.link_404:hover {
+    background-color: #003247;
+    box-shadow: 0px 10px 15px rgba(0, 50, 71, 0.4);
+    color: #DBF2FF;
+    transform: translateY(-7px);
+}
+
+.contant_box_404 {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -95px;
+}

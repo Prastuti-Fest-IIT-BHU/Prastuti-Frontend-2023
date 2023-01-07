@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
+import Error from "./components/Error"
 
 import Intro from "./components/Intro";
 import Spons from "./components/Spons"
@@ -120,6 +121,12 @@ export default function App() {
                 <Form />
               </>
             }
+          />
+          <Route
+           path="/*"
+           element={
+            <Error/>
+           }
           />
         </Routes>
         {/* <Footer /> */}
