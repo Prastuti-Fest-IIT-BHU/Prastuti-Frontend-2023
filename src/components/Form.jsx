@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Navbar from "./Navbar";
 const Form1 = () => {
   // const [selected, setSelected] = useState();
   const [selectionArray, setSelectionArray] = useState([
@@ -16,14 +16,14 @@ const Form1 = () => {
   let selected = [...selectionArray];
 
   const interests = [
+    "Competetive Programming",
+    "Machine Learning",
+    "Development",
     "Dance",
     "Music",
-    "Literary Art",
-    "Design & Digital Art",
-    "Reading",
-    "Gaming",
-    "HEllo",
-    "hi",
+    "Digital Electronics",
+    "Analog Electronics",
+    "Power Electronics"
   ];
   const interestArray = [];
   selectionArray.forEach((item, index) => {
@@ -37,12 +37,12 @@ const Form1 = () => {
   };
   return (
     <div>
-      <section className="bg-cover -z-10 h-full" style={divStyle}>
-        <div className="flex flex-col min-h-screen bg-black/60">
-          <div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
-            <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
-              <div className="text-white   lg:w-1/2 lg:mx-6">
-                <h1 className="text-3xl font-Catamaran font-bold uppercase lg:text-4xl">
+      <section className="bg-cover -z-10 h-max md:h-full" style={divStyle}>
+        <div className="flex flex-col min-h-[91.4vh] bg-black/60">
+          <div className="container flex flex-col flex-1 px-0 md:px-6 py-0 mx-auto">
+            <div className="flex-1 lg:flex lg:items-center lg:mx-6">
+              <div className="text-white px-2  lg:w-1/2 lg:mx-6">
+                <h1 className="text-3xl mt-2 font-Catamaran font-bold uppercase lg:text-4xl">
                   Prastuti'23
                 </h1>
 
@@ -141,8 +141,8 @@ const Form1 = () => {
                 </div>
               </div>
 
-              <div className="mt-8 lg:w-1/2 block h-[42rem] lg:mx-6 overflow-y-scroll scroll-smooth">
-                <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl rounded-xl lg:max-w-xl">
+              <div className="block h-[30rem] px-0 w-full mt-2 md:w-max lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
+                <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl lg:max-w-xl">
                   <h1 className="text-2xl font-Manrope font-semibold text-gray-700 ">
                     Interest form
                   </h1>
@@ -152,7 +152,7 @@ const Form1 = () => {
                   </p>
 
                   <form className="mt-6">
-                    <div className="block overflow-y-scroll">
+                    <div className="block ">
                       <div className="flex-1">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           Full Name<span style={{ color: "red" }}>*</span>
@@ -177,6 +177,23 @@ const Form1 = () => {
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
+
+                      {/* Gender */}
+
+                       <div className="flex-1 mt-6">
+                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
+                          Gender<span style={{ color: "red" }}>*</span>
+                        </label>
+                        <div className="flex">
+                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="male" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Male</div>
+                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="female" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Female</div>
+                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="other" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Other</div>
+                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="none" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Prefer Not to Say</div>
+                        </div> 
+                        
+
+
+                      </div> 
 
                       <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600">
@@ -218,27 +235,6 @@ const Form1 = () => {
                           placeholder="https://github.com/Veer0x1"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
-                      </div>
-                      {/* Gender */}
-
-                      <div className="flex-1 mt-6">
-                        <label className="block font-Manrope mb-2 text-sm text-gray-600">
-                          Gender<span style={{ color: "red" }}>*</span>
-                        </label>
-
-                        <select
-                          className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
-                          id="gender"
-                          placeholder="Select your gender"
-                          required
-                        >
-                          <option disabled selected className="text-gray-700 font-Catamaran">
-                            Select your gender
-                          </option>
-                          <option>Male</option>
-                          <option>Female</option>
-                          <option>Other</option>
-                        </select>
                       </div>
 
                       <div className="flex-1 mt-6">

@@ -1,7 +1,7 @@
 import React from "react";
 import teaser from "../assets/Register/prastuti teaser draft 5.mp4";
 import image from "../assets/Register/logo.png";
-
+import Navbar from "./Navbar";
 const Register = () => {
   return (
     <div className="flex min-h-screen min-w-full items-center bg-new-white md:bg-blob_small bg-no-repeat bg-auto bg-center lg:bg-blob">
