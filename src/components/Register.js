@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../assets/Register/logo.png";
 import style from "../assets/Register/style.css"
+
 const Register = () => {
   return (
     <div className="main relative bg-no-repeat bg-cover h-screen light-gradient bg-center">
