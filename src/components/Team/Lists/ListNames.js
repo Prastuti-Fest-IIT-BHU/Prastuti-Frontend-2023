@@ -1,5 +1,5 @@
-import './side.css'
-import React, { useState, useEffect,useReducer,useContext } from 'react';
+import "./side.css";
+import React, { useState, useEffect } from "react";
 function ListNames({ anchorId, itemName, active }) {
   const [anchorTarget, setAnchorTarget] = useState(null);
 
@@ -10,9 +10,10 @@ function ListNames({ anchorId, itemName, active }) {
   function handleClick(e) {
     e.preventDefault();
     const yOffset = -90;
-    const y = anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y =
+      anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
 
   return (
@@ -20,8 +21,9 @@ function ListNames({ anchorId, itemName, active }) {
       <a
         href={`#${itemName}`}
         onClick={handleClick}
-        aria-label={`Scroll to ${itemName}`}>
-          <div className="item">{itemName}</div>
+        aria-label={`Scroll to ${itemName}`}
+      >
+        <div className="item">{itemName}</div>
       </a>
     </li>
   );
