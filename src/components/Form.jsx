@@ -158,7 +158,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="Balveer Singh Rao"
+                          placeholder="Your Name"
                           required
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
@@ -170,7 +170,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="tel"
-                          placeholder="7823422345"
+                          placeholder="1234567890"
                           pattern="[0-9]{10}"
                           required
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
@@ -211,7 +211,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.instagram.com/balveersinghrao2021/"
+                          placeholder="https://www.instagram.com/instagram/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
@@ -221,7 +221,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.linkedin.com/in/balveer-singh-rao-636449229/"
+                          placeholder="https://www.linkedin.com/company/prastuti/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
@@ -231,7 +231,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://github.com/Veer0x1"
+                          placeholder="https://github.com/Prastuti-Fest-IIT-BHU"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
