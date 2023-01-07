@@ -1,7 +1,8 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import img2 from "../assets/Teams/img2.jpg";
-import img1 from "../assets/Teams/wave.png";
+
+import React from 'react'
+import img2 from '../assets/Teams/img2.jpg'
+import img1 from '../assets/Teams/wave.png'
+import style from '../assets/Teams/style.css'
 
 const Teams = () => {
   const [no_of_people, setNo_of_people] = React.useState(3);
@@ -55,3 +56,4 @@ const Teams = () => {
 };
 
 export default Teams;
+

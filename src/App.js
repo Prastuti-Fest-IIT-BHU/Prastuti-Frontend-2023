@@ -1,5 +1,6 @@
 import Sponsor from "./components/Sponser/Sponsor";
 import Register from "./components/Register";
+
 import Faq from "././components/Faq";
 import About from "./components/About";
 import SeparateEvent from "./components/Separate_Event";
@@ -10,7 +11,10 @@ import Footer from "./components/Footer";
 import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
+
 import Intro from "./components/Intro";
+import Spons from "./components/Spons"
+import { Component } from "react";
 
 import Form from "./components/Form.jsx";
 
@@ -119,6 +123,7 @@ export default function App() {
           />
         </Routes>
         {/* <Footer /> */}
+
       </Router>
     </>
   );
