@@ -30,8 +30,13 @@ font-family: 'Manrope', sans-serif;
     justify-content: space-between;
 }
 .sponscard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
     width: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .sponscard .cardtitle{
@@ -52,8 +57,16 @@ font-family: 'Manrope', sans-serif;
     color: #004C7D;
 }
 
-.SponsContainer img{
+.tech{
     width: 200px;
+    height: 100%;
+}
+.ieee{
+    width: 200px;
+    height: 100%;
+}
+.skill{
+    width: 350px;
     height: 100%;
 }
 
