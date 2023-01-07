@@ -29,10 +29,10 @@ export default function App() {
               <>
                 <StickyNav />
                 <Intro />
-                <Register />
+                <About />
                 <Faq />
                 <Sponsor />
-                <About />
+                <Spons/>               
                 <Footer />
               </>
             }
