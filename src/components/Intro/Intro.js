@@ -12,14 +12,12 @@ const Intro = () => {
           loop
           className="absolute t-0 l-0 w-[100%] h-[100%] z-[-10] object-cover opacity-30"
         />
-        {/* <h1 className='aboutHead'>About Us</h1>
-      <h4 class="aboutPara">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</h4> */}
         <div className="flex flex-col h-[100vh] w-[100vw] bg-black/10">
           <p className="text-3xl text-center grow md:grow-0 place-content-evenly md:text-left text-white relative sm:mt-10 lg:mt-20 mr-2 ml-2 min-h-max font-bold p-6 lg:px-12">
             <TypeAnimation
               // Same String at the start will only be typed once, initially
               sequence={[
-                "PRASTUTI",
+                "PRASTUTI'23",
                 1000,
                 "IIT BHU",
                 800,
@@ -36,20 +34,7 @@ const Intro = () => {
           </p>
           <div className="grow md:grow-0 flex flex-col">
             <p className="flex hidden md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-              veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-              vel eum iure reprehenderit qui in ea voluptate velit esse quam
-              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-              voluptas nulla pariatur
+            Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the annual technical festival that echoes the spirit of innovation and progress! This gives you a chance to get your feet wet in a wide array of domains, ranging from image processing and simulation to web development and designing circuits. Whether you're a newbie or a know-it-all, Prastuti is here to soak you in its technical extravaganza. With stellar workshops straight from the experts, the seeds of understanding sprout in your mind, which are further watered by the electrifying competitions with handsome prizes! This not only helps polish your engineering prowess but gives you a first-hand experience of the modern industry requirements. Moreover, there are some iconic Guest talks to blow your mind and to keep the flames of advancement ignited! So, are you ready to reconstruct the era of a technological renaissance with Prastuti'23?
             </p>
             <div className="flex justify-content p-4">
               <button

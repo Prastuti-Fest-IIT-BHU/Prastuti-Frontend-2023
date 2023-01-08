@@ -23,21 +23,21 @@ const Footer = () => {
             <img className="w-20 h-20 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="https://files.catbox.moe/uqbxcf.png" alt="logo"></img>
           </div>
           <ul className='flex justify-center py-2'>
+              <li className="social-links font-['Manrope'] text-white mx-5 text-l my-4">
+              <a href="https://twitter.com/fest_prastuti?t=KdlkevmuvhbFQHx63dibXA&s=08" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsGithub className="sm:hidden"/></IconContext.Provider>
+                <p className='hidden sm:flex'>Twitter</p></a>
+              </li>
               <li className='social-links font-["Manrope"] text-white mx-5 text-l my-4 '>
-              <a href="https://www.facebook.com/prastuti.iitbhu"><IconContext.Provider value={{ className: 'react-icons' }}><BsFacebook className="sm:hidden"/></IconContext.Provider>
+              <a href="https://www.linkedin.com/company/prastuti/" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsLinkedin className="sm:hidden"/></IconContext.Provider>
+              <p className='hidden sm:flex'>LinkedIn</p></a>
+              </li>
+              <li className='social-links font-["Manrope"] text-white mx-5 text-l my-4 '>
+              <a href="https://www.facebook.com/prastuti.iitbhu" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsFacebook className="sm:hidden"/></IconContext.Provider>
               <p className='hidden sm:flex'>Facebook</p></a>
               </li>
               <li className='social-links font-["Manrope"] justify-center text-white mx-5 text-l my-4 '>
-              <a href="https://www.instagram.com/prastuti.iitbhu/"><IconContext.Provider value={{ className: 'react-icons' }}><BsInstagram className="sm:hidden"/></IconContext.Provider>
+              <a href="https://www.instagram.com/prastuti.iitbhu/" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsInstagram className="sm:hidden"/></IconContext.Provider>
               <p className='hidden sm:flex'>Instagram</p></a>
-              </li>
-              <li className='social-links font-["Manrope"] text-white mx-5 text-l my-4 '>
-              <a href="https://www.linkedin.com/company/prastuti/"><IconContext.Provider value={{ className: 'react-icons' }}><BsLinkedin className="sm:hidden"/></IconContext.Provider>
-              <p className='hidden sm:flex'>LinkedIn</p></a>
-              </li>
-              <li className="social-links font-['Manrope'] text-white mx-5 text-l my-4">
-              <a href="https://github.com/Prastuti-Fest-IIT-BHU"><IconContext.Provider value={{ className: 'react-icons' }}><BsGithub className="sm:hidden"/></IconContext.Provider>
-                <p className='hidden sm:flex'>Github</p></a>
               </li>
             </ul>
 

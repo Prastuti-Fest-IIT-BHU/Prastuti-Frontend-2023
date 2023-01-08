@@ -19,7 +19,7 @@ import Sponsor from "./components/Sponsor"
 import Thankyou from "./components/Thank_you";
 // import { Component } from "react";
 
-import Form from "./components/Form.jsx";
+import Form from "./components/Form";
 
 export default function App() {
   return (
