@@ -140,7 +140,7 @@ const Form1 = () => {
                 </div>
               </div>
 
-              <div className="block h-[30rem] px-0 w-full mt-2 md:w-full lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
+              <div className="block h-[30rem] px-0 w-full mt-2 md:w-full lg:w-max lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
                 <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl lg:max-w-xl">
                   <h1 className="text-2xl font-Manrope font-semibold text-gray-700 ">
                     Interest form
