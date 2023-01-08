@@ -15,6 +15,8 @@ import Error from "./components/Error"
 
 import Intro from "./components/Intro";
 import Spons from "./components/Spons"
+
+import Thank_you from "./components/Thank_you";
 import { Component } from "react";
 
 import Form from "./components/Form.jsx";
@@ -33,7 +35,7 @@ export default function App() {
                 <About />
                 <Faq />
                 <Sponsor />
-                <Spons/>               
+                <Spons />
                 <Footer />
               </>
             }
@@ -92,6 +94,9 @@ export default function App() {
               </>
             }
           ></Route>
+          <Route path="/thankyou" element={
+            <Thank_you />
+          }></Route>
           <Route
             path="/oscillion"
             element={
@@ -102,17 +107,17 @@ export default function App() {
             }
           ></Route>
           <Route path="/login" element={
-              <>
-                <StickyNav />
-                <Register/>
-              </>
-            }></Route>
+            <>
+              <StickyNav />
+              <Register />
+            </>
+          }></Route>
           <Route path="/team" element={
-              <>
-                <StickyNav />
-                <PrastutiTeam/>
-              </>
-            }></Route>
+            <>
+              <StickyNav />
+              <PrastutiTeam />
+            </>
+          }></Route>
           <Route
             path="/form"
             element={
@@ -123,10 +128,10 @@ export default function App() {
             }
           />
           <Route
-           path="/*"
-           element={
-            <Error/>
-           }
+            path="/*"
+            element={
+              <Error />
+            }
           />
         </Routes>
         {/* <Footer /> */}
