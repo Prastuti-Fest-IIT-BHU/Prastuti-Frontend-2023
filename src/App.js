@@ -5,6 +5,7 @@ import Faq from "././components/Faq";
 import About from "./components/About";
 import SeparateEvent from "./components/Separate_Event";
 import eventData from "./components/Eventdata";
+import Profilepage from "./pages/profile/profilepage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -133,6 +134,9 @@ export default function App() {
               <Error />
             }
           />
+          <Route path="/profile" element={
+           <Profilepage/>
+          }></Route>
         </Routes>
         {/* <Footer /> */}
 
