@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../assets/Register/logo.png";
-import style from "../assets/Register/style.css"
+import "../assets/Register/Register.css"
 
 const Register = () => {
   return (
@@ -15,7 +15,7 @@ const Register = () => {
       <div className="flex flex-col items-center justify-center h-screen">
           <div className="absolute z-10 flex h-[37rem] w-[22rem] sm:w-[30rem] mt-30 bg-[#DBF2FF] mx-auto shadow-2xl shadow-dark-neon-tint rounded-lg bg-opacity-65 lg:max-w-4xl">          <div className="absolute w-full content-center p-6 md:px-8 ">
             <h2 className="text-2xl font-semibold text-center text-gray-700">
-              Brand
+              Prastuti'23
             </h2>
             <p className="text-xl text-center text-gray-600">
               Welcome back!

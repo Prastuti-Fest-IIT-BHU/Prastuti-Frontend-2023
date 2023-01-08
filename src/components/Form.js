@@ -46,10 +46,7 @@ const Form1 = () => {
                 </h1>
 
                 <p className="max-w-xl font-Manrope mt-6">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Voluptatem quo aliquid molestiae hic incidunt beatae placeat
-                  accusantium! Alias ex quisquam ab tempora. Ratione autem
-                  doloremque ducimus numquam doloribus, error sed.
+                Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the annual technical festival that echoes the spirit of innovation and progress! Just one more step to go for you to be a part! Are you Ready?
                 </p>
 
                 {/* <button className="px-8 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
@@ -62,7 +59,7 @@ const Form1 = () => {
                   <div className="flex mt-4 -mx-1.5 ">
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-[#00acee]"
-                      href="/"
+                      href="https://twitter.com/fest_prastuti?t=KdlkevmuvhbFQHx63dibXA&s=08" target="_blank" rel="noreferrer"
                     >
                       <svg
                         className="w-10 h-10 fill-current"
@@ -77,7 +74,7 @@ const Form1 = () => {
 
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-[#0077b5]"
-                      href="/"
+                      href="https://www.linkedin.com/company/prastuti/" target="_blank" rel="noreferrer"
                     >
                       <svg
                         className="w-8 h-8"
@@ -103,7 +100,7 @@ const Form1 = () => {
 
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-[#3b5998]"
-                      href="/"
+                      href="https://www.facebook.com/prastuti.iitbhu" target="_blank" rel="noreferrer"
                     >
                       <svg
                         className="w-8 h-8"
@@ -121,7 +118,7 @@ const Form1 = () => {
 
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-[#833AB4]"
-                      href="https://www.instagram.com/prastuti.iitbhu/"
+                      href="https://www.instagram.com/prastuti.iitbhu/" target="_blank" rel="noreferrer"
                     >
                       <svg
                         className="w-8 h-8"
@@ -143,11 +140,11 @@ const Form1 = () => {
               <div className="block h-[30rem] px-0 w-full mt-2 md:w-full lg:w-max lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
                 <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl lg:max-w-xl">
                   <h1 className="text-2xl font-Manrope font-semibold text-gray-700 ">
-                    Interest form
+                    Registration form
                   </h1>
 
                   <p className="mt-4 font-Catamaran text-gray-500 ">
-                    Tell us everything and we would love to hear from you
+                    We would love to learn more about You!
                   </p>
 
                   <form className="mt-6">
@@ -207,17 +204,17 @@ const Form1 = () => {
 
                       <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
-                          Instagram Handle
+                          Instagram Profile
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.instagram.com/instagram/"
+                          placeholder="https://www.instagram.com/prastuti.iitbhu/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
                       <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600">
-                          LinkedIn Handle
+                          LinkedIn Profile
                         </label>
                         <input
                           type="text"
@@ -227,7 +224,7 @@ const Form1 = () => {
                       </div>
                       <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
-                          GitHub Handle
+                          GitHub Profile
                         </label>
                         <input
                           type="text"
