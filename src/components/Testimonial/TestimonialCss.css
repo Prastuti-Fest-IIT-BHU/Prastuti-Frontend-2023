@@ -26,7 +26,7 @@ body.overflow {
 .showOnMobile {
   display: none;
 }
-.mainSponsor {
+.MainTestimonial {
   display: block;
 }
 .swiper-button-prev,
@@ -45,18 +45,33 @@ a {
   padding-top: 40px;
   position: relative;
 }
-.experiment {
-  display: block;
+.card {
+  display: flex;
+  justify-content: center;
   float: left;
   clear: none;
-  width: 25%;
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
-  height: 418px;
+  height: 485px;
   position: relative;
   overflow: hidden;
   text-align: center;
   background-color: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);;
+}
+.experiment {
+  position: absolute;
+  bottom: 0%;
+  display: block;
+  float: left;
+  clear: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  height: 400px;
+  overflow: visible;
+  text-align: center;
+  background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
   box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.15);
   transition: all 0.45s ease;
 }
@@ -90,10 +105,11 @@ a {
   position: relative;
   width: 100%;
   z-index: 10;
+  top: -30%;
 }
 .experiment .experiment-image {
-  width: 230px;
-  height: 230px;
+  width: 150px;
+  height: 150px;
   background-color: #1c1d25;
   border-radius: 50%;
   display: block;
@@ -109,10 +125,12 @@ a {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .experiment .experiment-title-area {
-  position: absolute;
-  top: 85%;
-  left: 12%;
-  text-align: left;
+  position: relative;
+  width: 80%;
+  top: -25%;
+  margin: auto;
+  /* left: 12%; */
+  text-align: center;
   z-index: 10;
   color: #fff;
 }
@@ -133,20 +151,21 @@ a {
   width: 7px;
 }
 .experiment .experiment-title-area .experiment-title {
-  font-size: 0.75em;
+  display: inline-block;
+  margin-top: 5%;
+  font-size: 1.1em;
+  font-weight: 800;
   font-family:'Manrope', sans-serif;
 }
 .experiment .experiment-number-area {
+  display: flex;
+    justify-content: center;
+    left: 50%;
   position: absolute;
-  top: 90%;
-  right: 10%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
   z-index: 10;
 }
 .experiment .experiment-number-area:before {
   content: "";
-  top: 45%;
   height: 2px;
   background-color: #fff;
   width: 30px;
@@ -154,17 +173,14 @@ a {
 .experiment .experiment-number-area:after,
 .experiment .experiment-number-area:before {
   position: absolute;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  right: 112%;
-  transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
+  transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1);
 }
 .experiment .experiment-number-area:after {
   top: 5px;
   content: "";
-  text-align: right;
+  text-align: center;
   font-size: 8px;
-  font-weight: 700;
+  font-weight: 800;
   padding-right: 40px;
 }
 .experiment:hover .experiment-mask {
@@ -223,25 +239,27 @@ a {
   }
 }
 @media only screen and (max-width: 64em) {
-  .mainSponsor {
+  .MainTestimonial {
   display: none;
 }
  .showOnMobile {
     display: block;
   }
+  .card{
+    height: 383px;
+  }
   .experiment {
+    overflow: visible;
     height: 320px;
   }
-  .experiment .experiment-image {
-    width: 180px;
-    height: 180px;
+  .experiment-circle{
+    
   }
-  .experiment .experiment-image2 {
-    width: 180px;
-    height: 180px;
+  .experiment .experiment-image {
+    width: 120px;
+    height: 120px;
   }
   .experiment .experiment-title-area {
-    top: 80%;
     padding-right: 5px;
   }
   .experiment .experiment-number-area {
@@ -294,7 +312,6 @@ a {
   font-size: 50px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 70px;
   color: white;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
   transition-delay: 0.18s;

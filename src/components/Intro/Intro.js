@@ -1,5 +1,5 @@
 import React from 'react'
-import ParticleAnimation from './Sponser/ParticleAnimation';
+import ParticleAnimation from './ParticleAnimation';
 
 const Intro = () => {
   return (
