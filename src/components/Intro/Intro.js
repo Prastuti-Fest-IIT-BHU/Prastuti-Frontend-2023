@@ -6,5 +6,3 @@ const Intro = () => {
     <ParticleAnimation/>
   );
 }
-
-export default Intro;

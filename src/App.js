@@ -11,9 +11,12 @@ import Footer from "./components/Footer";
 import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
+import Error from "./components/Error"
 
 import Intro from "./components/Intro/Intro";
 import Spons from "./components/Spons"
+
+import Thank_you from "./components/Thank_you";
 import { Component } from "react";
 
 import Form from "./components/Form.jsx";
@@ -91,6 +94,9 @@ export default function App() {
               </>
             }
           ></Route>
+          <Route path="/thankyou" element={
+            <Thank_you />
+          }></Route>
           <Route
             path="/oscillion"
             element={
@@ -101,17 +107,17 @@ export default function App() {
             }
           ></Route>
           <Route path="/login" element={
-              <>
-                <StickyNav />
-                <Register/>
-              </>
-            }></Route>
+            <>
+              <StickyNav />
+              <Register />
+            </>
+          }></Route>
           <Route path="/team" element={
-              <>
-                <StickyNav />
-                <PrastutiTeam/>
-              </>
-            }></Route>
+            <>
+              <StickyNav />
+              <PrastutiTeam />
+            </>
+          }></Route>
           <Route
             path="/form"
             element={
@@ -119,6 +125,12 @@ export default function App() {
                 <StaticNav />
                 <Form />
               </>
+            }
+          />
+          <Route
+            path="/*"
+            element={
+              <Error />
             }
           />
         </Routes>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 const Form1 = () => {
   // const [selected, setSelected] = useState();
   const [selectionArray, setSelectionArray] = useState([
@@ -141,7 +140,7 @@ const Form1 = () => {
                 </div>
               </div>
 
-              <div className="block h-[30rem] px-0 w-full mt-2 md:w-max lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
+              <div className="block h-[30rem] px-0 w-full mt-2 md:w-full lg:w-max lg:mx-6 overflow-visible md:overflow-auto scroll-smooth">
                 <div className="w-full px-8 bg-white  py-10 mx-auto shadow-2xl lg:max-w-xl">
                   <h1 className="text-2xl font-Manrope font-semibold text-gray-700 ">
                     Interest form
@@ -159,7 +158,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="Balveer Singh Rao"
+                          placeholder="Your Name"
                           required
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
@@ -171,7 +170,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="tel"
-                          placeholder="7823422345"
+                          placeholder="1234567890"
                           pattern="[0-9]{10}"
                           required
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
@@ -212,7 +211,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.instagram.com/balveersinghrao2021/"
+                          placeholder="https://www.instagram.com/instagram/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
@@ -222,7 +221,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.linkedin.com/in/balveer-singh-rao-636449229/"
+                          placeholder="https://www.linkedin.com/company/prastuti/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
@@ -232,7 +231,7 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://github.com/Veer0x1"
+                          placeholder="https://github.com/Prastuti-Fest-IIT-BHU"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
