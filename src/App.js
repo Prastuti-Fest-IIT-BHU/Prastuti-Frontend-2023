@@ -1,4 +1,4 @@
-import Sponsor from "./components/Sponser/Sponsor";
+import Testimonial from "./components/Testimonial/Testimonial";
 import Register from "./components/Register";
 
 import Faq from "././components/Faq";
@@ -13,7 +13,7 @@ import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
 import Error from "./components/Error"
 
-import Intro from "./components/Intro";
+import Intro from "./components/Intro/Intro";
 import Spons from "./components/Spons"
 
 import Thank_you from "./components/Thank_you";
@@ -34,8 +34,8 @@ export default function App() {
                 <Intro />
                 <About />
                 <Faq />
-                <Sponsor />
-                <Spons />
+                <Testimonial />
+                <Spons/>               
                 <Footer />
               </>
             }
