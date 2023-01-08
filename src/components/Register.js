@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import teaser from "../assets/Register/prastuti teaser draft 5.mp4";
 import image from "../assets/Register/logo.png";
-
 const Register = () => {
   return (
     <div className="flex min-h-screen min-w-full items-center bg-new-white md:bg-blob_small bg-no-repeat bg-auto bg-center lg:bg-blob">
@@ -28,7 +27,7 @@ const Register = () => {
           </div>
 
           <a
-            href="#"
+            href="https://prastuti-2023.onrender.com/api/login"
             className="flex items-center justify-center mt-4 text-neon-tint bg-dark-blue transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
           >
             <div className="px-4 py-2">
@@ -51,7 +50,7 @@ const Register = () => {
                 />
               </svg>
             </div>
-            <span className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center">
+            <span className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center" onClick={Login}>
               Sign in with Google
             </span>
           </a>

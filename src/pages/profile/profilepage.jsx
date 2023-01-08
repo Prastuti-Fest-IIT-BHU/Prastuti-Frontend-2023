@@ -3,6 +3,7 @@ import "./profilecss.css";
 import Profileteam from "./profileteam";
 import Profilerequest from "./Profilerequest";
 import Profileevent from "./profileevent";
+import Footer from "../../components/Footer";
 const Profilepage = () => {
   const [value, setvalue] = useState(<Profileevent />);
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
@@ -67,6 +68,7 @@ const Profilepage = () => {
         <hr className="Phr" />
         {value}
       </div>
+      <Footer/>
     </>
   );
 };

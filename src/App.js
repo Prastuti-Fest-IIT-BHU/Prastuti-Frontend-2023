@@ -10,7 +10,8 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import PrastutiTeam from "./components/Team/Teams"
 import Intro from "./components/Intro";
-
+import Profilepage from "./pages/profile/profilepage";
+import Check from "./Check";
 export default function App() {
   return (
     <>   
@@ -42,6 +43,9 @@ export default function App() {
         <Route path='/oscillion' element={<Separate_Event data={eventData.oscillion} />}></Route>
         <Route path='/login' element={<Register/>}></Route>
         <Route path='/team' element={<PrastutiTeam/>}></Route>
+        <Route path='/profile' element={<Profilepage/>}></Route>
+        <Route path='/check' element={<Check/>}></Route>
+
       </Routes>
     </Router>
     </>
