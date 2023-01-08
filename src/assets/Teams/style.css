@@ -1,0 +1,8 @@
+	.dark-gradient {
+		background: radial-gradient(circle, #003247 0%, #013147 10%, #013044 20%, #003046 30%, #002f43 70%, #01273c 90%, #002639 100%);
+	}
+
+	.light-gradient {
+		background: rgb(219, 242, 255);
+		background: linear-gradient(90deg, rgba(219, 242, 255, 1) 0%, rgba(185, 250, 255, 1) 100%);
+	}

@@ -1,6 +1,6 @@
-import ListNames from './ListNames';
-import './side.css'
-import React, { useState, useEffect,useReducer,useContext } from 'react';
+import ListNames from "./ListNames";
+import "./side.css";
+import React, { useState, useEffect } from "react";
 const listnamess = {
   pos_1: null,
   pos_2: null,
@@ -17,21 +17,20 @@ const listnamess = {
 };
 
 const listnamesNames = {
-  pos_1: 'Convener',
-  pos_2: 'Content Team',
-  pos_3: 'Design',
-  pos_4: 'Event',
-  pos_5: 'Marketing',
-  pos_6: 'Publicity',
-  pos_7: 'Finance',
-  pos_8: 'Social Media',
-  pos_9: 'Tech',
-  pos_10: 'E-Sports',
-  pos_11: 'Workshop',
+  pos_1: "Convener",
+  pos_2: "Content Team",
+  pos_3: "Design",
+  pos_4: "Event",
+  pos_5: "Marketing",
+  pos_6: "Publicity",
+  pos_7: "Finance",
+  pos_8: "Social Media",
+  pos_9: "Tech",
+  pos_10: "E-Sports",
+  pos_11: "Workshop",
 };
 function List() {
-  const [Curr, setCurr] = useState('pos_1');
-
+  const [Curr, setCurr] = useState("pos_1");
 
   const Scroll = () => {
     const curPos = window.scrollY;
@@ -52,21 +51,22 @@ function List() {
   useEffect(() => {
     setTimeout(getitem, 1000);
     const observer = new MutationObserver(getitem);
-    observer.observe(document.getElementById('root'), {
+    observer.observe(document.getElementById("root"), {
       childList: true,
-      subtree: true
+      subtree: true,
     });
-    window.addEventListener('scroll', Scroll);
+    window.addEventListener("scroll", Scroll);
     return () => {
-      window.removeEventListener('scroll',Scroll);
+      window.removeEventListener("scroll", Scroll);
     };
   }, []);
- 
+
   const getitem = () => {
     const curScroll = window.scrollY - 80;
     for (const key in listnamess) {
       try {
-        listnamess[key] = document.getElementById(key).getBoundingClientRect().top + curScroll;
+        listnamess[key] =
+          document.getElementById(key).getBoundingClientRect().top + curScroll;
       } catch (e) {
         console.error(e);
       }
@@ -80,14 +80,11 @@ function List() {
       key={`listnamess_${i}`}
       active={e === Curr}
       id="menu-item"
-      
     />
   ));
   return (
-    <section className='item'>
-      <ul style={{ listStyle: 'none',padding:'0'}}>
-        {Liste}
-      </ul>
+    <section className="item">
+      <ul style={{ listStyle: "none", padding: "0" }}>{Liste}</ul>
     </section>
   );
 }
