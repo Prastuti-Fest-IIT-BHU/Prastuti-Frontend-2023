@@ -14,10 +14,10 @@ import PrastutiTeam from "./components/Team/Teams";
 import Error from "./components/Error"
 
 import Intro from "./components/Intro/Intro";
-import Spons from "./components/Spons"
+import Sponsor from "./components/Sponsor"
 
-import Thank_you from "./components/Thank_you";
-import { Component } from "react";
+import Thankyou from "./components/Thank_you";
+// import { Component } from "react";
 
 import Form from "./components/Form.jsx";
 
@@ -35,7 +35,7 @@ export default function App() {
                 <About />
                 <Faq />
                 <Testimonial />
-                <Spons/>               
+                <Sponsor/>               
                 <Footer />
               </>
             }
@@ -95,7 +95,7 @@ export default function App() {
             }
           ></Route>
           <Route path="/thankyou" element={
-            <Thank_you />
+            <Thankyou />
           }></Route>
           <Route
             path="/oscillion"
