@@ -21,15 +21,15 @@ const data = {
   convener: [
     {
       id: 1,
-      img:c12,
-      position: 'Co-Convenor',
-      name:'Piyush Yadav'
-    },
-    {
-      id: 2,
       img:c2,
       position: 'Convenor',
       name:'Vaibhav Singh'
+    },
+    {
+      id: 2,
+      img:c12,
+      position: 'Co-Convenor',
+      name:'Piyush Yadav'
     },
     {
       id: 3,
@@ -72,7 +72,7 @@ const data = {
   ],
   pr: [
     {
-      id: 12,
+      id: 8,
       img: c8,
       position: 'Finance Head',
       name: 'Harsh Goyal'
@@ -81,7 +81,7 @@ const data = {
 
   design: [
     {
-      id: 8,
+      id: 9,
       img: c5,
       position: 'Design Head',
       name:'Alluru Sai Rushitha'
@@ -89,7 +89,7 @@ const data = {
   ],
   event: [
     {
-      id: 9,
+      id: 10,
       img: c4,
       position: 'Event Head',
       name:'Akshit Sharma'
@@ -97,16 +97,22 @@ const data = {
   ],
   tech: [
     {
-      id: 10,
+      id: 11,
       img: c14,
       position: 'Tech Head (App)',
       name: 'Sriraj'
     },
     {
-      id: 11,
+      id: 12,
       img: c15,
       position: 'Tech Head (Web)',
       name:'Sumant Chaudhary'
+    },
+    {
+      id:19,
+      img:"",
+      position:'Networking Head',
+      name:'Ankit Kumar'
     }
   ],
   sport: [

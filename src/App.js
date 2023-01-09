@@ -5,6 +5,7 @@ import Faq from "././components/Faq";
 import About from "./components/About";
 import SeparateEvent from "./components/Separate_Event";
 import eventData from "./components/Eventdata";
+import Events from "./components/Events"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -12,6 +13,7 @@ import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
 import Error from "./components/Error"
+import Profilepage from "./pages/profile/profilepage";
 
 import Intro from "./components/Intro/Intro";
 import Sponsor from "./components/Sponsor"
@@ -32,7 +34,8 @@ export default function App() {
               <>
                 <StickyNav />
                 <Intro />
-                <About />
+                <About/>
+                <Events/>
                 <Faq />
                 <Testimonial />
                 <Sponsor/>               
@@ -133,6 +136,12 @@ export default function App() {
               <Error />
             }
           />
+          <Route path="/profile" element={
+            <>
+              <StickyNav />
+              <Profilepage />
+            </>
+          }></Route>
         </Routes>
         {/* <Footer /> */}
 

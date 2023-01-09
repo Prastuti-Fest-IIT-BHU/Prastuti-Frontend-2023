@@ -37,10 +37,12 @@
   margin-left: 50px;
   list-style: none;
 }
-
 .main {
-  margin-left: calc(210px + 10vw); /* Same as the width of the sidenav */
+  margin-left: calc(210px + 10vw);
   font-size: 1.2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
   padding: 0px 10px;
   list-style: none;
 }
@@ -62,6 +64,7 @@
     margin-left: 0px;
   }
   div.main {
+    display:inline-block;
     margin-left: 0;
   }
 }

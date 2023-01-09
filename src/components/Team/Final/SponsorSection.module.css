@@ -5,6 +5,7 @@
 .pos_title h1 {
   position: relative;
   font-family: Manrope;
+  text-align: center;
   font-weight: 300;
   font-size: 1.8em;
   color: balck;
@@ -23,7 +24,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content:space-around;
   padding-left: 32px;
 }
 .mssg {

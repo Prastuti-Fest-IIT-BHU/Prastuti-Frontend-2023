@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { BsInstagram } from 'react-icons/bs'
 import { BsFacebook } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
@@ -18,13 +19,13 @@ const Thank_you = () => {
           <h2 className='text-3xl m-2 font-Catamaran'>Your Registration id is :</h2>
           <h1 className='m-2 text-3xl font-extrabold text-white :text-5xl lg:text-6xl font-Manrope'>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
         </div>
-        <span><a href="/" className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-medium text-[#DBF2FF] transition duration-300 ease-out border-2 border-[#DBF2FF] rounded-full shadow-md group w-1/2 lg:w-1/4">
+        <span><Link to="/#" className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-medium text-[#DBF2FF] transition duration-300 ease-out border-2 border-[#DBF2FF] rounded-full shadow-md group w-1/2 lg:w-1/4">
           <span className="absolute inset-0 flex items-center justify-center w-full h-full text-[#003247] duration-300 -translate-x-full bg-[#DBF2FF] group-hover:translate-x-0 ease">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
           </span>
           <span className="absolute flex items-center justify-center w-full h-full font-Catamaran text-[#DBF2FF] transition-all duration-300 transform group-hover:translate-x-full ease">Back to Home</span>
           <span className="relative invisible">Go Back To Home</span>
-        </a></span>
+        </Link></span>
       </div>
       <div className='flex w-full h-auto justify-items-start align-middle flex-col md:w-1/2 md:h-screen md:justify-evenly'>
         <span className='max-w-[400px] max-h-[400px] w-fit h-fit flex justify-center py-2 mx-auto m-5'>

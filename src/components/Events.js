@@ -18,7 +18,7 @@ const Card = (prop) => {
 
   return (
 
-    <div  style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
+    <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     {Data.map((item, index) => (
     <>
     

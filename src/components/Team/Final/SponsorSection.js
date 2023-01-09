@@ -17,16 +17,14 @@ function PosSection(props) {
       </div>
       <div className={classes.pos_title} id="pos_2">
         <h1>Tech Team</h1>
-
         <div className={classes.cards}>
           {data.tech.map((item, index) => (
-                <Card img={item.img} position={item.position} name={item.name} key={item.id} />
+                <Card img={item.img} position={item.position} name={item.name} key={index} />
               ))}
         </div>
       </div>
       <div className={classes.pos_title} id="pos_3">
         <h1>Design Team</h1>
-
         <div className={classes.cards}>
           {data.design.map((item, index) => (
             <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -35,7 +33,6 @@ function PosSection(props) {
       </div>
       <div className={classes.pos_title} id="pos_4">
         <h1>Event Team</h1>
-
         <div className={classes.cards}>
           {data.event.map((item, index) => (
                 <Card img={item.img} position={item.position} name={item.name} key={index} />

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Sponsor/Sponsor.css"
 export default function Spons() {
     return (
-        <div className='SponsContainer'>
+        <div className='SponsContainer' id="sponsors">
             <div className="title">
                 <h1>Our Sponsors</h1>
             </div>
