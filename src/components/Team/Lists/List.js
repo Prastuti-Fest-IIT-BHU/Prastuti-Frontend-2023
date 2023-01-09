@@ -30,6 +30,7 @@ const listnamesNames = {
   pos_10: "E-Sports",
   pos_11: "Workshop",
 };
+
 function List() {
   const [Curr, setCurr] = useState("pos_1");
 

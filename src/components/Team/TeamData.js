@@ -16,7 +16,7 @@ import c17 from './prastuti-photos/Vikram.png'
 import c18 from './prastuti-photos/Yash.jpeg'
 import c19 from './prastuti-photos/ayush.png'
 import c20 from './prastuti-photos/kunal.png'
-
+import d3 from './prastuti-photos/Ankit.jpg'
 const data = {
   convener: [
     {
@@ -110,7 +110,7 @@ const data = {
     },
     {
       id:19,
-      img:"",
+      img:d3,
       position:'Networking Head',
       name:'Ankit Kumar'
     }

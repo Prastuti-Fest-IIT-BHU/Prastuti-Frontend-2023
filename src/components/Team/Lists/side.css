@@ -7,6 +7,6 @@
 .item:active{
     color: blue;
 }
-.item:target{
+.item:focus{
     color: blue;
 }
