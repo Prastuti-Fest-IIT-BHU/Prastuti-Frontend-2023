@@ -71,7 +71,7 @@ const Card = (prop) => {
             </motion.div>
           </div>
 
-        <motion.div
+        {/* <motion.div
           className="progress"
           style={{
             scaleX,
@@ -79,10 +79,11 @@ const Card = (prop) => {
             left: "0",
             right: "0",
             height: "5px",
-            backgroundColor: "black",
+            backgroundColor: "#29ffff",
             bottom: "10px",
+            zIndex: "10"
           }}
-        /> 
+        />  */}
         
     </>
     ))}
