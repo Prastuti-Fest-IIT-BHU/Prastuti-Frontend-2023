@@ -3,7 +3,7 @@ import "./profilecss.css";
 import Profileteam from "./profileteam";
 import Profilerequest from "./Profilerequest";
 import Profileevent from "./profileevent";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 const Profilepage = () => {
   const [value, setvalue] = useState(<Profileevent />);
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);

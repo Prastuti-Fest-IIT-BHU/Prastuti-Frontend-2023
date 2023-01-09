@@ -1,5 +1,5 @@
 import React from "react";
-import videobg from "../../assets/bgvideo1.mp4";
+import videobg from "./bgvideo1.mp4";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 const Intro = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 //import MainTitle from "./MainTitle";
 //import Image from "next/image";
-import { Data } from './Data';
+import { Data } from '../Event/Data';
 //import { ArrowUpIcon } from "@heroicons/react/solid";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -40,7 +40,7 @@ function Project({ }) {
       >
         <div className="w-8/12 h-full min-w-[300px] min-h-[200px] bg-slate-200 rounded-lg ">
           <img
-            src={item.image}
+            src={item.image} alt="Event"
             className="rounded-lg w-full h-full object-cover -z-[2]  "
           />
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Sponsor/Sponsor.css"
+import "./Sponsor.css"
 export default function Spons() {
     return (
         <div className='SponsContainer' id="sponsors">
