@@ -38,9 +38,9 @@ function List() {
       if (listnamess[section] < curPos + 40) {
         // curSection = section;
         setCurr(section);
-        console.log(section);
-        console.log(listnamess);
-        console.log(curPos);
+        // console.log(section);
+        // console.log(listnamess);
+        // console.log(curPos);
         // break;
       } else if (listnamess[section] >= curPos) {
         break;

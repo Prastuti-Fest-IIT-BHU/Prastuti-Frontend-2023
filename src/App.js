@@ -5,6 +5,7 @@ import Faq from "././components/Faq";
 import About from "./components/About";
 import SeparateEvent from "./components/Separate_Event";
 import eventData from "./components/Eventdata";
+import Events from "./components/Events"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -32,7 +33,8 @@ export default function App() {
               <>
                 <StickyNav />
                 <Intro />
-                <About />
+                <About/>
+                <Events/>
                 <Faq />
                 <Testimonial />
                 <Sponsor/>               
