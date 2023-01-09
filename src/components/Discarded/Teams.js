@@ -1,8 +1,8 @@
 
 import React from 'react'
-import img2 from '../assets/Teams/img2.jpg'
-import img1 from '../assets/Teams/wave.png'
-import style from '../assets/Teams/style.css'
+import img2 from './/img2.jpg'
+import img1 from './wave.png'
+import  './style.css'
 
 const Teams = () => {
   const [no_of_people, setNo_of_people] = React.useState(3);

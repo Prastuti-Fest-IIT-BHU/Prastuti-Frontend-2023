@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import '../assets/seperateEvents/SeperateEvents.css'
+import './SeperateEvents.css'
 const Separate_Event = ({data}) => {
       return(
         <>

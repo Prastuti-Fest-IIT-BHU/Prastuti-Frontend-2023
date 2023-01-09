@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Error/Error.css";
+import "./Error.css";
 export default function Errpr() {
   return (
     <section class="page_404">

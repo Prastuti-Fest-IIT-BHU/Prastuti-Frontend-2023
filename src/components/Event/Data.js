@@ -1,9 +1,10 @@
-import img1 from "../assets/Eventspage/Codigio.jpg";
-import img2 from "../assets/Eventspage/Consolium.jpg";
-import img3 from "../assets/Eventspage/Cryptx.jpg";
-import img4 from "../assets/Eventspage/Hackoverflow.jpg";
-import img5 from "../assets/Eventspage/Recognizance.jpg";
-import img6 from "../assets/Eventspage/Simulium.png";
+import img1 from "./Images/Codigio.jpg";
+import img2 from "./Images/Consolium.jpg";
+import img3 from "./Images/oscillion.jpg";
+import img4 from "./Images/Hackoverflow.jpg";
+import img5 from "./Images/Recognizance.jpg";
+import img6 from "./Images/Simulim.jpg";
+
 export const Data = [
     {
         title:'Codigo',
@@ -26,7 +27,7 @@ export const Data = [
         
     },
     {
-        title:'Cryptx',
+        title:'Oscillion',
       //info: 'easgffkghkufdtrdt strsdyftrstdhj',
       information:
         'easgffkghkufdtrdt strsdyftrstdhfsrtedytetyectw4q4cwehycu tsrehyvrjbj',
