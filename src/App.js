@@ -13,6 +13,7 @@ import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
 import Error from "./components/Error"
+import Profilepage from "./pages/profile/profilepage";
 
 import Intro from "./components/Intro/Intro";
 import Sponsor from "./components/Sponsor"
@@ -135,6 +136,12 @@ export default function App() {
               <Error />
             }
           />
+          <Route path="/profile" element={
+            <>
+              <StickyNav />
+              <Profilepage />
+            </>
+          }></Route>
         </Routes>
         {/* <Footer /> */}
 
