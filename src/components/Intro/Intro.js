@@ -1,6 +1,7 @@
 import React from "react";
 import videobg from "../../assets/bgvideo1.mp4";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 const Intro = () => {
   return (
     <>
@@ -34,15 +35,31 @@ const Intro = () => {
           </p>
           <div className="grow md:grow-0 flex flex-col">
             <p className="flex hidden md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none">
-            Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the annual technical festival that echoes the spirit of innovation and progress! This gives you a chance to get your feet wet in a wide array of domains, ranging from image processing and simulation to web development and designing circuits. Whether you're a newbie or a know-it-all, Prastuti is here to soak you in its technical extravaganza. With stellar workshops straight from the experts, the seeds of understanding sprout in your mind, which are further watered by the electrifying competitions with handsome prizes! This not only helps polish your engineering prowess but gives you a first-hand experience of the modern industry requirements. Moreover, there are some iconic Guest talks to blow your mind and to keep the flames of advancement ignited! So, are you ready to reconstruct the era of a technological renaissance with Prastuti'23?
+              Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the
+              annual technical festival that echoes the spirit of innovation and
+              progress! This gives you a chance to get your feet wet in a wide
+              array of domains, ranging from image processing and simulation to
+              web development and designing circuits. Whether you're a newbie or
+              a know-it-all, Prastuti is here to soak you in its technical
+              extravaganza. With stellar workshops straight from the experts,
+              the seeds of understanding sprout in your mind, which are further
+              watered by the electrifying competitions with handsome prizes!
+              This not only helps polish your engineering prowess but gives you
+              a first-hand experience of the modern industry requirements.
+              Moreover, there are some iconic Guest talks to blow your mind and
+              to keep the flames of advancement ignited! So, are you ready to
+              reconstruct the era of a technological renaissance with
+              Prastuti'23?
             </p>
-            <div className="flex justify-content p-4">
-              <button
-                className="mt-8 mb-4 m-auto text-white border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#ffffff] hover:text-gray-700 hover:font-bold font-Catamaran
-                  "
-              >
-                Register
-              </button>
+            <div className="flex justify-center justify-content p-4">
+              <Link to="/register/#">
+                <button
+                  className="m-auto mt-8 mb-4 m-auto text-white border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#ffffff] hover:text-gray-700 hover:font-bold font-Catamaran
+                 "
+                >
+                  Register
+                </button>
+              </Link>
             </div>
           </div>
         </div>

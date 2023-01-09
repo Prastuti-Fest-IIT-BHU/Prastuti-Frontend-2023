@@ -70,7 +70,7 @@ const Faq = () => {
 
   return (
 
-    <div className="app">
+    <div className="app" id="faqs">
       <header>
         <h1>Frequently <br/> <spam className="ask">Asked</spam> <br/> Questions</h1>
 
