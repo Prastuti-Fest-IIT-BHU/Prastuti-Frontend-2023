@@ -18,14 +18,14 @@ const listnamess = {
 
 const listnamesNames = {
   pos_1: "Convener",
-  pos_2: "Content Team",
+  pos_2: "Tech",
   pos_3: "Design",
   pos_4: "Event",
   pos_5: "Marketing",
   pos_6: "Publicity",
   pos_7: "Finance",
   pos_8: "Social Media",
-  pos_9: "Tech",
+  pos_9: "Content",
   pos_10: "E-Sports",
   pos_11: "Workshop",
 };
