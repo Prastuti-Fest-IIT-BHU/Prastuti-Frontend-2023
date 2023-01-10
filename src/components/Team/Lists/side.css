@@ -4,6 +4,9 @@
     text-align: centre;
     color: black;
 }
-.item:hover{
-    color:blue
+.item:active{
+    color: blue;
+}
+.item:focus{
+    color: blue;
 }

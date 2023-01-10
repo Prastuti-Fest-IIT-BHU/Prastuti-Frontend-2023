@@ -13,6 +13,15 @@ const Profilerequest = () => {
         <div className="prequestchild">Team Blanze</div>
         <div className="prequestchild preqaccept">Accept</div>
       </div>
+      {/* <div className=" Pchildteam prequest">
+        <div className="prequestchild">Team Blanze</div>
+        <div className="prequestchild preqaccept">Accept</div>
+      </div> */}
+      <div className=" Pchildteam prequest">
+        <div className="prequestchild">Team Blanze</div>
+        <div className="prequestchild preqaccept">Accept</div>
+      </div>
+      
     </div>
   </div></>
   )
