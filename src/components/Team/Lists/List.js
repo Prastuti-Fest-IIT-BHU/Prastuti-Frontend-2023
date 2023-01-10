@@ -1,6 +1,7 @@
 import ListNames from "./ListNames";
 import "./side.css";
 import React, { useState, useEffect } from "react";
+import { style } from "@motionone/dom";
 const listnamess = {
   pos_1: null,
   pos_2: null,
@@ -17,18 +18,19 @@ const listnamess = {
 };
 
 const listnamesNames = {
-  pos_1: "Convener",
-  pos_2: "Content Team",
+  pos_1: "CONVENERS",
+  pos_2: "Tech",
   pos_3: "Design",
   pos_4: "Event",
   pos_5: "Marketing",
   pos_6: "Publicity",
   pos_7: "Finance",
   pos_8: "Social Media",
-  pos_9: "Tech",
+  pos_9: "Content",
   pos_10: "E-Sports",
   pos_11: "Workshop",
 };
+
 function List() {
   const [Curr, setCurr] = useState("pos_1");
 
@@ -36,12 +38,7 @@ function List() {
     const curPos = window.scrollY;
     for (const section in listnamess) {
       if (listnamess[section] < curPos + 40) {
-        // curSection = section;
         setCurr(section);
-        // console.log(section);
-        // console.log(listnamess);
-        // console.log(curPos);
-        // break;
       } else if (listnamess[section] >= curPos) {
         break;
       }
