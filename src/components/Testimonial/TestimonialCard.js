@@ -4,10 +4,7 @@ import React from "react";
 export default function TestimonialCard(props) {
   return (
     <div className="card">
-      <a
-        // href="http://codepen.io/rickzanutta/pen/yjaeB"
-        // target="_blank"
-        // rel="noopener"
+      <div
         className="experiment"
       >
         <div className="experiment-mask"></div>
@@ -21,13 +18,13 @@ export default function TestimonialCard(props) {
           <span>{props.number}</span>
         </div> */}
         <div className="experiment-title-area">
-          <div className="experiment-title-label">{props.info}</div>
-          <div className="experiment-title">{props.title}
-          
+          <div className="experiment-title">{props.title}</div>
         <div className="experiment-number-area ">&nbsp;</div>
+          <div className="experiment-title-label">{props.info}
+          
           </div>
         </div>
-      </a>
+      </div>
     </div>
   );
 }

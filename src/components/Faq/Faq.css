@@ -51,6 +51,9 @@ header h1 {
     font-size: 20px;
     padding: 8px;
     transition: all 2s ease;
+    width: 50%;
+    margin-left: 21vw;
+    cursor: pointer;
 }
 
 br {
@@ -69,6 +72,8 @@ br:after {
     transition: all 2s ease;
     position: relative;
     left: 10px;
+    width: 50%;
+    margin-left: 21vw;
 }
 
 .faq-question::after {
@@ -105,13 +110,18 @@ br:after {
 @media (max-width:1028px) {
     .faq-answer {
         font-size: 17px;
-
-
+        width: auto;
+        margin-left:0;
+        display: flex;
+        align-items: center;
     }
 
     .faq-question {
         font-size: 18px;
-        ;
+        width: auto;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
     }
 
     header h1 {
@@ -125,7 +135,7 @@ br:after {
         left: 9px;
         width: 30px;
         height: 30px;
-
+        margin-bottom: 20px;
     }
 
     br {
