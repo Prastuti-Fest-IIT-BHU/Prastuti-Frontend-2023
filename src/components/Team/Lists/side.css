@@ -1,12 +1,17 @@
-.item{
-    margin-top: 0px;
-    padding-top:5px ;
-    text-align: centre;
-    color: black;
+.item {
+  margin-top: 0px;
+  padding-top: 5px;
+  text-align: centre;
+  color: black;
 }
-.item:active{
-    color: blue;
+.box:hover:hover {
+  background-color: #bfebff;
+  border-radius: 20px;
 }
-.item:focus{
-    color: blue;
+
+.item:active {
+  color: blue;
+}
+.item:focus {
+  color: blue;
 }
