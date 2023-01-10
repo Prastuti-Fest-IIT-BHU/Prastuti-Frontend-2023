@@ -22,19 +22,19 @@ const data = {
     {
       id: 1,
       img:c2,
-      position: 'Convenor',
+      position: 'Convener',
       name:'Vaibhav Singh'
     },
     {
       id: 2,
       img:c12,
-      position: 'Co-Convenor',
+      position: 'Co-Convener',
       name:'Piyush Yadav'
     },
     {
       id: 3,
       img: c17,
-      position: 'Co-Convenor',
+      position: 'Co-Convener',
       name: 'Vikram Pratap Singh'
     }
   ],
