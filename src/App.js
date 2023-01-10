@@ -6,22 +6,32 @@ import eventData from "./pages/Seperate_Event/Eventdata";
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
 import Error from "./pages/Error/Error"
-import Profilepage from "./pages/Profile/profilepage";
+import Profilepage from "./pages/profile/profilepage";
 
+import Loader from "./components/Loader/loader";
 import Thankyou from "./pages/Thank_You/Thank_you";
 // import { Component } from "react";
 
 import Form from "./pages/Form/Form";
 
 export default function App() {
+  const [showLoader, setLoader] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoader(false);
+    },3000)
+  })
   return (
     <>
       <Router>
+        {
+          showLoader ? <Loader text={`landing home`}/> : null
+        }
         <Routes>
           <Route
             path="/"
