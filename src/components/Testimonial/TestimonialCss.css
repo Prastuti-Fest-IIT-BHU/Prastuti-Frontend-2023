@@ -135,8 +135,9 @@ a {
   color: #fff;
 }
 .experiment .experiment-title-area .experiment-title-label {
+  margin-top: 5%;
   position: relative;
-  font-size: 0.625em;
+  font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Manrope', sans-serif;
@@ -152,8 +153,8 @@ a {
 }
 .experiment .experiment-title-area .experiment-title {
   display: inline-block;
-  margin-top: 5%;
-  font-size: 1.1em;
+  margin-top: -2%;
+  font-size: 1.2em;
   font-weight: 800;
   font-family:'Manrope', sans-serif;
 }
@@ -252,9 +253,9 @@ a {
     overflow: visible;
     height: 320px;
   }
-  .experiment-circle{
+  /* .experiment-circle{
     
-  }
+  } */
   .experiment .experiment-image {
     width: 120px;
     height: 120px;
