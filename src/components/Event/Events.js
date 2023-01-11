@@ -2,18 +2,18 @@ import React from "react";
 import { Data } from './Data';
 
 
- import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
 
 const Card = (prop) => {
-  const { scrollYProgress } = useScroll();
+  /*const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  });
+  });*/
 
 
   return (
@@ -32,7 +32,7 @@ const Card = (prop) => {
           // whileInView={"visible"}
           
         >
-            <motion.div class="container w-100 lg:w-4/5 mx-auto shadow-md flex flex-col rounded-lg" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
+            <motion.div class="container w-100 lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
             whileHover={{ scale: 1.05 }}
             >
               <a
