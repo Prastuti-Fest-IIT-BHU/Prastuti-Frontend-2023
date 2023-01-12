@@ -13,8 +13,8 @@ export default function MainTestimonial() {
       cssMode={true}
       mousewheel={true}
       keyboard={true}
-      slidesPerView={2}
-      spaceBetween={250}
+      slidesPerView={3}
+      spaceBetween={120}
       navigation={true}
       modules={[Navigation, Mousewheel, Keyboard]}
       className="mySwiper"
@@ -46,6 +46,24 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"05"}
+              info={"Main Testimonial"}
+              title={"GeeksForGEEKS"}
+              image={
+                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+              }
+            />
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide
+        style={{
+          padding: "10px",
+        }}
+      >
+        <div className="inner-container">
+          <div className="inner-container">
+            <TestimonialCard
+              number={"09"}
               info={"Main Testimonial"}
               title={"GeeksForGEEKS"}
               image={
