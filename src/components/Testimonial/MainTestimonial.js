@@ -14,7 +14,7 @@ export default function MainTestimonial() {
       mousewheel={true}
       keyboard={true}
       slidesPerView={3}
-      spaceBetween={120}
+      spaceBetween={80}
       navigation={true}
       modules={[Navigation, Mousewheel, Keyboard]}
       className="mySwiper"
