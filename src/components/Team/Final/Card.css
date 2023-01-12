@@ -4,18 +4,18 @@
   text-align: center;
   justify-content: space-around;
 }
-.pos{
+.pos {
   text-align: center;
   font-size: 1rem;
 }
 .position {
   height: 29px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #685EDA;
+  color: #685eda;
   position: absolute;
   width: 302px;
   top: 340px;
@@ -27,27 +27,29 @@
   height: 375px;
   margin-right: 5%;
   margin-bottom: 5%;
-  background:#003247;
+  background: #003247;
   border: 2px solid #000000;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
 .team-card:hover {
-    box-shadow: 4px 8px 0px gray;
+  box-shadow: 4px 8px 0px gray;
   transition: all 0.5s ease;
 }
 
-
-.cardImg{
+.cardImg {
   object-fit: cover;
   width: 245px;
   height: 245px;
   margin: 25px 0px 0px 25px;
   overflow: hidden;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 6px solid #000000;
   border-radius: 1000px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
+}
+.content {
+  padding: 25px;
 }
 
 .cardImg:hover {
@@ -55,18 +57,18 @@
   transition: all 0.4s ease;
 }
 
-.cardImg img{
+.cardImg img {
   object-fit: cover;
   width: 241px;
   height: 280px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 19px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .cardImg img:hover {
   transform: scale(1.08);
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 .container {
   padding: 2px 16px;
@@ -74,13 +76,10 @@
   /* background: white; */
 }
 
-.pos{
-
-  color: #DBF2FF;
-
+.pos {
+  padding: 2px;
+  color: #dbf2ff;
 }
-
-
 
 @media screen and (max-width: 700px) {
   .team-card {
@@ -92,35 +91,34 @@
     justify-content: space-between;
   }
 
-  .parent_wrapper{
+  .parent_wrapper {
     width: 100%;
   }
 
-  .cardImg{
+  .cardImg {
     width: 225px;
     height: 225px;
   }
 
-  .cardImg img{
+  .cardImg img {
     width: 235px;
     height: 270px;
   }
 
-  .position{
+  .position {
     position: absolute;
     top: 330px;
     width: 280px;
   }
 
-  .cardTitle{
-    position:absolute;
+  .cardTitle {
+    position: absolute;
     top: 360px;
     width: 280px;
   }
 
-  .drink{
+  .drink {
     position: absolute;
-    top:235px;
+    top: 235px;
   }
 }
-

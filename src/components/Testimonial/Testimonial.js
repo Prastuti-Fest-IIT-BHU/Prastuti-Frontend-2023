@@ -10,7 +10,7 @@ export default function Testimonial() {
         <div
           class="section-text-mask"
         >
-          <h4 class="h5 section-subtitle"></h4>
+          <h4 class="h5 section-subtitle"> </h4>
         </div>
         <div class="section-text-mask">
           <h2 class="h3 section-title">Testimonial</h2>

@@ -16,6 +16,7 @@ body {
     justify-content: center;
     color: black;
     margin-top: 60px;
+    padding: 59px;
 }
 
 header {
@@ -41,16 +42,19 @@ header h1 {
 }
 
 .faq {
-    margin: 15px;
+    margin: 5px;
     color: white;
-    padding: 20px;
+    padding: 12px;
 }
 
 .faq-question {
     position: relative;
-    font-size: 20px;
-    padding: 8px;
+    font-size: 18px;
+    padding: 2px;
     transition: all 2s ease;
+    width: 50%;
+    margin-left: 21vw;
+    cursor: pointer;
 }
 
 br {
@@ -68,7 +72,9 @@ br:after {
     overflow-y: hidden;
     transition: all 2s ease;
     position: relative;
-    left: 10px;
+    left: 1px;
+    width: 50%;
+    margin-left: 21vw;
 }
 
 .faq-question::after {
@@ -77,10 +83,10 @@ br:after {
     float: right;
     left: 60px;
     transition: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 
-    background-image: url('./down-arrow.png');
+    background-image: url('./down-arrow.png') ;
     -webkit-filter: invert(100%);
     filter: invert(100%);
     background-size: contain;
@@ -105,13 +111,19 @@ br:after {
 @media (max-width:1028px) {
     .faq-answer {
         font-size: 17px;
-
-
+        width: auto;
+        margin-left:0;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
     }
 
     .faq-question {
-        font-size: 18px;
-        ;
+        font-size: 17px;
+        width: auto;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
     }
 
     header h1 {
@@ -125,7 +137,7 @@ br:after {
         left: 9px;
         width: 30px;
         height: 30px;
-
+        margin-bottom: 20px;
     }
 
     br {

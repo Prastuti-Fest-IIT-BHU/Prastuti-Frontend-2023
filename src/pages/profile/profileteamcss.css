@@ -1,87 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Manrope:wght@300&&display=swap');
-.Pchildteam{
-    margin: 2rem;
-     width: 20rem;
-     min-height: 5rem;
-     background: linear-gradient(270deg, rgba(219,242,255,1) 0%, #b5c8e8 100%);
-    border-radius: 2rem;
-    position: relative;
-    box-shadow: rgba(86, 87, 87, 0.832) 5px 6px 7px 1px;
-  }
-  .psubchild1team{
-    position: absolute;
-    left: -10%;
-    top: 20%;
-    border-radius: 1rem;
-    background: linear-gradient(90deg, rgba(219,242,255,1) 0%, #b5c8e8 100%);
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Manrope:wght@300&&display=swap");
+.Pchildteam {
+  margin: 2rem;
+  width: 20rem;
+  min-height: 5rem;
+  background: linear-gradient(270deg, rgba(219, 242, 255, 1) 0%, #b5c8e8 100%);
+  border-radius: 2rem;
+  position: relative;
+  box-shadow: rgba(86, 87, 87, 0.832) 5px 6px 7px 1px;
+  padding: 5px;
+}
+.psubchild1team {
+  position: absolute;
+  left: -10%;
+  top: 20%;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgba(219, 242, 255, 1) 0%, #b5c8e8 100%);
 
-    background-position: center center;
-    background-size: cover;
-    height: 60%;
-    width: 20%;
-    box-shadow: rgba(110, 109, 109, 0.832) 5px 6px 7px 1px;
-    overflow: hidden;
-    
-  }
+  background-position: center center;
+  background-size: cover;
+  height: 60%;
+  width: 20%;
+  box-shadow: rgba(110, 109, 109, 0.832) 5px 6px 7px 1px;
+  overflow: hidden;
+}
 
-  .teamname{
-    display: block;
-    font-size: 1.2rem;
-    width: fit-content;
-  }
-  .psubchildteam{
-    position: relative;
-    right: -20%;
-    top: 0%;
-    width: fit-content;
-   
-  }
-  
-  .prequest{
-    display: flex;
-    justify-content:space-between;
-    align-content: center;
-    align-items: center;
-    
-  }
-  .prequestchild{
+.teamname {
+  display: block;
+  font-size: 1.2rem;
+  width: fit-content;
+}
+.psubchildteam {
+  position: relative;
+  right: -20%;
+  top: 0%;
+  width: fit-content;
+}
+
+.prequest {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.prequestchild {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
+}
+.preqaccept {
+  padding: 0.4rem 1rem;
+  border-radius: 1.4rem;
+  background-color: #477db1;
+  box-shadow: rgba(86, 87, 87, 0.832) 5px 6px 7px 1px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  margin: 1rem;
+}
+@media screen and (max-width: 360px) {
+  .prequestchild {
     margin: 1rem;
-    font-size: 1.5rem;
-    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
   }
-  .preqaccept{
-    padding:.4rem 1rem;
-    border-radius: 1.4rem;
-    background-color: #477db1;
-    box-shadow: rgba(86, 87, 87, 0.832) 5px 6px 7px 1px;
-   font-size: 1.2rem;
-   color: white;
-   cursor: pointer;
-   margin: 1rem;
+}
+@media screen and (max-width: 333px) {
+  .prequestchild {
+    margin: 0.7rem;
   }
-  @media screen and (max-width:360px){
-    .prequestchild{
-      margin: 1rem;
-      font-size: 1.2rem;
-    }
+}
+@media screen and (max-width: 333px) {
+  .prequestchild {
+    font-size: 1rem;
   }
-  @media screen and (max-width:333px){
-    .prequestchild{
-      margin: .7rem;
-
-    }    
-
+}
+@media screen and (max-width: 300px) {
+  .Pchildteam {
+    width: 100%;
   }
-  @media screen and (max-width:333px){
-    .prequestchild{
-      font-size: 1rem;
-
-    }    
-
-  }
-  @media screen and (max-width:300px){
-   .Pchildteam{
-   width: 100%;
-   }
-  }
-  
+}
