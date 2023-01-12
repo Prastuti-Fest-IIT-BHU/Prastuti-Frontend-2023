@@ -1,15 +1,12 @@
-<<<<<<< HEAD:src/components/Register.js
 import React, { useState, useEffect } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
-import image from "../assets/Register/logo.png";
-import style from "../assets/Register/style.css"
+// import image from "../assets/Register/logo.png";
+// import style from "../assets/Register/style.css"
 import axios from "axios"
-=======
-import React from "react";
+// import React from "react";
 import image from "./logo.png";
 import "./Register.css"
->>>>>>> 877c7d3b1d4bd47587b50770359ef1dbb1fe11b3:src/components/Register/Register.js
 
 const Register = () => {
   const [ profile, setProfile ] = useState([]);
@@ -35,6 +32,7 @@ const onSuccess = async(res) => {
   setProfile(res.profileObj);
   const data = await axios.post("http://localhost:8000/api/login",{tokenId:res.tokenId})
   localStorage.setItem("loginData",data.data.user._id);
+  console.log("dhjbdj");
   window.location.replace("/form");
 };
 
@@ -105,6 +103,7 @@ const logOut = () => {
                     onFailure={onFailure}
                     cookiePolicy={'single_host_origin'}
                     isSignedIn={true}
+                    style={{backgroundColor:"rgba(0,0,0,0.5)!important"}}
                 />
             )}
               </span>

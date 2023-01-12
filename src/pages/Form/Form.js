@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import  axios  from 'axios';
 const Form1 = () => {
@@ -12,7 +12,15 @@ const Form1 = () => {
   const [social,setsocial]=useState([
     "","",""
   ])
-  
+  useEffect(()=>{
+    const checkFormFilled = async ()=>{
+      const {data} = await axios.get(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`);
+      if(data[0].isFormFilled){
+        window.location.replace("/");
+      }
+    }
+    checkFormFilled()
+  },[])
   const inserData =(e)=>{
     setvalue((prevalue)=>{
       return{
@@ -60,7 +68,7 @@ const Form1 = () => {
       interestArray.push(interests[index]);
     }
   });
-  console.log(interestArray);
+  
   const UpdateData = async()=>{
       try {
         const data = await axios.put(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`,{
@@ -69,16 +77,18 @@ const Form1 = () => {
           Phone:value.Phone,
           Gender:value.Gender,
           SocialMedia_Links:social,
-          Interests:interestArray
+          Interests:interestArray,
+          isFormFilled:true
         });
-        alert("done bro")
+       window.location.replace("/thankyou")
       } catch (error) {
         alert("error")
       }
   }
   function Submit(e){
     e.preventDefault();
-    UpdateData()
+      UpdateData()
+    
   }
   return (
     <div>

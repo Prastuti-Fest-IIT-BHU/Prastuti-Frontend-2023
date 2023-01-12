@@ -10,10 +10,13 @@ const Separate_Event = ({data}) => {
                 <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-Manrope text-lg">{data.subtitle}</h2>
                 <p className="md:text-md xl:text-lg text-justify font-Catamaran text-md mb-4">{data.eventInfo}</p>
                 <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">Participants : <span>000</span></h3>
-                <Link to='/login'>
+                {localStorage.getItem("loginData")?<Link to='/'>
                   <button className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
                   " >Register</button>
-                </Link>
+                </Link>:<Link to='/login'>
+                  <button className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
+                  " >Register</button>
+                </Link>}
               </div>
           </div>
         </>

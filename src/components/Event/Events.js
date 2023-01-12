@@ -23,6 +23,7 @@ const Card = (prop) => {
     <>
     
         <div
+          key={index}
           id="card" 
           class="pt-8 pb-12 x  {item.float}"
           data-aos={item.slide}
@@ -36,7 +37,7 @@ const Card = (prop) => {
             whileHover={{ scale: 1.05 }}
             >
               <a
-              href="/"
+              href={item.path}
                 v-for="card in cards"
                 class="flex flex-col md:flex-row overflow-hidden
                                     rounded-lg mt-4 w-100 mx-2"

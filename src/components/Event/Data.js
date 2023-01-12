@@ -14,6 +14,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img1,
         slide:'fade-up',
+        path:"/codigo"
         
     },
     {
@@ -24,7 +25,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img2,
         slide:'fade-down',
-        
+        path:"/consilium"
     },
     {
         title:'Oscillion',
@@ -34,7 +35,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img3,
         slide:'fade-up',
-        
+        path:"/oscillion"
     },
     {
         title:'Hackoverflow',
@@ -44,7 +45,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img4,
         slide:'fade-down',
-        
+        path:"/hackoverflow"
     },
     {
     title:'Recognizance',
@@ -54,7 +55,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img5,
         slide:'fade-up',
-        
+        path:"/recognizance"
     },
     {
         title:'Simulium',
@@ -64,7 +65,7 @@ export const Data = [
         infoinfo:'jshkdshflisdjlijsd.',
         image:img6,
         slide:'fade-down',
-        
+        path:"/simulim"
     },
   
   ];

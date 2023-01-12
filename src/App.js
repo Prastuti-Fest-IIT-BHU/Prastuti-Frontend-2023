@@ -11,7 +11,7 @@ import StickyNav from "./components/Navbars/stickyNav";
 import StaticNav from "./components/Navbars/staticNav";
 import PrastutiTeam from "./components/Team/Teams";
 import Error from "./pages/Error/Error"
-import Profilepage from "./pages/Profile/profilepage";
+import Profilepage from "./pages/profile/profilepage";
 
 import Thankyou from "./pages/Thank_You/Thank_you";
 // import { Component } from "react";
@@ -43,7 +43,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent data={eventData.codigo} />
+                <SeparateEvent  data={eventData.codigo} />
               </>
             }
           ></Route>
@@ -52,7 +52,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent data={eventData.hackoverflow} />
+                <SeparateEvent  data={eventData.hackoverflow} />
               </>
             }
           ></Route>
@@ -61,7 +61,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent data={eventData.recognizance} />
+                <SeparateEvent  data={eventData.recognizance} />
               </>
             }
           ></Route>
@@ -70,7 +70,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent data={eventData.simulim} />
+                <SeparateEvent  data={eventData.simulim} />
               </>
             }
           ></Route>
@@ -79,7 +79,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent data={eventData.consilium} />
+                <SeparateEvent  data={eventData.consilium} />
               </>
             }
           ></Route>
