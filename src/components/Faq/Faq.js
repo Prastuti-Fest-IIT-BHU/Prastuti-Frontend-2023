@@ -72,6 +72,7 @@ const Faq = () => {
         <div className="faq-answer">
           {faq.answer}
         </div>
+        <div className="faqline"></div>
       </div >
 
     )

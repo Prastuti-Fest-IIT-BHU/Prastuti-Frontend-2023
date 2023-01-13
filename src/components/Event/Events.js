@@ -33,7 +33,7 @@ const Card = (prop) => {
           // whileInView={"visible"}
           
         >
-            <motion.div class="container w-100 lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
+            <motion.div class="container pb-5 w-100 lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
             whileHover={{ scale: 1.05 }}
             >
               <a
@@ -62,7 +62,7 @@ const Card = (prop) => {
                     {item.information}
                   </p>
                   <p
-                    class="text-sm text-gray-700 tracking-wide font-semibold mt-2"
+                    class="text-xl text-gray-700 tracking-wide font-semibold mt-2"
                     style={{ fontFamily: "Catarman",color: "#003247" }}
                   >
                     {item.infoinfo}
