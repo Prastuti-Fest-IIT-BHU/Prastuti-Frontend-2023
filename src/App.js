@@ -29,9 +29,9 @@ export default function App() {
   return (
     <>
       <Router>
-        {
+        {/* {
           showLoader ? <Loader text={`landing home`}/> : null
-        }
+        } */}
         <Routes>
           <Route
             path="/"

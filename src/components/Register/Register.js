@@ -30,7 +30,7 @@ const Register = () => {
 });
 const onSuccess = async(res) => {
   setProfile(res.profileObj);
-  const data = await axios.post("http://localhost:8000/api/login",{tokenId:res.tokenId})
+  const data = await axios.post("https://prastuti-2023.onrender.com/api/login",{tokenId:res.tokenId})
   localStorage.setItem("loginData",data.data.user._id);
   console.log("dhjbdj");
   window.location.replace("/form");

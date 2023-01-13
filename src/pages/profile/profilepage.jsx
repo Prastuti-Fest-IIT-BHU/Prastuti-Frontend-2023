@@ -10,6 +10,7 @@ const Profilepage = () => {
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
   const [team,setteam] = useState(null);
   const [event,setevent] = useState(null);
+  const [request,setrequest] = useState(null);
   const [input, setinput] = useState([]);
   const [value, setvalue] = useState(null);
 
@@ -28,23 +29,28 @@ const Profilepage = () => {
     }
   }
   useEffect(()=>{
-    if (localStorage.getItem("loginData")) {
+    if(localStorage.getItem("loginData")){
       const gettingData = async()=>{
         const {data} = await axios.get(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`)
           setinput(data[0]);
           setteam(data[0].Teams);
           setevent(data[0].Events_Participated)
           setvalue(<Profileevent event={data[0].Events_Participated} />)
-          console.log(data[0]);
+          setrequest(data[0].Pending_Requests);
+         
       } 
       gettingData();
     } else {
       window.location.replace("/")
       
-    }
-    
+    }   
 
   },[])
+
+  if (!localStorage.getItem('loginData')){
+    window.location.replace("/");
+    return;
+  }
 
   return (
     <>
@@ -109,7 +115,7 @@ const Profilepage = () => {
               <div
                 className={`Pnavchild px-4 ${addclass[2]}`}
                 onClick={() => {
-                  setvalue(<Profilerequest team={team}/>);
+                  setvalue(<Profilerequest request={request} team={team}/>);
                   handleevent(2);
                 }}
               >

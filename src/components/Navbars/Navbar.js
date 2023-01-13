@@ -124,22 +124,21 @@ const Navbar = () => {
                 <Link to="/team/#">Team</Link>
               </li>
             </ul>
-            <Link to="/login">
+            {localStorage.getItem("loginData") ? <Link to="/profile">
               <button
-                onClick={() => {
-                  localStorage.removeItem("loginData");
-                }}
                 className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                             ease-in-out"
-              >
-                {localStorage.getItem("loginData") ? (
-                  <span>Logout</span>
-                ) : (
-                  "Register/Login"
-                )}
+              >Profile
+              </button>
+            </Link>:<Link to="/login">
+              <button className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+                            sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
+                            ease-in-out">
+                  Register/Login
               </button>
             </Link>
+            }
           </div>
         </div>
 
