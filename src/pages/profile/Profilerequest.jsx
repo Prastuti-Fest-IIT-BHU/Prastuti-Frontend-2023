@@ -19,22 +19,27 @@ const RequestCard = (prop) => {
     gettingteam();
   },[]);
   const acceptRequest = async () => {
-    await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/request/accept`, {
+   try{ const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/request/accept`, {
       requestId: prop.data._id,
     });
-    alert("Accepted Request");
+    alert(response.data.message);
     window.location.reload(true);
+  }
+  catch(error){
+    alert(error.response.data.message)
+  }
+
   };
 
   const deleterequset = async () => {
     try {
-      await axios.delete(`${process.env.REACT_APP_SECRET_KEY}/api/request/`, {
+      const response = await axios.delete(`${process.env.REACT_APP_SECRET_KEY}/api/request/`, {
         data: { requestId: prop.data._id },
       });
-      alert("Rejected Request");
+      alert(response.data.message);
       window.location.reload(true);
     } catch (error) {
-      alert(error);
+      alert(error.response.data.message);
     }
   };
   return (

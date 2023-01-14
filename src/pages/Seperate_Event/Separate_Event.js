@@ -10,8 +10,7 @@ const Separate_Event = ({data}) => {
    const [team,setteam]=useState(null);
    const getEvent = async()=>{
     const {data} =  await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/events`);
-    seteventEame(data.events)
-     
+    seteventEame(data.events.find(({ Name }) => Name === Eventitle).no_of_participants)
     setresult(data.events.find(({ Name }) => Name === Eventitle))
     
    }
@@ -34,7 +33,7 @@ const Separate_Event = ({data}) => {
             alert(response.data.message);
             window.location.replace("/profile")
            } catch (error) {
-            alert(error)
+            alert(error.response.data.message)
            }
      }
      else
@@ -43,6 +42,7 @@ const Separate_Event = ({data}) => {
      }
 
    }
+  //  console.log(result._id);
    const register =async()=>{
         if(!result.team_event){
           try{ const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/soloRegistration`,{
@@ -53,11 +53,10 @@ const Separate_Event = ({data}) => {
           window.location.replace("/profile");
         }
           catch(error){
-            alert(error)
+            alert(error.response.data.message)
           }
         }
         if(result.team_event){
-          console.log("else");
           let teamName = prompt("Please enter your team name that you have created in profilepage","team name")
           findingteam(teamName)
            const teamdata = result.teams.find(({ Name }) => Name === teamName)
@@ -71,7 +70,7 @@ const Separate_Event = ({data}) => {
                 <h1 className= "font-bold text-xl xl:text-3xl md:text-2xl mt-10 mb-4 font-Manrope" >{data.title}</h1>
                 <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-Manrope text-lg">{data.subtitle}</h2>
                 <p className="md:text-md xl:text-lg text-justify font-Catamaran text-md mb-4">{data.eventInfo}</p>
-                <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">Participants : <span>000</span></h3>
+                <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">Participants : <span>{eventName}</span></h3>
                 {localStorage.getItem("loginData")?<Link  onClick={register}>
                   <button className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
                   " >Register</button>

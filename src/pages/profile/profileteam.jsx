@@ -17,7 +17,7 @@ const Requestsent = (prop)=>{
 window.location.reload(true);
 
     } catch (error) {
-      alert(error);
+      alert(error.response.data.message);
     }
   };
   return (<><div className="eventname">
@@ -31,17 +31,22 @@ window.location.reload(true);
 const Profileteam = (prop) => {
   const [value, setvalue] = useState(null);
   const createTeam = async () => {
-    if (value) {
-      await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
+
+    try{if (value) {
+      const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
         userID: localStorage.getItem("loginData"),
         Team_Name: value,
         Member_Count: 1,
       });
-      alert("Team created");
+      alert(response.data.message);
       window.location.reload(true);
     } else {
       alert("Please write team name");
-    }
+    }}
+   catch(error){
+    alert(error.response.data.message)
+   }
+
   };
   return (
     <>
