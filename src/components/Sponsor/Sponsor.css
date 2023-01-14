@@ -15,6 +15,7 @@ font-family: 'Manrope', sans-serif;
     height: 60vh;
     background-color: #DBF2FF;
     color: #004C7D;
+    /* background: url("../Design/light+circle.png") no-repeat center; */
 }
 
 .SponsContainer .title{
@@ -46,6 +47,7 @@ font-family: 'Manrope', sans-serif;
     font-weight: bolder;
     
 }
+
 .line{
     margin: 0;
     padding: 30px 0px;
@@ -57,6 +59,7 @@ font-family: 'Manrope', sans-serif;
     background-color: #DBF2FF;
     color: #004C7D;
 }
+
 
 .tech{
     width: 200px;

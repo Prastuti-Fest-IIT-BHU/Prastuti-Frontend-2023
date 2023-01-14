@@ -4,6 +4,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope&display=swap');
 
+.Navlogo{
+    height: 100%;
+    width: 250px;
+    position: relative;
+    z-index: 1000;
+    border: none;
+    box-shadow: none;
+}
+
 .social-links::after{
     background-color: #DBF2FF;
     content:"";

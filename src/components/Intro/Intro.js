@@ -2,17 +2,18 @@ import React from "react";
 import videobg from "./bgvideo1.mp4";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
+import "./Intro.css"
 const Intro = () => {
   return (
     <>
-      <div className="flex justify-center align-center flex-wrap overflow-hidden ">
-        <video
+      <div className="flex justify-center align-center flex-wrap overflow-hidden IntroContainer ">
+        {/* <video
           src={videobg}
           autoPlay
           muted
           loop
           className="absolute t-0 l-0 w-[100%] h-[100%] z-[-10] object-cover opacity-30"
-        />
+        /> */}
         <div className="flex flex-col h-[100vh] w-[100vw] bg-black/10">
           <p className="text-3xl text-center grow md:grow-0 place-content-evenly md:text-left text-white relative sm:mt-10 lg:mt-20 mr-2 ml-2 min-h-max font-bold p-6 lg:px-12">
             <TypeAnimation
@@ -29,12 +30,13 @@ const Intro = () => {
               ]}
               speed={30} // Custom Speed from 1-99 - Default Speed: 40
               style={{ fontSize: "2em" }}
+              className="movingText"
               wrapper="span" // Animation will be rendered as a <span>
               repeat={Infinity} // Repeat this Animation Sequence infinitely
             />
           </p>
           <div className="grow md:grow-0 flex flex-col">
-            <p className="flex hidden md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none">
+            <p className="flex md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none intro">
               Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the
               annual technical festival that echoes the spirit of innovation and
               progress! This gives you a chance to get your feet wet in a wide
@@ -48,17 +50,18 @@ const Intro = () => {
               a first-hand experience of the modern industry requirements.
               Moreover, there are some iconic Guest talks to blow your mind and
               to keep the flames of advancement ignited! So, are you ready to
-              reconstruct the era of a technological renaissance with
+              reconstruct the era of technological renaissance with
               Prastuti'23?
             </p>
             <div className="flex justify-center justify-content p-4">
               <Link to="/register/#">
-                <button
+                {/* <button
                   className="m-auto mt-8 mb-4 m-auto text-white border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#ffffff] hover:text-gray-700 hover:font-bold font-Catamaran
                  "
                 >
                   Register
-                </button>
+                </button> */}
+                <button className="linkBtn">Register</button>
               </Link>
             </div>
           </div>

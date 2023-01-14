@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* <div className="text-right"> */}
           <h1 className="text-white text-2xl font-['Manrope'] font-black px-3 ml-2 drop-shadow-lg">
             <Link smooth to="/#">
-              Prastuti'23
+              <img src="./prastuti-logo.png" alt="Prastuti'23" className="Navlogo"/> 
             </Link>
           </h1>
           {/* <img src="Prastuti-Frontend-2023/src/assets/prastuti.png" alt='logo' className=""></img> */}
@@ -95,11 +95,11 @@ const Navbar = () => {
                   smooth
                   to={{
                     pathname: "/",
-                    hash: "faqs",
+                    hash: "sponsors",
                   }}
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  FAQs
+                  Sponsors
                 </Link>
               </li>
               <li
@@ -110,11 +110,11 @@ const Navbar = () => {
                   smooth
                   to={{
                     pathname: "/",
-                    hash: "sponsors",
+                    hash: "faqs",
                   }}
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Sponsors
+                  FAQs
                 </Link>
               </li>
               <li

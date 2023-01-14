@@ -2,11 +2,12 @@
   margin-top: 0px;
   padding-top: 5px;
   text-align: centre;
-  color: black;
+  color: white;
 }
-.box:hover:hover {
+.box:hover{
   background-color: #bfebff;
   border-radius: 20px;
+  color: black;
 }
 
 .item:active {

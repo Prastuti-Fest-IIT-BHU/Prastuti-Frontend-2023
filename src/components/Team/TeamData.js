@@ -154,6 +154,12 @@ const data = {
       position: 'Codigo',
       name:'Ashwani'
     },
+    {
+      id: 19,
+      img: c6,
+      position: 'Oscillion',
+      name:'Hrishabh Kumar Garg'
+    },
   ],
 };
 

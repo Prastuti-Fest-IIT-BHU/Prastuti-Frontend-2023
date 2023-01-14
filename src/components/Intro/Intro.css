@@ -1,0 +1,44 @@
+.IntroContainer{
+    background: url("../Design/dark+circle.png") no-repeat center;
+    background-size: 100vw 100vh;
+}
+
+.linkBtn{
+    margin-top: 40px;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    color: #000;
+    background-color: #DBF2FF;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    z-index: 20;
+}
+
+.linkBtn:hover{
+    background-color: #003247;
+    box-shadow: 0px 10px 15px rgba(0, 50, 71, 0.4);
+    color: #DBF2FF;
+    transform: translateY(-7px);
+}
+
+
+@media screen and (min-width: 360px) {
+    .IntroContainer{
+        background: url("../Design/dark.png");
+        background-size: 100vw 100vh;
+    }
+    .movingText{
+        font-size: larger !important;
+        margin: 0;
+        padding: 0 !important;
+    }
+  }

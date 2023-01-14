@@ -26,10 +26,9 @@ export default function Spons() {
                         <img src="https://techanalogy.org/_next/image?url=%2Ficon.svg&w=256&q=75" alt="" className='tech' />
                     </a>
                     <h1 className='cardtitle'> Education Partner</h1>
-
+                
                 </div>
             </div>
-
 
 
         </div>

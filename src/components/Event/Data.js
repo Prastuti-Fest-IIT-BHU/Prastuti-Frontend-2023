@@ -45,7 +45,7 @@ export const Data = [
       Industries. The participants will be introduced to the working principles and
       construction of such devices and how they communicate to produce effective
       results.`,
-    infoinfo: 'jshkdshflisdjlijsd.',
+    infoinfo: 'Head: Hrishabh Kumar Garg (88210448398)',
     image: img3,
     slide: 'fade-up',
 

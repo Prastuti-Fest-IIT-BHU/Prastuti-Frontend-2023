@@ -1,5 +1,6 @@
 import React from "react";
 import { Data } from './Data';
+import "./Events.css"
 
 
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -18,7 +19,8 @@ const Card = (prop) => {
 
   return (
 
-    <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
+    // <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
+    <div id="events">
     {Data.map((item, index) => (
     <>
     
