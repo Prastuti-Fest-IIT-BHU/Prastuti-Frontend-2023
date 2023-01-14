@@ -9,34 +9,29 @@ const Separate_Event = ({data}) => {
    const [result,setresult] =useState(null);
    const [team,setteam]=useState(null);
    const getEvent = async()=>{
-    const {data} =  await axios.get("https://prastuti-2023.onrender.com/api/events");
-    // console.log(data.events);
+    const {data} =  await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/events`);
     seteventEame(data.events)
      
     setresult(data.events.find(({ Name }) => Name === Eventitle))
     
    }
-  //  console.log(result);
    useEffect(()=>{
     getEvent()
    },[])
    const findingteam = async(name)=>{
-    const {data} = await axios.get(`http://localhost:8000/api/teams`)
+    const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/teams`)
       
   const verifiedname =data.teams.find((({Team_Name})=>Team_Name===name))
-  // console.log(result._id)
-  console.log(localStorage.getItem("loginData"));
-  console.log(result._id);
 
 
      if(verifiedname){
            try {
-               await axios.post(`http://localhost:8000/api/teamRegistration`,{
+             const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teamRegistration`,{
                 "user_id": localStorage.getItem("loginData"),
                 "event_id": result._id,
                 "team_id": verifiedname._id
             })
-            alert("Registered successfully");
+            alert(response.data.message);
             window.location.replace("/profile")
            } catch (error) {
             alert(error)
@@ -49,14 +44,14 @@ const Separate_Event = ({data}) => {
 
    }
    const register =async()=>{
-    console.log("regi");
         if(!result.team_event){
-          try{ await axios.post(`https://prastuti-2023.onrender.com/api/soloRegistration`,{
+          try{ const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/soloRegistration`,{
             "user_id": localStorage.getItem("loginData"),
             "event_id": result._id
         })
-          alert("successfully registered"); 
-          window.location.replace("/profile");}
+          alert(response.data.message); 
+          window.location.replace("/profile");
+        }
           catch(error){
             alert(error)
           }
@@ -64,10 +59,8 @@ const Separate_Event = ({data}) => {
         if(result.team_event){
           console.log("else");
           let teamName = prompt("Please enter your team name that you have created in profilepage","team name")
-          // console.log(result.teams);
           findingteam(teamName)
            const teamdata = result.teams.find(({ Name }) => Name === teamName)
-          //  console.log(teamdata);
         }
 
    }

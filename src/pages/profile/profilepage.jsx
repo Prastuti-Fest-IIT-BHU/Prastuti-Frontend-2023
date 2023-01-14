@@ -6,7 +6,7 @@ import Profileevent from "./profileevent";
 import Footer from "../../components/Footer/Footer";
 import axios from "axios";
 const Profilepage = () => { 
-  
+ 
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
   const [team,setteam] = useState(null);
   const [event,setevent] = useState(null);
@@ -30,10 +30,12 @@ const Profilepage = () => {
   }
   useEffect(()=>{
     if(localStorage.getItem("loginData")){
+      console.log(process.env.REACT_APP_SECRET_KEY);
       const gettingData = async()=>{
-        const {data} = await axios.get(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`)
+        const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`)
           setinput(data[0]);
           setteam(data[0].Teams);
+          // console.log(data[0].Teams);
           setevent(data[0].Events_Participated)
           setvalue(<Profileevent event={data[0].Events_Participated} />)
           setrequest(data[0].Pending_Requests);

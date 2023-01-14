@@ -3,13 +3,9 @@ import "./profilecss.css";
 import { Speedometer2 } from "react-bootstrap-icons";
 import { Calendar2Check } from "react-bootstrap-icons";
 const Profileevent = (prop) => {
-  // console.log(prop.event[1]);
   const [value, setvalue] = useState(prop.event);
-
-  console.log("no");
   return (
     <>
-      {" "}
       <div className="Pmaincontainer">
         <div className="Pcontainer">
           {prop.event.map((data, index) => {
@@ -38,7 +34,6 @@ const Profileevent = (prop) => {
                             left: "-3px",
                           }}
                         >
-                          {" "}
                           <Speedometer2 />
                         </div>
                         {data.team_event

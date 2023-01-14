@@ -11,11 +11,11 @@ import "./Register.css"
 const Register = () => {
   const [ profile, setProfile ] = useState([]);
   const [value,setvalue]=useState(localStorage.getItem("loginData")?JSON.parse(localStorage.getItem('loginData')):null)
-  const clientId = '134310782555-uh34p2qnfu3q4p8u8puinsmpn251org0.apps.googleusercontent.com';
+  const clientId =process.env.REACT_APP__CLIENT_ID;
   useEffect(() => {
     const initClient = () => {
         gapi.client.init({
-            clientId: clientId,
+            clientId:process.env.REACT_APP__CLIENT_ID,
             scope: ''
         });
     };
@@ -30,7 +30,7 @@ const Register = () => {
 });
 const onSuccess = async(res) => {
   setProfile(res.profileObj);
-  const data = await axios.post("https://prastuti-2023.onrender.com/api/login",{tokenId:res.tokenId})
+  const data = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/login`,{tokenId:res.tokenId})
   localStorage.setItem("loginData",data.data.user._id);
   console.log("dhjbdj");
   window.location.replace("/form");
@@ -91,21 +91,17 @@ const logOut = () => {
               </div> */}
               <span className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center">
                 {/* Sign in with Google  */}
-                {profile ? (
-                <div>
-                    <GoogleLogout className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center" clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
-                </div>
-            ) : (
+               
                 <GoogleLogin className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center"
                     clientId={clientId}
                     buttonText="Sign in with Google"
                     onSuccess={onSuccess}
                     onFailure={onFailure}
                     cookiePolicy={'single_host_origin'}
-                    isSignedIn={true}
+                    
                     style={{backgroundColor:"rgba(0,0,0,0.5)!important"}}
                 />
-            )}
+           
               </span>
             </a>
           </div>
