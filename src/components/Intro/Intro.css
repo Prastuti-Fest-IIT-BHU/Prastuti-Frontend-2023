@@ -24,7 +24,8 @@
 }
 
 .linkBtn:hover{
-    background-color: #003247;
+    /* background-color: #003247; */
+    background-color: #2985ff;
     box-shadow: 0px 10px 15px rgba(0, 50, 71, 0.4);
     color: #DBF2FF;
     transform: translateY(-7px);
@@ -34,7 +35,7 @@
 @media screen and (min-width: 360px) {
     .IntroContainer{
         background: url("../Design/dark.png");
-        background-size: 100vw 100vh;
+        /* background-size: 100vw 100vh; */
     }
     .movingText{
         font-size: larger !important;

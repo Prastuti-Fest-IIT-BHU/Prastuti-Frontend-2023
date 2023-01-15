@@ -16,7 +16,8 @@ svg:not(:root) {
   box-sizing: border-box;
 }
 body {
-  background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%);
+  /* background: radial-gradient(circle,#003247 0%, #013147 10%,#013044 20%,#003046 30%,#002f43 70% ,#01273c 90% ,#002639 100%); */
+  background: url("../Design/light+circle.png");
   color: #000000;
 }
 body.is-mobile-menu-open,
@@ -28,6 +29,9 @@ body.overflow {
 }
 .MainTestimonial {
   display: block;
+}
+.mySwiper{
+  background: url("../Design/light+circle.png");
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -309,6 +313,7 @@ a {
   position: relative;
 }
 .section-title {
+  background: url("../Design/light+circle.png") bottom;
   font-family: 'Caterman', sans-serif;
   font-size: 50px;
   font-weight: 300;

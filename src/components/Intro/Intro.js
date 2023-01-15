@@ -1,5 +1,4 @@
 import React from "react";
-import videobg from "./bgvideo1.mp4";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 import "./Intro.css"
@@ -14,7 +13,7 @@ const Intro = () => {
           loop
           className="absolute t-0 l-0 w-[100%] h-[100%] z-[-10] object-cover opacity-30"
         /> */}
-        <div className="flex flex-col h-[100vh] w-[100vw] bg-black/10">
+        <div className="flex flex-col md:h-[100vh] w-[100vw] bg-black/10">
           <p className="text-3xl text-center grow md:grow-0 place-content-evenly md:text-left text-white relative sm:mt-10 lg:mt-20 mr-2 ml-2 min-h-max font-bold p-6 lg:px-12">
             <TypeAnimation
               // Same String at the start will only be typed once, initially
@@ -53,6 +52,7 @@ const Intro = () => {
               reconstruct the era of technological renaissance with
               Prastuti'23?
             </p>
+
             <div className="flex justify-center justify-content p-4">
 
               {localStorage.getItem("loginData") ?null: (

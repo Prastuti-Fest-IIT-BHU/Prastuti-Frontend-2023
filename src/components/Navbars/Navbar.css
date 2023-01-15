@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope&display=swap');
+nav{
+    padding-right: 1.5rem;
+}
 
 .Navlogo{
     height: 100%;
