@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./profilecss.css";
 import "./profileteamcss.css";
 import axios from "axios";
-
 const Requestsent = (prop)=>{
   const [email,setemail] = useState(null);
   const sendRequest = async (id) => {
@@ -53,7 +52,6 @@ const Profileteam = (prop) => {
       <div className="Pmaincontainer">
         <div className="Pcontainer">
           {prop.team.map((data, index) => {
-            console.log(data._id);
             return (
               <div className="Pchildteam" key={index}>
                 <div

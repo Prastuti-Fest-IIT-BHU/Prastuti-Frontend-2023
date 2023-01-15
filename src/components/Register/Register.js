@@ -20,7 +20,6 @@ const Register = () => {
         });
     };
     gapi.load('client:auth2', initClient);
-    console.log("hii");
     if(localStorage.getItem("loginData")){
       window.location.replace("/form")
     }
@@ -32,7 +31,6 @@ const onSuccess = async(res) => {
   setProfile(res.profileObj);
   const data = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/login`,{tokenId:res.tokenId})
   localStorage.setItem("loginData",data.data.user._id);
-  console.log("dhjbdj");
   window.location.replace("/form");
 };
 

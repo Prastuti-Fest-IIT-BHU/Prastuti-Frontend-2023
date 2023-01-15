@@ -65,7 +65,7 @@ function List() {
         listnamess[key] =
           document.getElementById(key).getBoundingClientRect().top + curScroll;
       } catch (e) {
-        console.error(e);
+        return
       }
     }
     Scroll();

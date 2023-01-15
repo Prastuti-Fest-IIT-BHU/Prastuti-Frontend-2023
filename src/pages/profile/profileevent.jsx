@@ -2,6 +2,57 @@ import React, { useState, useEffect } from "react";
 import "./profilecss.css";
 import { Speedometer2 } from "react-bootstrap-icons";
 import { Calendar2Check } from "react-bootstrap-icons";
+
+
+const GetTeam = (prop)=>{
+  let teamName =prop.team.map((data)=>{
+  
+    if(prop.data.find(({team})=>team===data._id))
+    {return(
+      prop.data.find(({team})=>team===data._id)
+    )}
+  
+    return 
+  })
+
+     teamName = teamName.filter(function( element ) {
+       return element !== undefined;
+})
+
+  return <>
+  <span>
+   {teamName[0].score}
+    </span>
+    </>
+}
+const GetTeamName = (prop)=>{
+  let teamName =prop.data.map((data)=>{
+  
+    if(prop.team.find(({_id})=>_id===data.team))
+    {return(
+      prop.team.find(({_id})=>_id===data.team)
+    )}
+  
+    return 
+  })
+
+     teamName = teamName.filter(function( element ) {
+       return element !== undefined;
+})
+
+  return <>
+ 
+   {teamName[0].Team_Name}
+   
+    </>
+}
+
+
+
+
+
+
+
 const Profileevent = (prop) => {
   const [value, setvalue] = useState(prop.event);
   return (
@@ -9,7 +60,7 @@ const Profileevent = (prop) => {
       <div className="Pmaincontainer">
         <div className="Pcontainer">
           {prop.event.map((data, index) => {
-            
+            // console.log(data);
             return (
               <div className="Pchild" key={index}>
                 <div
@@ -23,10 +74,13 @@ const Profileevent = (prop) => {
                 <div className="psubchild">
                   <div className="pevent">
                     <span className="eventname">{data.Name}</span>
-                    {/* <span className="eventteam">Team Blaze</span> */}
+                    <span className="eventteam"> {data.team_event
+                          ?<GetTeamName data ={data.teams} team ={prop.team} />
+                          :"Solo"}</span>
                     <span className="eventinfo">
                       <div>
                         {/* data.teams.find(({_id})=>_id===localStorage.getItem("loginData")).score */}
+                        
                         <div
                           style={{
                             position: "relative",
@@ -37,7 +91,7 @@ const Profileevent = (prop) => {
                           <Speedometer2 />
                         </div>
                         {data.team_event
-                          ? 0
+                          ?<GetTeam data ={data.teams} team ={prop.team} />
                           : data.Participants.find(
                               ({ participant }) =>
                                 participant ===
