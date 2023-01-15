@@ -52,16 +52,14 @@ const Intro = () => {
               reconstruct the era of technological renaissance with
               Prastuti'23?
             </p>
-            <div className="flex justify-center justify-content p-4 btnContainer">
-              <Link to="/register/#">
-                {/* <button
-                  className="m-auto mt-8 mb-4 m-auto text-white border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#ffffff] hover:text-gray-700 hover:font-bold font-Catamaran
-                 "
-                >
-                  Register
-                </button> */}
-                <button className="linkBtn">Register</button>
-              </Link>
+
+            <div className="flex justify-center justify-content p-4">
+
+              {localStorage.getItem("loginData") ?null: (
+                <Link to="/login/#">
+                  <button className="linkBtn">Register</button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
