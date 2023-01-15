@@ -169,7 +169,7 @@
 
 .psubchild {
   position: absolute;
-  right: 15%;
+  right: 10%;
   top: 5%;
 }
 
@@ -309,4 +309,21 @@
     height: 3.5rem;
     border-radius: 1.75rem;
   }
+}
+.pevent{
+  width:14rem
+}
+.profilecontainer input{
+  border-radius: .2rem;
+  font-size: 1.3rem;
+  width: 80%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.profilecontainer input:focus{
+   outline:none;
+
 }

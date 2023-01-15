@@ -1,7 +1,68 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
 import './SeperateEvents.css'
+import axios from "axios";
 const Separate_Event = ({data}) => {
+  const Eventitle= data.title
+  console.log(Eventitle);
+   const [eventName,seteventEame] =useState(null);
+   const [result,setresult] =useState(null);
+   const [team,setteam]=useState(null);
+   const getEvent = async()=>{
+    const {data} =  await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/events`);
+    seteventEame(data.events.find(({ Name }) => Name === Eventitle).no_of_participants)
+    setresult(data.events.find(({ Name }) => Name === Eventitle))
+    
+   }
+   useEffect(()=>{
+    getEvent()
+   },[])
+   const findingteam = async(name)=>{
+    const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/teams`)
+      
+  const verifiedname =data.teams.find((({Team_Name})=>Team_Name===name))
+
+
+     if(verifiedname){
+           try {
+             const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teamRegistration`,{
+                "user_id": localStorage.getItem("loginData"),
+                "event_id": result._id,
+                "team_id": verifiedname._id
+            })
+            alert(response.data.message);
+            window.location.replace("/profile")
+           } catch (error) {
+            alert(error.response.data.message)
+           }
+     }
+     else
+     {
+      alert("Please enter existing team name")
+     }
+
+   }
+  //  console.log(result._id);
+   const register =async()=>{
+        if(!result.team_event){
+          try{ const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/soloRegistration`,{
+            "user_id": localStorage.getItem("loginData"),
+            "event_id": result._id
+        })
+          alert(response.data.message); 
+          window.location.replace("/profile");
+        }
+          catch(error){
+            alert(error.response.data.message)
+          }
+        }
+        if(result.team_event){
+          let teamName = prompt("Please enter your team name that you have created in profilepage","team name")
+          findingteam(teamName)
+           const teamdata = result.teams.find(({ Name }) => Name === teamName)
+        }
+
+   }
       return(
         <>
           <div className="min-h-screen min-w-screen m-0 bg-no-repeat bg-cover bg-center" style={{backgroundImage:`url(${data.imgpath})`}} >
@@ -9,11 +70,14 @@ const Separate_Event = ({data}) => {
                 <h1 className= "font-bold text-xl xl:text-3xl md:text-2xl mt-10 mb-4 font-Manrope" >{data.title}</h1>
                 <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-Manrope text-lg">{data.subtitle}</h2>
                 <p className="md:text-md xl:text-lg text-justify font-Catamaran text-md mb-4">{data.eventInfo}</p>
-                <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">Participants : <span>000</span></h3>
-                <Link to='/login'>
+                <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">Participants : <span>{eventName}</span></h3>
+                {localStorage.getItem("loginData")?<Link  onClick={register}>
                   <button className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
                   " >Register</button>
-                </Link>
+                </Link>:<Link to='/login'>
+                  <button className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
+                  " >Register</button>
+                </Link>}
               </div>
           </div>
         </>

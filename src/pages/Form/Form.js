@@ -1,7 +1,35 @@
-import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
+import  axios  from 'axios';
 const Form1 = () => {
   // const [selected, setSelected] = useState();
+  const [value,setvalue] = useState({
+    Name:"",
+    Phone:0,
+    Gender:"",
+    College:""
+  })
+  const [social,setsocial]=useState([
+    "","",""
+  ])
+  useEffect(()=>{
+    const checkFormFilled = async ()=>{
+      const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
+      if(data[0].isFormFilled){
+        window.location.replace("/");
+      }
+    }
+    checkFormFilled()
+  },[])
+  const inserData =(e)=>{
+    setvalue((prevalue)=>{
+      return{
+        ...prevalue,
+        [e.target.name]:e.target.value
+      }
+    })
+  }
+
   const [selectionArray, setSelectionArray] = useState([
     false,
     false,
@@ -22,23 +50,52 @@ const Form1 = () => {
     "Music",
     "Digital Electronics",
     "Analog Electronics",
-    "Power Electronics"
+    "Power Electronics",
   ];
   const interestArray = [];
-  selectionArray.forEach((item, index) => {
-    if (item) {
-      interestArray.push(interests[index]);
-    }
-  });
+  // selectionArray.forEach((item, index) => {
+  //   if (item) {
+  //     interestArray.push(interests[index]);
+  //   }
+  // });
+
   const divStyle = {
     backgroundImage:
       "url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')",
   };
+  selected.forEach((item, index) => {
+    if (item) {
+      interestArray.push(interests[index]);
+    }
+  });
+  
+  const UpdateData = async()=>{
+      try {
+        const data = await axios.put(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`,{
+          Name:value.Name,
+          College:value.College,
+          Phone:value.Phone,
+          Gender:value.Gender,
+          SocialMedia_Links:social,
+          Interests:interestArray,
+          isFormFilled:true
+        });
+       window.location.replace("/thankyou")
+      } catch (error) {
+        console.log(error);
+        alert(error.message)
+      }
+  }
+  function Submit(e){
+    e.preventDefault();
+      UpdateData()
+    
+  }
   return (
     <div>
       <section className="bg-cover -z-10 h-max md:h-full" style={divStyle}>
         <div className="flex flex-col min-h-[91.4vh] bg-black/60">
-          <div className="container flex flex-col flex-1 px-0 md:px-6 py-0 mx-auto">
+          <div className="container  flex flex-col flex-1 px-0 md:px-6 py-0 mx-auto">
             <div className="flex-1 lg:flex lg:items-center lg:mx-6">
               <div className="text-white px-2  lg:w-1/2 lg:mx-6">
                 <h1 className="text-3xl mt-2 font-Catamaran font-bold uppercase lg:text-4xl">
@@ -147,13 +204,15 @@ const Form1 = () => {
                     We would love to learn more about You!
                   </p>
 
-                  <form className="mt-6">
+                  <form className="mt-6" onSubmit={Submit}>
                     <div className="block ">
                       <div className="flex-1">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600 ">
                           Full Name<span style={{ color: "red" }}>*</span>
                         </label>
-                        <input
+                        <input 
+                          name="Name"
+                          onChange={inserData}
                           type="text"
                           placeholder="Your Name"
                           required
@@ -166,7 +225,9 @@ const Form1 = () => {
                           Mobile Number<span style={{ color: "red" }}>*</span>
                         </label>
                         <input
-                          type="tel"
+                          type="Number"
+                          name="Phone"
+                          onChange={inserData}
                           placeholder="1234567890"
                           pattern="[0-9]{10}"
                           required
@@ -176,20 +237,58 @@ const Form1 = () => {
 
                       {/* Gender */}
 
-                       <div className="flex-1 mt-6">
+                      <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600">
                           Gender<span style={{ color: "red" }}>*</span>
                         </label>
                         <div className="flex">
-                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="male" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Male</div>
-                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="female" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Female</div>
-                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="other" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Other</div>
-                          <input className ="flex-grow text-gray-700 font-Catamaran" type="radio" name="gender" value="none" required/> <div className ="flex-grow text-gray-700 font-Catamaran" >Prefer Not to Say</div>
-                        </div> 
-                        
-
-
-                      </div> 
+                          <input
+                            className="flex-grow text-gray-700 font-Catamaran"
+                            type="radio"
+                            name="Gender"
+                            
+                            onChange={inserData}
+                            value="Male"
+                            required
+                          />
+                          <div className="flex-grow text-gray-700 font-Catamaran">
+                            Male
+                          </div>
+                          <input
+                            className="flex-grow text-gray-700 font-Catamaran"
+                            type="radio"
+                            onChange={inserData}
+                            name="Gender"
+                            value="Female"
+                            required
+                          />
+                          <div className="flex-grow text-gray-700 font-Catamaran">
+                            Female
+                          </div>
+                          <input
+                            className="flex-grow text-gray-700 font-Catamaran"
+                            type="radio" 
+                            onChange={inserData}
+                            name="Gender"
+                            value="Other"
+                            required
+                          />
+                          <div className="flex-grow text-gray-700 font-Catamaran">
+                            Other
+                          </div>
+                          <input
+                            className="flex-grow text-gray-700 font-Catamaran"
+                            type="radio"
+                            name="Gender"
+                            onChange={inserData}
+                            value="None"
+                            required
+                          />
+                          <div className="flex-grow text-gray-700 font-Catamaran">
+                            None
+                          </div>
+                        </div>
+                      </div>
 
                       <div className="flex-1 mt-6">
                         <label className="block font-Manrope mb-2 text-sm text-gray-600">
@@ -197,6 +296,8 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
+                          name="College"
+                          onChange={inserData}
                           placeholder="IIT (BHU) Varanasi"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                         />
@@ -208,7 +309,11 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
-                          placeholder="https://www.instagram.com/prastuti.iitbhu/"
+                          name="SocialMedia_Links"
+                          onChange={(e)=>{const data =[...social];
+                                data[0]=e.target.value
+                            setsocial(data)}}
+                          placeholder="https://www.instagram.com/instagram/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
                       </div>
@@ -218,6 +323,10 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
+                          name="SocialMedia_Links"
+                          onChange={(e)=>{const data =[...social];
+                            data[1]=e.target.value
+                        setsocial(data)}}
                           placeholder="https://www.linkedin.com/company/prastuti/"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />
@@ -228,6 +337,10 @@ const Form1 = () => {
                         </label>
                         <input
                           type="text"
+                          name="SocialMedia_Links"
+                          onChange={(e)=>{const data =[...social];
+                            data[2]=e.target.value
+                        setsocial(data)}}
                           placeholder="https://github.com/Prastuti-Fest-IIT-BHU"
                           className="block font-Catamaran w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                         />

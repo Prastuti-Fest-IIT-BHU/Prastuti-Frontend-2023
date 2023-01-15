@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { FaBars, FaArrowLeft } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
@@ -21,14 +21,6 @@ const Navbar = () => {
       body.style.overflow = "auto";
     }
   };
-
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -60;
-
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  };
-
   return (
     <>
       <nav className="navbar bg-[#003247]">
@@ -51,9 +43,7 @@ const Navbar = () => {
           </div>
           {/* <div className="text-right"> */}
           <h1 className="text-white text-2xl font-['Manrope'] font-black px-3 ml-2 drop-shadow-lg">
-            <Link smooth to="/#">
-              <img src="./prastuti-logo.png" alt="Prastuti'23" className="Navlogo"/> 
-            </Link>
+            <Link to="/">Prastuti'23</Link>
           </h1>
           {/* <img src="Prastuti-Frontend-2023/src/assets/prastuti.png" alt='logo' className=""></img> */}
           {/* </div> */}
@@ -61,78 +51,49 @@ const Navbar = () => {
           <div className=" flex items-center py-3 relative">
             <ul className="hidden md:flex px-2 lg:px-5 ">
               <li className="px-2 md:px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l">
-                <Link
-                  smooth
-                  to={{
-                    pathname: "/",
-                    hash: "about",
-                  }}
-                  scroll={(el) => scrollWithOffset(el)}
-                >
-                  About
-                </Link>
+                <Link to="#about">About</Link>
               </li>
               <li
                 className="px-2 md:px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l"
                 href="#"
               >
-                <Link
-                  smooth
-                  to={{
-                    pathname: "/",
-                    hash: "events",
-                  }}
-                  scroll={(el) => scrollWithOffset(el)}
-                >
-                  Events
-                </Link>
+                <Link to="#events">Events</Link>
               </li>
               <li
                 className="px-2 md:px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l"
                 href="#"
               >
-                <Link
-                  smooth
-                  to={{
-                    pathname: "/",
-                    hash: "sponsors",
-                  }}
-                  scroll={(el) => scrollWithOffset(el)}
-                >
-                  Sponsors
-                </Link>
+                <Link to="#faqs">FAQs</Link>
               </li>
               <li
                 className="px-2 md:px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l"
                 href="#"
               >
-                <Link
-                  smooth
-                  to={{
-                    pathname: "/",
-                    hash: "faqs",
-                  }}
-                  scroll={(el) => scrollWithOffset(el)}
-                >
-                  FAQs
-                </Link>
+                <Link to="#sponsors">Sponsors</Link>
               </li>
               <li
                 className="px-2 md:px-4 text-white font-['Manrope'] hover:text-[#4B7CB2] text-l"
                 href="#"
               >
-                <Link to="/team/#">Team</Link>
+                <Link to="team">Team</Link>
               </li>
             </ul>
             {localStorage.getItem("loginData") ? <Link to="/profile">
               <button
+                onClick={() => {
+                  localStorage.removeItem("loginData");
+                }}
                 className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                             ease-in-out"
               >Profile
               </button>
             </Link>:<Link to="/login">
-              <button className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+              <button
+                onClick={() => {
+                  localStorage.removeItem("loginData");
+                }}
+                className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                             ease-in-out">
                   Register/Login
@@ -154,81 +115,43 @@ const Navbar = () => {
               className="px-4 py-5 text-white text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link
-                smooth
-                to={{
-                  pathname: "/",
-                  hash: "about",
-                }}
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                About
-              </Link>
+              <Link to="#about">About</Link>
             </li>
             <li
               className="px-4 py-5 text-white text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link
-                smooth
-                to={{
-                  pathname: "/",
-                  hash: "events",
-                }}
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                Events
-              </Link>
+              <Link to="#events">Events</Link>
             </li>
             <li
               className="px-4 py-5 text-white text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link
-                smooth
-                to={{
-                  pathname: "/",
-                  hash: "faqs",
-                }}
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                FAQs
-              </Link>
+              <Link to="#faqs">FAQs</Link>
             </li>
             <li
               className="px-4 py-5 text-white text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link
-                smooth
-                to={{
-                  pathname: "/",
-                  hash: "sponsors",
-                }}
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                Sponsors
-              </Link>
+              <Link to="#sponsors">Sponsors</Link>
             </li>
             <li
               className="px-4 py-5 text-white text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link to="/team/#">Team</Link>
+              <Link to="#team">Team</Link>
             </li>
             <li
               className="px-4 py-5 text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link to="/register/#">
-                <button
-                  className="drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+              <button
+                className="drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                                 text-2xl hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                                 ease-in-out"
-                >
-                  Register
-                </button>
-              </Link>
+              >
+                Register
+              </button>
             </li>
           </ul>
           <ul className="flex justify-center py-2">
