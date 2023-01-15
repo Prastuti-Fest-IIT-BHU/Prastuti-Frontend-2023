@@ -78,6 +78,9 @@ br:after {
     left: 1px;
     width: 50%;
     margin-left: 21vw;
+    /* transition-property: max-height;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out; */
 }
 
 .faq-question::after {

@@ -126,11 +126,11 @@ const Navbar = () => {
             </ul>
             <Link to="/register/#">
               <button
-                className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
-                            sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
+                className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-6 py-2 border rounded-lg font-bold text-[#003247] 
+                            sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#fff] hover:bg-[#2985ff] transition duration-300 
                             ease-in-out"
               >
-                Register/Login
+                Login
               </button>
             </Link>
           </div>
@@ -220,7 +220,7 @@ const Navbar = () => {
                                 text-2xl hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                                 ease-in-out"
                 >
-                  Register
+                  Login
                 </button>
               </Link>
             </li>
