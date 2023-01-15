@@ -14,7 +14,7 @@ const Form1 = () => {
   ])
   useEffect(()=>{
     const checkFormFilled = async ()=>{
-      const {data} = await axios.get(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`);
+      const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
       if(data[0].isFormFilled){
         window.location.replace("/");
       }
@@ -71,7 +71,7 @@ const Form1 = () => {
   
   const UpdateData = async()=>{
       try {
-        const data = await axios.put(`http://localhost:8000/api/user/${localStorage.getItem("loginData")}`,{
+        const data = await axios.put(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`,{
           Name:value.Name,
           College:value.College,
           Phone:value.Phone,
@@ -82,7 +82,8 @@ const Form1 = () => {
         });
        window.location.replace("/thankyou")
       } catch (error) {
-        alert("error")
+        console.log(error);
+        alert(error.message)
       }
   }
   function Submit(e){
