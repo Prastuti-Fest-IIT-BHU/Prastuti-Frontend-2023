@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./profilecss.css";
 import Profileteam from "./profileteam";
 import Profilerequest from "./Profilerequest";
 import Profileevent from "./profileevent";
 import Footer from "../../components/Footer/Footer";
-const Profilepage = () => {
-  const [value, setvalue] = useState(<Profileevent />);
+import axios from "axios";
+const Profilepage = () => { 
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
+  const [team,setteam] = useState(null);
+  const [event,setevent] = useState(null);
+  const [request,setrequest] = useState(null);
+  const [input, setinput] = useState([]);
+  const [value, setvalue] = useState(null);
 
   function handleevent(data) {
     if (data === 0) {
@@ -22,7 +27,34 @@ const Profilepage = () => {
       setaddclass(input);
     }
   }
+  useEffect(()=>{
+    if(localStorage.getItem("loginData")){
+      const gettingData = async()=>{
+        const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`)
+          setinput(data[0]);
+          setteam(data[0].Teams);
+          setevent(data[0].Events_Participated)
+          setvalue(<Profileevent event={data[0].Events_Participated} team={data[0].Teams} />)
+          setrequest(data[0].Pending_Requests);
+         
+      } 
+      gettingData();
+      const interval = setInterval(() => {
+        localStorage.removeItem("loginData");
+      }, 600000);
+      return () => clearInterval(interval);
+    } 
+    else {
+      window.location.replace("/")
+      
+    }   
 
+  },[])
+
+  if (!localStorage.getItem('loginData')){
+    window.location.replace("/");
+    return;
+  }
 
   return (
     <>
@@ -33,10 +65,10 @@ const Profilepage = () => {
           </div>
           {/* <img src={profileback} className=" relative -mb-36 object-cover opacity-90" /> */}
           <div className="myprofile -mt-12 flex flex-col md:flex-row">
-            <div className="profilechild imgprofile"><img className="imgprofile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="user" /></div>
+            <div className="profilechild imgprofile"><img className="imgprofile" src={input.Profile_Photo} alt="user" /></div>
             <div className="profilechild">
-              <div className="Prodetails text-3xl font-bold text-black-900">Rahul Kumar Sonkar</div>
-              <div className="Prodetails hidden md:flex text-l font-normal text-black-900">ankit.kumarnishad.eee20@itbhu.ac.in</div>
+              <div className="Prodetails text-3xl font-bold text-black-900">{input.Name}</div>
+              <div className="Prodetails hidden md:flex text-l font-normal text-black-900">{input.email_id}</div>
 
             </div>
           </div>
@@ -51,12 +83,15 @@ const Profilepage = () => {
             <p className="about-header text-center">About</p>
             <hr className="Phr" />
             <div className="user-details">
-            <p className="profile-name text-center lg:text-start break-words text-xl p-1 ">Ankit Kumar lorem ipsum</p>
-            <p className="profile-email text-center lg:text-start break-words text-l p-1 ">ankit.kumarniasdddd.eee20@itbhu.ac.in</p>
-            <p className="profile-contact text-center lg:text-start break-words text-l p-1 ">+91123456789</p>
+            <p className="profile-name text-center lg:text-start break-words text-xl p-1 ">{input.Name}</p>
+            <p className="profile-email text-center lg:text-start break-words text-l p-1 ">{input.email_id}</p>
+            <p className="profile-contact text-center lg:text-start break-words text-l p-1 ">+91{input.Phone}</p>
             </div>
             <div className="sign-out-btn  flex justify-center">
-            <button class="link_404">Sign Out</button>
+            <button class="link_404" onClick={()=>{
+              localStorage.removeItem("loginData")
+              window.location.replace("/")
+            }}>Sign Out</button>
             </div>
             
             </div>
@@ -66,7 +101,7 @@ const Profilepage = () => {
               <div
                 className={`Pnavchild px-4 ${addclass[0]}`}
                 onClick={() => {
-                  setvalue(<Profileevent />);
+                  setvalue(<Profileevent event={event} team={team} />);
                   handleevent(0);
                 }}
               >
@@ -75,7 +110,7 @@ const Profilepage = () => {
               <div
                 className={`Pnavchild px-4 ${addclass[1]}`}
                 onClick={() => {
-                  setvalue(<Profileteam />);
+                  setvalue(<Profileteam team={team} />);
                   handleevent(1);
                 }}
               >
@@ -84,7 +119,7 @@ const Profilepage = () => {
               <div
                 className={`Pnavchild px-4 ${addclass[2]}`}
                 onClick={() => {
-                  setvalue(<Profilerequest />);
+                  setvalue(<Profilerequest request={request} team={team}/>);
                   handleevent(2);
                 }}
               >

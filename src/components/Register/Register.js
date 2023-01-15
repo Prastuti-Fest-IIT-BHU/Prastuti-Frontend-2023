@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { gapi } from 'gapi-script';
+// import image from "../assets/Register/logo.png";
+// import style from "../assets/Register/style.css"
+import axios from "axios"
+// import React from "react";
 import image from "./logo.png";
 import "./Register.css"
 
 const Register = () => {
+  const [ profile, setProfile ] = useState([]);
+  const [value,setvalue]=useState(localStorage.getItem("loginData")?JSON.parse(localStorage.getItem('loginData')):null)
+  const clientId =process.env.REACT_APP__CLIENT_ID;
+  useEffect(() => {
+    const initClient = () => {
+        gapi.client.init({
+            clientId:process.env.REACT_APP__CLIENT_ID,
+            scope: ''
+        });
+    };
+    gapi.load('client:auth2', initClient);
+    if(localStorage.getItem("loginData")){
+      window.location.replace("/form")
+    }
+    
+
+    
+});
+const onSuccess = async(res) => {
+  setProfile(res.profileObj);
+  const data = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/login`,{tokenId:res.tokenId})
+  localStorage.setItem("loginData",data.data.user._id);
+  window.location.replace("/form");
+};
+
+const onFailure = (err) => {
+  console.log('failed', err);
+};
+
+const logOut = () => {
+  localStorage.removeItem("loginData")
+  setProfile(null);
+  setvalue(null)
+};
   return (
     <div className="main relative bg-no-repeat bg-cover h-screen light-gradient bg-center">
       <span className="absolute flex align-middle justify-center h-screen">
@@ -24,10 +64,10 @@ const Register = () => {
               <img src={image} alt="logo" className="w-[25rem] h-[25rem] " />
             </div>
             <a
-              href="#"
+              // href="#"
               className="flex items-center justify-center mt-4 bg-[#003247] text-[#DBF2FF] transition-colors duration-300 transform border rounded-lg hover:bg-[#DBF2FF] hover:text-[#003247] hover:border-[#003247] focus:outline-none focus:bg-[#DBF2FF] focus:text-[#003247] focus:border-[#003247]"
             >
-              <div className="px-4 py-2">
+              {/* <div className="px-4 py-2">
                 <svg className="w-6 h-6" viewBox="0 0 40 40">
                   <path
                     d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
@@ -46,9 +86,20 @@ const Register = () => {
                     fill="#1976D2"
                   />
                 </svg>
-              </div>
+              </div> */}
               <span className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center">
-                Sign in with Google
+                {/* Sign in with Google  */}
+               
+                <GoogleLogin className="align-top justify-center w-5/6 px-4 py-3 font-bold text-center"
+                    clientId={clientId}
+                    buttonText="Sign in with Google"
+                    onSuccess={onSuccess}
+                    onFailure={onFailure}
+                    cookiePolicy={'single_host_origin'}
+                    
+                    style={{backgroundColor:"rgba(0,0,0,0.5)!important"}}
+                />
+           
               </span>
             </a>
           </div>

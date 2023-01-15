@@ -58,7 +58,6 @@
     margin: auto;
     margin-top: 5%;
     border-radius: 10%;
-
   }
   .Profiledetail{
     margin: 1rem;
@@ -82,7 +81,6 @@
     font-weight: 700;
     overflow-wrap: break-word;
     color: white;
-
   }
   .Peventol li{
     margin: 1rem;
@@ -108,7 +106,6 @@
      .Pimage{
         width: 50%;
      }
-
   }
   @media screen and (max-width:518px) {
     .Pmaincontainer{
@@ -118,13 +115,11 @@
     .Psubparent{
         display: block;
         width: 100%;
-
     }
     .psubchild1{
         width: 93%;
         height: 30rem;
         margin:1.2rem auto;
-
     }
     .psubchild2{
         width: 93%;
@@ -143,7 +138,6 @@
      .Pteamol{
         margin: 0;
      }
-
   } 
   @media screen and (max-width:390px) {
     .Pimage{
