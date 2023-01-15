@@ -4,13 +4,15 @@
   position: relative;
   height: 100%;
   overflow: hidden;
+  background: url("../Design/light+circle.png");
 }
 .sidebar {
-  margin-top: 40px;
-  height: 85%;
+  /* margin-top: 40px; */
+  background: url("../Design/dark+circle.png");
+  height: 100%;
   max-width: 30vw;
   position: fixed;
-  top:13%;
+  top:8.4%;
   width: 300px;
   left: 1px;
   border-radius: 0;
@@ -32,7 +34,6 @@
 .sidebar a {
   padding: 10px;
   text-decoration: none;
-  color: #fff;
   font-family: Marcellus;
   display: block;
   margin-left: 50px;

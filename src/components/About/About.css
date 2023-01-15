@@ -1,6 +1,13 @@
 body {
-    background: radial-gradient(circle, #003247 0%, #013147 10%, #013044 20%, #003046 30%, #002f43 70%, #01273c 90%);
+    /* background: radial-gradient(circle, #003247 0%, #013147 10%, #013044 20%, #003046 30%, #002f43 70%, #01273c 90%); */
+    background: url("../Design/dark.png");
 }
+#about{
+    background: url("../Design/dark+circle.png");
+    z-index: 100;
+    padding-top: 40px;
+}
+
 
 .aboutHead {
     color: white;
@@ -8,8 +15,9 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 46%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    
+    /* margin-top: 20px; */
+    /* margin-bottom: -10px; */
     margin-left: 27%;
     margin-right: 27%;
 
@@ -40,3 +48,12 @@ body {
     left: 0;
     bottom: 0;
 }
+
+
+@media screen and (max-width: 360px) {
+    #about h4{
+        padding: 0;
+        width: 85vw;
+        margin: 30px;
+    }
+  }
