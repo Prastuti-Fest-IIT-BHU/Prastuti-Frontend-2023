@@ -1,5 +1,6 @@
 import React from "react";
 import { Data } from './Data';
+import { Link } from "react-router-dom";
 import "./Events.css"
 
 
@@ -38,8 +39,8 @@ const Card = (prop) => {
             <motion.div class="container pb-5 w-100 lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
             whileHover={{ scale: 1.05 }}
             >
-              <a
-              href={item.path}
+              <Link
+              to={item.path}
                 v-for="card in cards"
                 class="flex flex-col md:flex-row overflow-hidden
                                     rounded-lg mt-4 w-100 mx-2"
@@ -60,17 +61,17 @@ const Card = (prop) => {
                   >
                {item.title}
                   </h3>
-                  <p class="mt-2" style={{ fontFamily: "Catarman" ,color: "#003247"}}>
+                  <p class="mt-2 info">
                     {item.information}
                   </p>
                   <p
-                    class="text-xl text-gray-700 tracking-wide font-semibold mt-2"
+                    class="text-xl text-gray-700 tracking-wide font-black mt-2"
                     style={{ fontFamily: "Catarman",color: "#003247" }}
                   >
                     {item.infoinfo}
                   </p>
                 </div>
-              </a>
+              </Link>
             </motion.div>
           </div>
 

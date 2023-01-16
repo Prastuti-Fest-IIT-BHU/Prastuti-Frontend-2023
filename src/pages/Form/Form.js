@@ -12,6 +12,7 @@ const Form1 = () => {
   const [social,setsocial]=useState([
     "","",""
   ])
+  
   useEffect(()=>{
     const checkFormFilled = async ()=>{
       const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
@@ -20,7 +21,8 @@ const Form1 = () => {
       }
     }
     checkFormFilled()
-  },[])
+  },[]) 
+
   const inserData =(e)=>{
     setvalue((prevalue)=>{
       return{
@@ -91,6 +93,13 @@ const Form1 = () => {
       UpdateData()
     
   }
+
+  if (!localStorage.getItem('loginData')){
+    window.location.replace("/");
+    return;
+  }
+
+
   return (
     <div>
       <section className="bg-cover -z-10 h-max md:h-full" style={divStyle}>

@@ -14,6 +14,7 @@
 .social-links:hover::after{
     display:block;
     animation: left-to-right 0.25s cubic-bezier(.694,.048,.335,1) ;
+    background-color: #2985ff;
 }
 
 @keyframes left-to-right{

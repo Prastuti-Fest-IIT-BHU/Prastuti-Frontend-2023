@@ -43,7 +43,13 @@ const Separate_Event = ({data}) => {
 
    }
   //  console.log(result._id);
-   const register =async()=>{
+      const register =async()=>{
+
+        const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
+        if(!data[0].isFormFilled){
+          window.location.replace("/form");
+        }
+
         if(!result.team_event){
           try{ const response =  await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/soloRegistration`,{
             "user_id": localStorage.getItem("loginData"),

@@ -31,6 +31,12 @@ const Profileteam = (prop) => {
   const [value, setvalue] = useState(null);
   const createTeam = async () => {
 
+    // Checking if form filled
+    const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
+    if(!data[0].isFormFilled){
+      window.location.replace("/form");
+    }
+
     try{if (value) {
       const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
         userID: localStorage.getItem("loginData"),

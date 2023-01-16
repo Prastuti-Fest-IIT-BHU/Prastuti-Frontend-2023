@@ -19,6 +19,7 @@ export const Data = [
     infoinfo: 'Head: Ashwani Sisodiya (6367433427)',
     image: img1,
     slide: 'fade-up',
+    path:"/codigo"
 
   },
   {
@@ -34,6 +35,7 @@ export const Data = [
     infoinfo: 'Head: Ayush Singh Pal (9923266285)',
     image: img2,
     slide: 'fade-down',
+    path:"/consilium"
 
   },
   {
@@ -48,6 +50,7 @@ export const Data = [
     infoinfo: 'Head: Hrishabh Kumar Garg (88210448398)',
     image: img3,
     slide: 'fade-up',
+    path:"/oscillion"
 
   },
   {
@@ -59,9 +62,10 @@ export const Data = [
       development among engineers from all fields. As a result, a firm grasp of
       development is a must for anyone aspiring to grow in the industry. With this
       event, we intend to give participants a kickstart in learning web development.`,
-    infoinfo: 'Head: Nilay Srikanth Mundra (9328208189)',
+    infoinfo: 'Head: Nilay Mundra (9328208189)',
     image: img4,
     slide: 'fade-down',
+    path:"/hackoverflow"
 
   },
   {
@@ -75,6 +79,7 @@ export const Data = [
     infoinfo: 'Head: Vidit Agarwal (6352912056)',
     image: img5,
     slide: 'fade-up',
+    path:"/recognizance"
 
   },
   {
@@ -90,6 +95,7 @@ export const Data = [
     infoinfo: 'Head: Astitva Gupta (7828004967)',
     image: img6,
     slide: 'fade-down',
+    path: 'simulim'
 
   },
 

@@ -14,7 +14,7 @@ const Intro = () => {
           className="absolute t-0 l-0 w-[100%] h-[100%] z-[-10] object-cover opacity-30"
         /> */}
         <div className="flex flex-col md:h-[100vh] w-[100vw] bg-black/10">
-          <p className="text-3xl text-center grow md:grow-0 place-content-evenly md:text-left text-white relative sm:mt-10 lg:mt-20 mr-2 ml-2 min-h-max font-bold p-6 lg:px-12">
+          <p className="text-3xl text-center grow md:grow-0 place-content-evenly md:text-left text-white relative sm:mt-10 lg:mt-20 mr-2 ml-2 min-h-max font-bold p-6 lg:px-12 IntroHeading">
             <TypeAnimation
               // Same String at the start will only be typed once, initially
               sequence={[
@@ -35,7 +35,7 @@ const Intro = () => {
             />
           </p>
           <div className="grow md:grow-0 flex flex-col">
-            <p className="flex md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none intro">
+            <p className="flex md:flex text-left text-lg mr-2 ml-2 px-6 lg:px-12 py-4 text-white lg:max-w-screen-lg text-justify break-none intro IntroPara">
               Electrical Department of IIT (BHU) Varanasi presents PRASTUTI, the
               annual technical festival that echoes the spirit of innovation and
               progress! This gives you a chance to get your feet wet in a wide
