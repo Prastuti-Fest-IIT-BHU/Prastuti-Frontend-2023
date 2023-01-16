@@ -134,7 +134,7 @@ const Navbar = () => {
               </button>
             </Link>:<Link to="/login">
               <button className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
-                            sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
+                            sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#fff] hover:bg-[#2985ff] transition duration-300 
                             ease-in-out">
                   Login
               </button>

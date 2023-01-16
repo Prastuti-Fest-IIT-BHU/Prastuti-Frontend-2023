@@ -4,8 +4,8 @@ body {
 }
 #about{
     background: url("../Design/light+circle.png");
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
-    opacity: 0.95;
+    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05); */
+    /* opacity: 0.95; */
     z-index: 100;
     padding-top: 40px;
     padding-bottom: 40px;

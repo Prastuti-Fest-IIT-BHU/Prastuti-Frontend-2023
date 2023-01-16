@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Events.css"
 
 
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion} from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -36,27 +36,27 @@ const Card = (prop) => {
           // whileInView={"visible"}
           
         >
-            <motion.div class="container pb-5 w-100 lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
+            <motion.div class="p-0 w-full min-h-[38vh] lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
             whileHover={{ scale: 1.05 }}
             >
               <Link
               to={item.path}
                 v-for="card in cards"
                 class="flex flex-col md:flex-row overflow-hidden
-                                    rounded-lg mt-4 w-100 mx-2"
+                                    rounded-lg w-100"
               >
-                <div class="h-64 w-auto md:w-1/2">
+                <div class="h-[38vh] w-auto md:w-1/2">
                   <img
-                    class="inset-0 h-full w-full pt-2 pb-2 object-cover object-center rounded-lg" alt="event pic"
+                    class="inset-0 h-full w-full object-cover object-center rounded-l-lg" alt="event pic"
                     src={item.image}
                   />
                 </div>
 
-                <div class="w-full py-4 px-6 text-gray-800 flex flex-col justify-between" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}} >
+                <div class="w-full py-6 px-8 text-gray-800 flex flex-col " style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}} >
                   <h3
-                    class="text-lg leading-tight truncate"
-                    style={{ fontFamily: "Manrope" ,color: '#fff',fontSize:'25px',
-                    textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6'}}
+                    class="text-lg leading-tight truncate mb-2"
+                    style={{ fontFamily: "Poppins" ,color: '#fff',fontSize:'25px',
+                    textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6', backgroundColor:"#003247"}}
                     
                   >
                {item.title}
