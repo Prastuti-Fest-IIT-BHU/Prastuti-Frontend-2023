@@ -56,7 +56,7 @@ const Intro = () => {
             <div className="flex justify-center justify-content p-4">
 
               {localStorage.getItem("loginData") ?null: (
-                <Link to="/login/#">
+                <Link to="/login">
                   <button className="linkBtn">Register</button>
                 </Link>
               )}
