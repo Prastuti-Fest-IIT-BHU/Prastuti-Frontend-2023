@@ -17,6 +17,7 @@
     background-color: #2985ff;
 }
 
+
 @keyframes left-to-right{
     0%{
 
@@ -26,8 +27,8 @@
         width:100%;
     }
 }
-
-/* @media (max-width: 1100px){
+/* 
+@media (max-width: 1100px){
     .footer ul{
         display:block;
         
@@ -41,11 +42,11 @@
     .social-links:hover::after{
         display:block;
         animation: none;
-    } */
+    } 
     
-/* } */
+ } */
 
-.react-icons {
+/* .react-icons {
     vertical-align: middle;
     align-items: center;
     margin:auto;
@@ -53,4 +54,4 @@
     width:2rem;
     padding-bottom: 0.5rem;
     color:white;
-  }
+  } */

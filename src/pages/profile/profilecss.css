@@ -132,10 +132,10 @@
   content: "";
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
   height: 2px;
   bottom: 0;
   left: 0;
+  transform: scaleX(0);
   background-color: #cfa744;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
