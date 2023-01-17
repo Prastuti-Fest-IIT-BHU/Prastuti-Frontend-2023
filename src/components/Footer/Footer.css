@@ -5,6 +5,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope&display=swap');
 
 
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vline{
+    height: 80px;
+    width: 1px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: white;
+    border-left: 1px solid #fff;
+}
+.up{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+}
+.up img{
+    height: 115px;
+    width: auto;
+}
+
+.conduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    width: auto;
+    color: white;
+    font-size:  14px;
+    font-family: "Nunito";
+}
+li{
+    font-family: "Nunito";
+}
 .social-links::after{
     background-color: #DBF2FF;
     content:"";
@@ -27,6 +65,14 @@
         width:100%;
     }
 }
+@media screen and (min-width: 360px) {
+    .up{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-left: 10vw;
+    }
+  }
 /* 
 @media (max-width: 1100px){
     .footer ul{

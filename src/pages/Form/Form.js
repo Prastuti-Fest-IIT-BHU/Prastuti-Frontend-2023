@@ -95,7 +95,9 @@ const Form1 = () => {
         Interests: interestArray,
         isFormFilled: true
       });
-      window.location.replace("/thankyou")
+      setTimeout(() => {
+        window.location.replace("/thankyou")
+      }, 1500)
     } catch (error) {
       console.log(error);
       alert(error.message)
