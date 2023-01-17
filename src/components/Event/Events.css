@@ -1,3 +1,15 @@
 #events{
     background: url("../Design/dark+circle.png");
 }
+
+#card h3{
+    font-family: 'Poppins';
+}
+
+#card .info{
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 1.1rem ;
+    color: black;
+}
+

@@ -35,11 +35,11 @@ body.overflow {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: #f3f3f3;
+  color: #fff;
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #f3f3f3;
+  color: #003247;
 }
 a {
   color: #1c1d25;
