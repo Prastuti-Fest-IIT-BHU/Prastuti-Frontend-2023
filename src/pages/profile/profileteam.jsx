@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "./profilecss.css";
 import "./profileteamcss.css";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
+
 const Requestsent = (prop)=>{
   const [email,setemail] = useState(null);
   const sendRequest = async (id) => {
@@ -35,6 +40,7 @@ const Profileteam = (prop) => {
     const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
     if(!data[0].isFormFilled){
       window.location.replace("/form");
+      return;
     }
 
     try{if (value) {
@@ -43,10 +49,28 @@ const Profileteam = (prop) => {
         Team_Name: value,
         Member_Count: 1,
       });
-      alert(response.data.message);
-      window.location.reload(true);
+      toast.success(response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+      // window.location.reload(true);
     } else {
-      alert("Please write team name");
+      toast.error('Please write Team Name!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
     }}
    catch(error){
     alert(error.response.data.message)
