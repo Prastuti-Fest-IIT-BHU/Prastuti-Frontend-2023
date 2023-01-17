@@ -34,11 +34,32 @@
     border-radius: 20px;
     border: 0px solid #DBF2FF;
   }
+
+  /* css for loader of landing page */
+  
+  .loader-container {
+    align-items: center;
+    background-color: #000000;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+  }
+  .loader-container img{
+    border-radius: 50%;
+  }
 </style>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <!-- Loader code for landing page -->
+
+  <div id="spinner" class="loader-container" >
+    <img src="prastutilander.gif" height="300px" width="300px" />
+  </div>
+
+  <div id="root">
+  </div>
 </body>
 
 </html>
