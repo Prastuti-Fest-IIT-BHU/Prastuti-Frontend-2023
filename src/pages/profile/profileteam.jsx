@@ -2,54 +2,128 @@ import React, { useState } from "react";
 import "./profilecss.css";
 import "./profileteamcss.css";
 import axios from "axios";
-const Requestsent = (prop)=>{
-  const [email,setemail] = useState(null);
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// toast.configure();
+
+const Requestsent = (prop) => {
+  const [email, setemail] = useState(null);
   const sendRequest = async (id) => {
     try {
-    const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/request/`, {
+      const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/request/`, {
         recepient_email: email,
         team_id: id,
         user_id: localStorage.getItem("loginData"),
       });
-      alert(response.data.message);
- 
-window.location.reload(true);
+      toast.success(response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+
+      setemail("")
+      // window.location.reload(true);
 
     } catch (error) {
-      alert(error.response.data.message);
+      toast.error(error.response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
   return (<><div className="eventname">
-  <input type="text" name="member"  autoComplete="off" placeholder="Recipient email" style={{fontSize:"1rem"}} value={email} onChange={(e)=>{setemail(e.target.value)}} />
-</div>
-<div className="sign-out-btn  flex justify-center"  >
-<button class="link_404" onClick={()=>sendRequest(prop.id)} style={{fontSize:"1rem",marginTop:"13px",marginBottom:"5px",marginLeft:"-2rem",width:"fit-content",height:"max-content",padding:"5px"}}>Add Members</button>
-</div></>)
+    <input type="text" name="member" autoComplete="off" placeholder="Recipient email" style={{ fontSize: "1rem" }} value={email} onChange={(e) => { setemail(e.target.value) }} />
+  </div>
+    <div className="sign-out-btn  flex justify-center"  >
+      <button class="link_404" onClick={() => sendRequest(prop.id)} style={{ fontSize: "1rem", marginTop: "13px", marginBottom: "5px", marginLeft: "-2rem", width: "fit-content", height: "max-content", padding: "5px" }}>Add Members</button>
+    </div></>)
 }
 
 const Profileteam = (prop) => {
   const [value, setvalue] = useState(null);
   const createTeam = async () => {
 
-    try{if (value) {
-      const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
-        userID: localStorage.getItem("loginData"),
-        Team_Name: value,
-        Member_Count: 1,
+    // Checking if form filled
+    const { data } = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
+    if (!data[0].isFormFilled) {
+      window.location.replace("/form");
+      return;
+    }
+
+    try {
+      if (value) {
+        const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
+          userID: localStorage.getItem("loginData"),
+          Team_Name: value,
+          Member_Count: 1,
+        });
+        toast.success(response.data.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        setTimeout(() => {
+          window.location.reload(true)
+        }, 1500)
+      } else {
+        toast.error('Please write the Team Name!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      }
+    }
+    catch (error) {
+      toast.error(error.response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
       });
-      alert(response.data.message);
-      window.location.reload(true);
-    } else {
-      alert("Please write team name");
-    }}
-   catch(error){
-    alert(error.response.data.message)
-   }
+    }
 
   };
   return (
     <>
       <div className="Pmaincontainer">
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         <div className="Pcontainer">
           {prop.team.map((data, index) => {
             return (
@@ -69,16 +143,16 @@ const Profileteam = (prop) => {
                     </span>
                     {data.Members.map((item, ind) => {
                       return (
-                        <span className="teamname" key={ind} style={{fontSize:"1rem"}} >
+                        <span className="teamname" key={ind} style={{ fontSize: "1rem" }} >
                           {ind + 1} {item.Name}
                         </span>
                       );
                     })}
-                    { data.Members.length===3?null: <Requestsent id={data._id}/>
-            }
-                 
+                    {data.Members.length === 3 ? null : <Requestsent id={data._id} />
+                    }
+
                   </div>
-                  
+
                 </div>
               </div>
             );
@@ -91,14 +165,14 @@ const Profileteam = (prop) => {
                     type="text"
                     placeholder="Team Name"
                     autoComplete="off"
-                    name="team" style={{marginTop:"10px"}}
+                    name="team" style={{ marginTop: "10px" }}
                     onChange={(e) => {
                       setvalue(e.target.value);
                     }}
                   />
                 </span>
                 <div className="sign-out-btn  flex justify-center">
-                  <button class="link_404"  style={{fontSize:"1rem",marginTop:"13px",marginBottom:"5px",marginLeft:"-2rem",width:"fit-content",height:"max-content",padding:"10px"}} onClick={createTeam}>
+                  <button class="link_404" style={{ fontSize: "1rem", marginTop: "13px", marginBottom: "5px", marginLeft: "-2rem", width: "fit-content", height: "max-content", padding: "10px" }} onClick={createTeam}>
                     Create Team
                   </button>
                 </div>

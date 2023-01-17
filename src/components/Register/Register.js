@@ -15,7 +15,7 @@ const Register = () => {
   useEffect(() => {
     const initClient = () => {
         gapi.client.init({
-            clientId:process.env.REACT_APP__CLIENT_ID,
+            clientId: clientId,
             scope: ''
         });
     };
@@ -45,6 +45,8 @@ const logOut = () => {
 };
   return (
     <div className="main relative bg-no-repeat bg-cover h-screen light-gradient bg-center">
+      {console.log(clientId)}
+      {console.log("Hlelle")}
       <span className="absolute flex align-middle justify-center h-screen">
         <svg class="blob absolute justify-center align-middle" width={900} height={900} viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(225,250)">
@@ -63,7 +65,7 @@ const logOut = () => {
             <div className="flex items-center justify-center mt-4">
               <img src={image} alt="logo" className="w-[25rem] h-[25rem] " />
             </div>
-            <a
+            <div
               // href="#"
               className="flex items-center justify-center mt-4 bg-[#003247] text-[#DBF2FF] transition-colors duration-300 transform border rounded-lg hover:bg-[#DBF2FF] hover:text-[#003247] hover:border-[#003247] focus:outline-none focus:bg-[#DBF2FF] focus:text-[#003247] focus:border-[#003247]"
             >
@@ -96,12 +98,11 @@ const logOut = () => {
                     onSuccess={onSuccess}
                     onFailure={onFailure}
                     cookiePolicy={'single_host_origin'}
-                    
                     style={{backgroundColor:"rgba(0,0,0,0.5)!important"}}
                 />
            
               </span>
-            </a>
+            </div>
           </div>
         </div>
       </div>
