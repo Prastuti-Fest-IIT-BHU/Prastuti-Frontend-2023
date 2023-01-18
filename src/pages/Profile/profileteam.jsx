@@ -2,20 +2,38 @@ import React, { useState } from "react";
 import "./profilecss.css";
 import "./profileteamcss.css";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Loader from "../../components/Loader/loader";
 
 // toast.configure();
 
 const Requestsent = (prop) => {
   const [email, setemail] = useState(null);
+  const [showLoader, setShowLoader] = useState(false);
+  const [loaderText, setLoaderText] = useState("");
+
+  const showLoaderWithMessage = (message) => {
+    setLoaderText(message);
+    setShowLoader(true);
+  };
+
+  const hideLoader = () => {
+    setShowLoader(false);
+  };
+
   const sendRequest = async (id) => {
     try {
-      const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/request/`, {
-        recepient_email: email,
-        team_id: id,
-        user_id: localStorage.getItem("loginData"),
-      });
+      showLoaderWithMessage("Sending Request");
+      const response = await axios.post(
+        `${process.env.REACT_APP_SECRET_KEY}/api/request/`,
+        {
+          recepient_email: email,
+          team_id: id,
+          user_id: localStorage.getItem("loginData"),
+        }
+      );
+      hideLoader();
       toast.success(response.data.message, {
         position: "top-right",
         autoClose: 5000,
@@ -27,10 +45,10 @@ const Requestsent = (prop) => {
         theme: "colored",
       });
 
-      setemail("")
+      setemail("");
       // window.location.reload(true);
-
     } catch (error) {
+      hideLoader();
       toast.error(error.response.data.message, {
         position: "top-right",
         autoClose: 5000,
@@ -43,32 +61,79 @@ const Requestsent = (prop) => {
       });
     }
   };
-  return (<><div className="eventname">
-    <input type="text" name="member" autoComplete="off" placeholder="Recipient email" style={{ fontSize: "1rem" }} value={email} onChange={(e) => { setemail(e.target.value) }} />
-  </div>
-    <div className="sign-out-btn  flex justify-center"  >
-      <button class="link_404" onClick={() => sendRequest(prop.id)} style={{ fontSize: "1rem", marginTop: "13px", marginBottom: "5px", marginLeft: "-2rem", width: "fit-content", height: "max-content", padding: "5px" }}>Add Members</button>
-    </div></>)
-}
+  return (
+    <>
+      {showLoader ? <Loader text={loaderText} /> : null}
+
+      <div className="eventname">
+        <input
+          type="text"
+          name="member"
+          autoComplete="off"
+          placeholder="Recipient email"
+          style={{ fontSize: "1rem" }}
+          value={email}
+          onChange={(e) => {
+            setemail(e.target.value);
+          }}
+        />
+      </div>
+      <div className="sign-out-btn  flex justify-center">
+        <button
+          class="link_404"
+          onClick={() => sendRequest(prop.id)}
+          style={{
+            fontSize: "1rem",
+            marginTop: "13px",
+            marginBottom: "5px",
+            marginLeft: "-2rem",
+            width: "fit-content",
+            height: "max-content",
+            padding: "5px",
+          }}
+        >
+          Add Members
+        </button>
+      </div>
+    </>
+  );
+};
 
 const Profileteam = (prop) => {
   const [value, setvalue] = useState(null);
-  const createTeam = async () => {
+  const [showLoader, setShowLoader] = useState(false);
+  const [loaderText, setLoaderText] = useState("");
 
+  const showLoaderWithMessage = (message) => {
+    setLoaderText(message);
+    setShowLoader(true);
+  };
+
+  const hideLoader = () => {
+    setShowLoader(false);
+  };
+
+  console.log(prop);
+
+  const createTeam = async () => {
     // Checking if form filled
-    const { data } = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
-    if (!data[0].isFormFilled) {
+    if (!prop.data) {
       window.location.replace("/form");
       return;
     }
 
     try {
       if (value) {
-        const response = await axios.post(`${process.env.REACT_APP_SECRET_KEY}/api/teams`, {
-          userID: localStorage.getItem("loginData"),
-          Team_Name: value,
-          Member_Count: 1,
-        });
+        showLoaderWithMessage("Creating Team");
+        const response = await axios.post(
+          `${process.env.REACT_APP_SECRET_KEY}/api/teams`,
+          {
+            userID: localStorage.getItem("loginData"),
+            Team_Name: value,
+            Member_Count: 1,
+          }
+        );
+        hideLoader();
         toast.success(response.data.message, {
           position: "top-right",
           autoClose: 5000,
@@ -80,10 +145,10 @@ const Profileteam = (prop) => {
           theme: "colored",
         });
         setTimeout(() => {
-          window.location.reload(true)
-        }, 1500)
+          window.location.reload(true);
+        }, 1500);
       } else {
-        toast.error('Please write the Team Name!', {
+        toast.error("Please write the Team Name!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -94,8 +159,8 @@ const Profileteam = (prop) => {
           theme: "colored",
         });
       }
-    }
-    catch (error) {
+    } catch (error) {
+      hideLoader();
       toast.error(error.response.data.message, {
         position: "top-right",
         autoClose: 5000,
@@ -107,11 +172,11 @@ const Profileteam = (prop) => {
         theme: "colored",
       });
     }
-
   };
   return (
     <>
       <div className="Pmaincontainer">
+        {showLoader ? <Loader text={loaderText} /> : null}
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -143,16 +208,19 @@ const Profileteam = (prop) => {
                     </span>
                     {data.Members.map((item, ind) => {
                       return (
-                        <span className="teamname" key={ind} style={{ fontSize: "1rem" }} >
+                        <span
+                          className="teamname"
+                          key={ind}
+                          style={{ fontSize: "1rem" }}
+                        >
                           {ind + 1} {item.Name}
                         </span>
                       );
                     })}
-                    {data.Members.length === 3 ? null : <Requestsent id={data._id} />
-                    }
-
+                    {data.Members.length === 3 ? null : (
+                      <Requestsent id={data._id} />
+                    )}
                   </div>
-
                 </div>
               </div>
             );
@@ -165,14 +233,27 @@ const Profileteam = (prop) => {
                     type="text"
                     placeholder="Team Name"
                     autoComplete="off"
-                    name="team" style={{ marginTop: "10px" }}
+                    name="team"
+                    style={{ marginTop: "10px" }}
                     onChange={(e) => {
                       setvalue(e.target.value);
                     }}
                   />
                 </span>
                 <div className="sign-out-btn  flex justify-center">
-                  <button class="link_404" style={{ fontSize: "1rem", marginTop: "13px", marginBottom: "5px", marginLeft: "-2rem", width: "fit-content", height: "max-content", padding: "10px" }} onClick={createTeam}>
+                  <button
+                    class="link_404"
+                    style={{
+                      fontSize: "1rem",
+                      marginTop: "13px",
+                      marginBottom: "5px",
+                      marginLeft: "-2rem",
+                      width: "fit-content",
+                      height: "max-content",
+                      padding: "10px",
+                    }}
+                    onClick={createTeam}
+                  >
                     Create Team
                   </button>
                 </div>
