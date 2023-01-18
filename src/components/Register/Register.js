@@ -11,6 +11,18 @@ import "./Register.css"
 const Register = () => {
   const [ profile, setProfile ] = useState([]);
   const [value,setvalue]=useState(localStorage.getItem("loginData")?JSON.parse(localStorage.getItem('loginData')):null)
+  const [showLoader, setShowLoader] = useState(false);
+  const [loaderText, setLoaderText] = useState("");
+
+  const showLoaderWithMessage = (message) => {
+    setLoaderText(message);
+    setShowLoader(true);
+  };
+
+  const hideLoader = () => {
+    setShowLoader(false);
+  };
+  
   const clientId =process.env.REACT_APP__CLIENT_ID;
   useEffect(() => {
     const initClient = () => {
