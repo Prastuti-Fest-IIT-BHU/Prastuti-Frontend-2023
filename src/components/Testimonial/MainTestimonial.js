@@ -28,7 +28,7 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"01"}
-              info={"Main Testimonial"}
+              info={`Content`}
               title={"GeeksForGEEKS"}
               image={
                 "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
@@ -46,7 +46,7 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"05"}
-              info={"Main Testimonial"}
+              info={`Main Testimonial`}
               title={"GeeksForGEEKS"}
               image={
                 "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
@@ -64,7 +64,7 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={"Main Testimonial"}
+              info={`Main Testimonial`}
               title={"GeeksForGEEKS"}
               image={
                 "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
@@ -82,7 +82,7 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={"Main Testimonial"}
+              info={`Main Testimonial`}
               title={"GeeksForGEEKS"}
               image={
                 "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
@@ -100,7 +100,7 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={"Main Testimonial"}
+              info={`Main Testimonial`}
               title={"GeeksForGEEKS"}
               image={
                 "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
