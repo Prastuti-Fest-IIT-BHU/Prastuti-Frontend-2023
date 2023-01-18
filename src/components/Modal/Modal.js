@@ -7,10 +7,6 @@ const Modal = ({children, modal, handleModal}) => {
     }
     return (
         <>
-            <button
-                onClick={toggleModal}
-                className="btn-modal">OPEN</button>
-
             {modal && (
                 <div className="modal">
                     <div onClick={toggleModal}

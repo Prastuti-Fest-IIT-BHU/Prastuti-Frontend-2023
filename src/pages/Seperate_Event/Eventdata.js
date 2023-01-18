@@ -63,7 +63,7 @@ const eventData={
   
       title : "Paper Presentation",
       subtitle : "The Paper and Poster presentation Event",
-      imgpath : "./eventImages/oscillion.jpg",
+      imgpath : "./eventImages/Paper.png",
       eventInfo : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Nibh venenatis cras sed felis eget velit aliquet sagittis. Id velit ut tortor pretium. Morbi tristique senectus et netus et malesuada fames ac turpis. Quisque egestas diam in arcu cursus. Viverra ipsum nunc aliquet bibendum. Faucibus a pellentesque sit amet porttitor eget dolor. Lectus vestibulum mattis ullamcorper velit sed. Sem nulla pharetra diam sit amet nisl suscipit. Mi bibendum neque egestas congue. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Cursus turpis massa tincidunt dui ut ornare lectus sit. Ut venenatis tellus in metus vulputate eu scelerisque. Urna porttitor rhoncus dolor purus. Sed cras ornare arcu dui vivamus arcu."
     
     },
