@@ -25,16 +25,16 @@
   border-right: 2px solid black;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'Montserrat';
+  font-family: "Nunito";
 }
 .sidebar h1 {
   font-size: 1.2em;
-  font-family: Marcellus;
+  font-family: "Nunito";
 }
 .sidebar a {
   padding: 10px;
   text-decoration: none;
-  font-family: Marcellus;
+  font-family: "Nunito";
   display: block;
   margin-left: 50px;
   list-style: none;
