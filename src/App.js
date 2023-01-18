@@ -20,12 +20,6 @@ import Thankyou from "./pages/Thank_You/Thank_you";
 import Form from "./pages/Form/Form";
 
 export default function App() {
-  const [showLoader, setLoader] = useState(true);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setLoader(false);
-    },3000)
-  })
   return (
     <>
       <Router>
@@ -36,7 +30,7 @@ export default function App() {
           <Route
             path="/"
             element={
-              <Home/>
+              <Home />
             }
           ></Route>
           <Route
@@ -53,7 +47,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent  data={eventData.codigo} />
+                <SeparateEvent data={eventData.codigo} />
               </>
             }
           ></Route>
@@ -62,7 +56,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent  data={eventData.hackoverflow} />
+                <SeparateEvent data={eventData.hackoverflow} />
               </>
             }
           ></Route>
@@ -71,7 +65,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent  data={eventData.recognizance} />
+                <SeparateEvent data={eventData.recognizance} />
               </>
             }
           ></Route>
@@ -80,7 +74,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent  data={eventData.simulim} />
+                <SeparateEvent data={eventData.simulim} />
               </>
             }
           ></Route>
@@ -89,7 +83,7 @@ export default function App() {
             element={
               <>
                 <StickyNav />
-                <SeparateEvent  data={eventData.consilium} />
+                <SeparateEvent data={eventData.consilium} />
               </>
             }
           ></Route>
