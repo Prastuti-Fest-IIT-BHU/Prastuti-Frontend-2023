@@ -18,7 +18,7 @@ function ListNames({ anchorId, itemName, active }) {
 
   return (
     <li className="box">
-      <a
+      <a className="anchor"
         href={`#${itemName}`}
         onClick={handleClick}
         aria-label={`Scroll to ${itemName}`}

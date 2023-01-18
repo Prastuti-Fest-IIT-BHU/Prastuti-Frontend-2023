@@ -3,16 +3,13 @@
   padding-top: 5px;
   text-align: centre;
   color: white;
+  font-family: "Nunito";
 }
 .box:hover{
   background-color: #bfebff;
   border-radius: 20px;
   color: black;
 }
-
-.item:active {
-  color: blue;
-}
-.item:focus {
-  color: blue;
+.item:hover{
+  color: black;
 }

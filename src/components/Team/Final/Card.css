@@ -10,7 +10,7 @@
 }
 .position {
   height: 29px;
-  font-family: "Manrope";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -33,7 +33,7 @@
 }
 
 .team-card:hover {
-  box-shadow: 4px 8px 0px gray;
+  /* box-shadow: 4px 8px 0px gray; */
   transition: all 0.5s ease;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .cardImg img:hover {
-  transform: scale(1.08);
+  transform: scale(1.10);
   /* opacity: 0.8; */
 }
 .container {
