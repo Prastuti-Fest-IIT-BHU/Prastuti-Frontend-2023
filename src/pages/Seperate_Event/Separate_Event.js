@@ -4,15 +4,18 @@ import "./SeperateEvents.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Loader from "../../components/Loader/loader";
+import Modal from "../../components/Modal/Modal";
 
 const Separate_Event = ({ data }) => {
   const Eventitle = data.title;
   console.log(Eventitle);
   const [eventName, seteventEame] = useState(null);
   const [result, setresult] = useState(null);
-  const [team, setteam] = useState(null);
+  const [teamName, setTeamName] = useState(null);
   const [showLoader, setShowLoader] = useState(false);
   const [loaderText, setLoaderText] = useState("");
+  const [modal, setModal] = useState(false)
+  const handleModal = (value) => setModal(value)
 
   const showLoaderWithMessage = (message) => {
     setLoaderText(message);
@@ -150,10 +153,6 @@ const Separate_Event = ({ data }) => {
       }
     }
     if (result.team_event) {
-      let teamName = prompt(
-        "Please enter your team name that you have created in profilepage",
-        "team name"
-      );
       findingteam(teamName);
       const teamdata = result.teams.find(({ Name }) => Name === teamName);
     }
@@ -191,7 +190,7 @@ const Separate_Event = ({ data }) => {
             Participants : <span>{eventName}</span>
           </h3>
           {localStorage.getItem("loginData") ? (
-            <Link onClick={register}>
+            <Link onClick={()=>handleModal(true)}>
               <button
                 className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
                   "
@@ -211,6 +210,14 @@ const Separate_Event = ({ data }) => {
           )}
         </div>
       </div>
+      <Modal modal = {modal}
+            handleModal = {handleModal}>
+              <div className="flex flex-col rounded-md">
+                <label for = "user-team" className="p-2">Please enter your team name that you have created in profilepage</label>
+                <input onChange={(e)=>setTeamName(e.target.value)} id = "user-team" type="text" className="p-2" placeholder="TeamName"></input>
+                <button className="p-2 flex  justify-end" onClick = {()=>{handleModal(false);register()}}>Submit</button>
+              </div>
+            </Modal>
     </>
   );
 };

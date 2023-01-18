@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./Modal.css"
-const Modal = () => {
-    const [modal, setModal] = useState(false)
+const Modal = ({children, modal, handleModal}) => {
 
     const toggleModal = () => {
-        setModal(!modal)
+        handleModal(!modal)
     }
     return (
         <>
@@ -18,7 +17,7 @@ const Modal = () => {
                         className="overlay">
                     </div>
                     <div className="modal-content">
-                        lorem-ipsum
+                       {children}
                     </div>
 
                     <button onClick={toggleModal}>
