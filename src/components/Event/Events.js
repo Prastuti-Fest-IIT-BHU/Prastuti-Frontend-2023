@@ -22,6 +22,7 @@ const Card = (prop) => {
 
     // <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     <div id="events">
+      <h1 className='EventHead font-Manrope font-extrabold text-6xl mt-[20px] mb-[10px]'>Events</h1>
     {Data.map((item, index) => (
     <>
     
@@ -54,7 +55,7 @@ const Card = (prop) => {
 
                 <div class="w-full py-6 px-8 text-gray-800 flex flex-col " style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}} >
                   <h3
-                    class="text-lg leading-tight truncate mb-2"
+                    class="text-lg leading-tight truncate mb-2 px-2 py-1"
                     style={{ fontFamily: "Poppins" ,color: '#fff',fontSize:'25px',
                     textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6', backgroundColor:"#003247"}}
                     

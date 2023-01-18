@@ -87,6 +87,15 @@ export default function App() {
               </>
             }
           ></Route>
+          <Route
+            path="/paper-presentation"
+            element={
+              <>
+                <StickyNav />
+                <SeparateEvent data={eventData.paperpresetation} />
+              </>
+            }
+          ></Route>
           <Route path="/thankyou" element={
             <Thankyou />
           }></Route>
