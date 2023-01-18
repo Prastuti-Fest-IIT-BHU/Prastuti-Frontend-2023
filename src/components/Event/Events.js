@@ -22,6 +22,7 @@ const Card = (prop) => {
 
     // <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
     <div id="events">
+      <h1 className='EventHead font-Manrope font-extrabold text-6xl mt-[20px] mb-[10px]'>Events</h1>
     {Data.map((item, index) => (
     <>
     

@@ -95,11 +95,11 @@ const Navbar = () => {
                   smooth
                   to={{
                     pathname: "/",
-                    hash: "sponsors",
+                    hash: "faqs",
                   }}
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Sponsors
+                  FAQs
                 </Link>
               </li>
               <li
@@ -110,11 +110,11 @@ const Navbar = () => {
                   smooth
                   to={{
                     pathname: "/",
-                    hash: "faqs",
+                    hash: "sponsors",
                   }}
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  FAQs
+                  Sponsors
                 </Link>
               </li>
               <li

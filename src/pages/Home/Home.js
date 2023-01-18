@@ -18,20 +18,20 @@ AOS.init();
 
 
 export default function Home() {
-  const spinner = document.getElementById('spinner');
-  const [landingLoader, setlandingLoader] = useState((spinner.style.display !== "none")? true: false);
-  if(spinner && (spinner.style.display !== "none")){
-    setTimeout(()=>{
-      setlandingLoader(false)
-      spinner.style.backgroundColor = "transparent";
-      spinner.style.opacity = "0"
-      spinner.style.transition = "all 1s ease-in"; 
-      spinner.style.visibility = "none"   
-    },2000)
-    setTimeout(()=>{
-      spinner.style.display="none"
-    },3000)
-  }
+  // const spinner = document.getElementById('spinner');
+  // const [landingLoader, setlandingLoader] = useState((spinner.style.display !== "none")? true: false);
+  // if(spinner && (spinner.style.display !== "none")){
+  //   setTimeout(()=>{
+  //     setlandingLoader(false)
+  //     spinner.style.backgroundColor = "transparent";
+  //     spinner.style.opacity = "0"
+  //     spinner.style.transition = "all 1s ease-in"; 
+  //     spinner.style.visibility = "none"   
+  //   },2000)
+  //   setTimeout(()=>{
+  //     spinner.style.display="none"
+  //   },3000)
+  // }
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -39,7 +39,7 @@ export default function Home() {
     damping: 30,
     restDelta: 0.001,
   });
-  return !landingLoader && (
+  return (
     <>
   <motion.div
           className="progress"
