@@ -1,5 +1,5 @@
 * {
-  font-family: sans-serif;
+  font-family: Nunito;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -102,7 +102,7 @@ a {
   line-height: 1;
   font-size: 8.125em;
   opacity: 0.055;
-  font-family: League Spartan, Helvetica, Arial, sans-serif;
+  font-family: "Nunito";
 }
 .experiment .experiment-circle {
   display: block;
@@ -144,7 +144,7 @@ a {
   font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Nunito';
 }
 .experiment .experiment-title-area .experiment-title-label:before {
   content: "";
@@ -160,7 +160,7 @@ a {
   margin-top: -2%;
   font-size: 1.2em;
   font-weight: 800;
-  font-family:'Manrope', sans-serif;
+  font-family:'Nunito';
 }
 .experiment .experiment-number-area {
   display: flex;
@@ -285,12 +285,18 @@ a {
   }
 }
 @media only screen and (max-width: 31.25em) {
+  .card{
+    height: 500px;
+    width: 100%;
+  }
   .experiment {
     display: block;
     clear: both;
     float: none;
     width: 100%;
     margin-right: auto;
+    height: 420px;
+    width: 400px;
   }
   .experiment,
   .experiment:first-child {
@@ -314,7 +320,7 @@ a {
 }
 .section-title {
   background: url("../Design/light+circle.png") bottom;
-  font-family: 'Caterman', sans-serif;
+  font-family: 'Nunito';
   font-size: 50px;
   font-weight: 300;
   text-align: center;
