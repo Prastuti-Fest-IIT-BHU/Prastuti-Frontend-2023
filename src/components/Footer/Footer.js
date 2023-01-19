@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <>
       <footer className='footer justify-center bg-[#003247] items-center min-h-[20vh]'>
-      <div className='py-5'>
+      <div className='py-5 flex flex-col justify-center'>
         {/* <div className="up flex items-center justify-center max-w-[40vw]  mx-auto " > */}
         <div className="up" >
             {/* <Link class-name="" to="/"></Link> */}

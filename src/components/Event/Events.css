@@ -10,10 +10,13 @@
     margin-left: 27%;
     margin-right: 27%;
 }
+
+#card{
+    margin: 0px 10px;
+}
 #card h3{
     font-family: 'Poppins';
 }
-
 #card .info{
     font-family: 'Nunito';
     font-weight: 500;

@@ -25,15 +25,15 @@ const Form1 = () => {
   //   return false;
   // }
 
-  // useEffect(()=>{
-  //   const checkFormFilled = async ()=>{
-  //     const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
-  //     if(data[0].isFormFilled){
-  //       window.location.replace("/");
-  //     }
-  //   }
-  //   checkFormFilled()
-  // },[]) 
+  useEffect(()=>{
+    const checkFormFilled = async ()=>{
+      const {data} = await axios.get(`${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem("loginData")}`);
+      if(data[0].isFormFilled){
+        window.location.replace("/");
+      }
+    }
+    checkFormFilled()
+  },[]) 
 
   const inserData = (e) => {
     setToast(false);

@@ -184,7 +184,7 @@ const Separate_Event = ({ data }) => {
         style={{ backgroundImage: `url(${data.imgpath})` }}
       >
         <div className=" min-h-screen w-full md:w-3/5 lg:w-[45%] bg-black md:opacity-[0.8] opacity-[0.7] text-white p-[3rem]">
-          <h1 className="font-bold text-xl xl:text-3xl md:text-2xl mt-10 mb-4 font-Manrope">
+          <h1 className="font-bold text-3xl md:text-2xl mt-10 mb-4 font-Manrope">
             {data.title}
           </h1>
           <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-Manrope text-lg">

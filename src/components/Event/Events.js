@@ -29,7 +29,7 @@ const Card = (prop) => {
         <div
           key={index}
           id="card" 
-          class="pt-8 pb-12 x  {item.float}"
+          class="pt-8 pb-12 x  {item.float} sm:m-0"
           data-aos={item.slide}
           data-aos-duration="1000"
           // variants={boxVariant}

@@ -1,8 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Manrope&display=swap');
+@tailwind utilities; */
 
 
 footer{
@@ -19,7 +17,7 @@ footer{
     border-left: 1px solid #fff;
 }
 .up{
-    width: 40vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,12 +65,7 @@ li{
     }
 }
 @media screen and (max-width: 360px) {
-    .up{
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-left: 10vw;
-    }
+    
   }
 /* 
 @media (max-width: 1100px){
