@@ -22,7 +22,7 @@ const Intro = () => {
                 1000,
                 "IIT BHU",
                 800,
-                "ELECTRICAL ENGINEERING",
+                "ELECTRICAL (EEE)",
                 800,
                 "TECH FEST",
                 800,
