@@ -52,7 +52,11 @@ const Navbar = () => {
           {/* <div className="text-right"> */}
           <h1 className="text-white text-2xl font-['Manrope'] font-black px-3 ml-2 drop-shadow-lg">
             <Link smooth to="/#">
-              <img src="./prastuti-logo.png" alt="Prastuti'23" className="Navlogo"/> 
+              <img
+                src="./prastuti-logo.png"
+                alt="Prastuti'23"
+                className="Navlogo"
+              />
             </Link>
           </h1>
           {/* <img src="Prastuti-Frontend-2023/src/assets/prastuti.png" alt='logo' className=""></img> */}
@@ -124,22 +128,27 @@ const Navbar = () => {
                 <Link to="/team/#">Team</Link>
               </li>
             </ul>
-            {localStorage.getItem("loginData") ? <Link to="/profile">
-              <button
-                className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-6 py-2 border rounded-lg font-bold text-[#003247] 
+            {localStorage.getItem("loginData") ? (
+              <Link to="/profile/#">
+                <button
+                  className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-6 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#fff] hover:bg-[#2985ff] transition duration-300 
                             ease-in-out"
-
-              >Profile
-              </button>
-            </Link>:<Link to="/login">
-              <button className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+                >
+                  Profile
+                </button>
+              </Link>
+            ) : (
+              <Link to="/login/#">
+                <button
+                  className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#fff] hover:bg-[#2985ff] transition duration-300 
-                            ease-in-out">
+                            ease-in-out"
+                >
                   Login
-              </button>
-            </Link>
-            }
+                </button>
+              </Link>
+            )}
           </div>
         </div>
 
@@ -221,15 +230,27 @@ const Navbar = () => {
               className="px-4 py-5 text-center font-['Manrope'] text-2xl"
               onClick={handleMenu}
             >
-              <Link to="/register/#">
-                <button
-                  className="drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+              {localStorage.getItem("loginData") ? (
+                <Link to="/profile/#">
+                  <button
+                    className="drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                                 text-2xl hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
                                 ease-in-out"
-                >
-                  Login
-                </button>
-              </Link>
+                  >
+                    Profile
+                  </button>
+                </Link>
+              ) : (
+                <Link to="/login/#">
+                  <button
+                    className="drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+                                text-2xl hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#29ffff] transition duration-300 
+                                ease-in-out"
+                  >
+                    Login
+                  </button>
+                </Link>
+              )}
             </li>
           </ul>
           <ul className="flex justify-center py-2">

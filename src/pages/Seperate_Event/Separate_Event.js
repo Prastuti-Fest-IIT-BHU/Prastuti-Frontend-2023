@@ -37,9 +37,11 @@ const Separate_Event = ({ data }) => {
     setresult(data.events.find(({ Name }) => Name === Eventitle));
     hideLoader();
   };
+
   useEffect(() => {
     getEvent();
   }, []);
+
   const findingteam = async (name) => {
     showLoaderWithMessage("Registering");
     const { data } = await axios.get(
@@ -153,7 +155,12 @@ const Separate_Event = ({ data }) => {
       }
     }
     if (result.team_event) {
-      findingteam(teamName);
+      handleModal(true)
+      // let teamName = prompt(
+      //   "Please enter your team name that you have created in profilepage",
+      //   "team name"
+      // );
+      // findingteam(teamName);
       const teamdata = result.teams.find(({ Name }) => Name === teamName);
     }
   };
@@ -190,7 +197,7 @@ const Separate_Event = ({ data }) => {
             Participants : <span>{eventName}</span>
           </h3>
           {localStorage.getItem("loginData") ? (
-            <Link onClick={()=>handleModal(true)}>
+            <Link onClick={register}>
               <button
                 className="mt-8 border-2 border-[white] px-10 py-3 rounded-3xl hover:bg-[#d5d8d8] hover:text-black font-Catamaran
                   "
@@ -215,7 +222,7 @@ const Separate_Event = ({ data }) => {
               <div className="flex flex-col rounded-md">
                 <label for = "user-team" className="p-2">Please enter your team name that you have created in profilepage</label>
                 <input onChange={(e)=>setTeamName(e.target.value)} id = "user-team" type="text" className="p-2" placeholder="TeamName"></input>
-                <button className="p-2 flex  justify-end" onClick = {()=>{handleModal(false);register()}}>Submit</button>
+                <button className="p-2 flex  justify-end" onClick = {()=>{handleModal(false);findingteam(teamName)}}>Submit</button>
               </div>
             </Modal>
     </>
