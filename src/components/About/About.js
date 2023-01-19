@@ -1,12 +1,7 @@
 import React from 'react'
 import './About.css'
 const About = () => {
-  const mystyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "10px",
-    fontFamily: "Arial"
-  };
+
   return (
     <>
       {/* <video autoPlay muted loop className="myVideo">
