@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar bg-[#003247]">
-        <div className="flex justify-between items-center max-h-[15vh]">
+        <div className="flex justify-between items-center max-h-[15vh] min-h-[8vh]">
           <div className="md:hidden mx-5 " onClick={handleMenu}>
             {!mobMenu ? (
               <IconContext.Provider value={{ className: "react-icons" }}>
@@ -53,7 +53,7 @@ const Navbar = () => {
           <h1 className="text-white text-2xl font-['Manrope'] font-black px-3 ml-2 drop-shadow-lg">
             <Link smooth to="/#">
               <img
-                src="./prastuti-logo.png"
+                src={require("./prastuti-logo.png")}
                 alt="Prastuti'23"
                 className="Navlogo"
               />
@@ -141,7 +141,7 @@ const Navbar = () => {
             ) : (
               <Link to="/login/#">
                 <button
-                  className="invisible sm:visible drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
+                  className="hidden sm:flex drop-shadow-xl font-['Manrope'] px-4 py-2 border rounded-lg font-bold text-[#003247] 
                             sm:text-l text-sm hover:border-[#004C7D] hover:border-1 bg-white hover:text-[#fff] hover:bg-[#2985ff] transition duration-300 
                             ease-in-out"
                 >
