@@ -286,7 +286,7 @@ a {
 }
 @media only screen and (max-width: 31.25em) {
   .card{
-    height: 500px;
+    height: 480px;
     width: 100%;
   }
   .experiment {
@@ -295,8 +295,8 @@ a {
     float: none;
     width: 100%;
     margin-right: auto;
-    height: 420px;
-    width: 400px;
+    height: 400px;
+    width: 300px;
   }
   .experiment,
   .experiment:first-child {

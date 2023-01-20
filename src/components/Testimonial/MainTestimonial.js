@@ -46,7 +46,7 @@ export default function MainTestimonial() {
         <div className="inner-container">
           <div className="inner-container">
             <TestimonialCard
-              number={"09"}
+              number={"05"}
               info={`With Prastuti an effort will be made to provide a platform to the students innovative industeries, startups
               and interface sectors to showcase the development and demeonstration of the respective products.`}
               title={"Mentor Professor, Dr. Soumya R Mohanty"}
@@ -65,7 +65,7 @@ export default function MainTestimonial() {
         <div className="inner-container">
           <div className="inner-container">
             <TestimonialCard
-              number={"05"}
+              number={"09"}
               info={`Prastuti provided me with the platform and opportunity to grow and learn about technology and web development in particular.`}
               title={"Prastuti'22 Participant, Himanshu Kaithal"}
               image={
