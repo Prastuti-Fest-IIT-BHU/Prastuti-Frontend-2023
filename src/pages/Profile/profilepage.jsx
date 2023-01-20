@@ -5,6 +5,8 @@ import Profilerequest from "./Profilerequest";
 import Profileevent from "./profileevent";
 import Footer from "../../components/Footer/Footer";
 import axios from "axios";
+import Loader from "../../components/Loader/loader";
+
 const Profilepage = () => {
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
   const [team, setteam] = useState(null);
@@ -42,6 +44,7 @@ const Profilepage = () => {
   useEffect(() => {
     if (localStorage.getItem("loginData")) {
       const gettingData = async () => {
+        showLoaderWithMessage("Fetching Details");
         const { data } = await axios.get(
           `${process.env.REACT_APP_SECRET_KEY}/api/user/${localStorage.getItem(
             "loginData"
@@ -49,6 +52,7 @@ const Profilepage = () => {
         );
         setinput(data[0]);
         setteam(data[0].Teams);
+        setFormFilled(data[0].isFormFilled);
         setevent(data[0].Events_Participated);
         setvalue(
           <Profileevent
@@ -57,7 +61,9 @@ const Profilepage = () => {
           />
         );
         setrequest(data[0].Pending_Requests);
+        hideLoader();
       };
+
       gettingData();
       const interval = setInterval(() => {
         localStorage.removeItem("loginData");
@@ -75,7 +81,7 @@ const Profilepage = () => {
 
   return (
     <>
-      {/* {showLoader ? <Loader text={loaderText} /> : null} */}
+      {showLoader ? <Loader text={loaderText} /> : null}
       <div className="profilecontainer">
         <div className="page px-0 md:px-10 z-10">
           <div
@@ -86,7 +92,7 @@ const Profilepage = () => {
             <div className="min-w-full md:rounded-b-xl h-[160px] -mb-4 bg-black/60"></div>
           </div>
           {/* <img src={profileback} className=" relative -mb-36 object-cover opacity-90" /> */}
-          {/* <div className="myprofile -mt-12 flex flex-col md:flex-row">
+          <div className="myprofile -mt-12 flex flex-col md:flex-row">
             <div className="profilechild imgprofile">
               <img
                 className="imgprofile"
@@ -102,11 +108,11 @@ const Profilepage = () => {
                 {input.email_id}
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         <div></div>
         <div className="pb-2 m-2 flex flex-col lg:items-center lg:flex-row lg:px-10">
-          {/* <div className="about-user lg:min-h-[40vh] m-2 p-2 bg-sky-50 rounded-2xl flex flex-col lg:w-4/12">
+          <div className="about-user lg:min-h-[40vh] m-2 p-2 bg-sky-50 rounded-2xl flex flex-col lg:w-4/12">
             <p className="about-header text-center">About</p>
             <hr className="Phr" />
             <div className="user-details">
@@ -131,43 +137,7 @@ const Profilepage = () => {
                 Sign Out
               </button>
             </div>
-          </div> */}
-
-
-          <div className="lg:w-full lg:max-w-md px-8 py-4 mt-16 bg-white rounded-lg shadow-lg m-2 md:justify-center">
-            <div className="flex justify-center -mt-16 md:justify-end">
-              <img
-                className="imgprofile"
-                src={input.Profile_Photo}
-                alt="user"
-              />
-            </div>
-
-            <h2 className="mt-2 text-2xl p-1 text-center font-Manrope font-semibold text-gray-800 md:mt-0 md:text-3xl lg:text-start">
-            {input.Name}
-            </h2>
-            
-            <hr className="Phr" />
-            <h2 className="mt-2 text-2xl text-center font-Manrope font-semibold text-gray-800 md:mt-0 md:text-3xl">
-              About
-            </h2>
-            <p className="profile-email font-Catamaran text-center lg:text-start break-words text-l p-1 ">
-            {input.email_id}
-            </p>
-            <p className="mt-2 font-Catamaran text-gray-600">
-            +91{input.Phone}
-            </p>
-
-            <div className="flex justify-end mt-4">
-              <div className="sign-out-btn  flex justify-center">
-                <button className="link_404">Sign Out</button>
-              </div>
-            </div>
           </div>
-
-
-
-
 
           <div className="dynamic-content m-2 min-h-[60vh] bg-sky-50 rounded-2xl  lg:w-8/12">
             <div className="profilenav flex">
