@@ -9,6 +9,7 @@
         "aos": "^2.3.4",
         "axios": "^1.2.2",
         "bootstrap": "^5.3.0-alpha1",
+        "dotenv": "^16.0.3",
         "framer-motion": "^8.2.4",
         "gapi-script": "^1.2.0",
         "gsap": "^3.11.4",
