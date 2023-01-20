@@ -47,7 +47,7 @@ export default function MobileLayout() {
           <div className="inner-container">
           <TestimonialCard
               number={"05"}
-              info={`With Prastuti an effort will be made to provide a platform to the students innovative industeries, startups
+              info={`With Prastuti an effort will be made to provide a platform to the students, innovative industeries, startups
               and interface sectors to showcase the development and demeonstration of the respective products.`}
               title={"Mentor Professor, Dr. Soumya R Mohanty"}
               image={
@@ -69,7 +69,7 @@ export default function MobileLayout() {
               info={`Prastuti provided me with the platform and opportunity to grow and learn about technology and web development in particular.`}
               title={"Prastuti'22 Participant, Himanshu Kaithal"}
               image={
-                "url(./Images/rkpandey.jpg)"
+                "url(./TestimonialImages/himanshu.jpg)"
               }
             />
           </div>
