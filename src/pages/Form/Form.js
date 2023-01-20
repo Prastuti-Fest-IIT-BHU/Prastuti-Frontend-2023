@@ -449,9 +449,10 @@ const Form1 = () => {
                                   {interest}
                                   <div>
                                     <span
-                                      className={`${selectionArray[index]} ? "" : "hidden" material-symbols-outlined flex items-center ml-1 text-sm hover:bg-gray-100`}
+                                      className={`${selectionArray[index] ? "" : "hidden"
+                                        } material-symbols-outlined flex items-center ml-1 text-sm hover:bg-gray-100`}
                                     >
-                                      X
+                                      Close
                                     </span>
                                   </div>
                                 </span>
