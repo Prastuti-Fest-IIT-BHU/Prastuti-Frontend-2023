@@ -82,12 +82,30 @@ export default function MobileLayout() {
       >
         <div className="inner-container">
           <div className="inner-container">
+          <TestimonialCard
+              number={"09"}
+              info={`Main Testimonial`}
+              title={"Prastuti'22 Organizer"}
+              image={
+                "url(./TestimonialImages/atul.jpg)"
+              }
+            />
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide
+        style={{
+          padding: "10px",
+        }}
+      >
+        <div className="inner-container">
+          <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              title={"Title"}
-              info={"Content"}
+              info={`Main Testimonial`}
+              title={"Prastuti'23 Senior Advisor"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/shreyash.jpg)"
               }
             />
           </div>

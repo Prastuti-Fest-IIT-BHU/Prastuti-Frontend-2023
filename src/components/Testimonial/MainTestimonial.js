@@ -84,10 +84,10 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={`Main Testimonial`}
-              title={"GeeksForGEEKS"}
+              info={`Attending the fest was an unforgettable experience. Not only did I have the opportunity to witness some of the most innovative and cutting-edge technology, but I also had the chance to network with like-minded individuals. The variety of events and competitions offered something for everyone, whether you were interested in programming, development, or even electronics. I was particularly impressed by the level of organization and attention to detail.`}
+              title={"Prastuti'22 Organizer, Atul"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/atul.jpg)"
               }
             />
           </div>
@@ -102,10 +102,10 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={`Main Testimonial`}
-              title={"GeeksForGEEKS"}
+              info={`The Prastuti Technical fest is a fantastic opportunity to learn, grow, and be inspired. I highly recommend it to anyone interested in technology and innovation.`}
+              title={"Prastuti'23 Senior Advisor, Shreyash Singh"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/shreyash.jpg)"
               }
             />
           </div>

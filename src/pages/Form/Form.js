@@ -259,7 +259,7 @@ const Form1 = () => {
                   </h1>
 
                   <p className="mt-4 font-Catamaran text-gray-500 ">
-                    We would love to learn more about You!
+                    We would love to learn more about You! This form can only be filled once and is Mandatory so be careful!
                   </p>
 
                   <form className="mt-6" onSubmit={Submit}>

@@ -66,9 +66,10 @@ const Profileevent = (prop) => {
                 <div
                   className="psubchild1"
                   style={{
-                    backgroundImage:
-                      'url("https://tse2.mm.bing.net/th?id=OIP.Wo0bMz8lk_fKOloqwx8OQQHaHa&pid=Api&P=0")',
+                    // backgroundImage:
+                    //   'url("https://tse2.mm.bing.net/th?id=OIP.Wo0bMz8lk_fKOloqwx8OQQHaHa&pid=Api&P=0")',
                     backgroundRepeat: "no-repeat",
+                    backgroundImage: `url("/profile/event.jpg")` 
                   }}
                 ></div>
                 <div className="psubchild">
