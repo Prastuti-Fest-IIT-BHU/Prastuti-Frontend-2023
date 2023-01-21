@@ -27,6 +27,12 @@ footer{
     height: 115px;
     width: auto;
 }
+.toptext{
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito";
+    margin-right: 10px;
+}
 
 .conduct{
     display: flex;

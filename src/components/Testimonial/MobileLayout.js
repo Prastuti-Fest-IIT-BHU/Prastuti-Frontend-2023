@@ -26,14 +26,13 @@ export default function MobileLayout() {
       >
         <div className="inner-container">
           <div className="inner-container">
-            <TestimonialCard
+          <TestimonialCard
               number={"01"}
-              title={"Title"}
-              info={
-                "Content"
-              }
+              info={`Prastuti provides students with the platform and the push to meet the most contemporary demands- renewable energy and computer interface within electronics and electrical engineering.
+              Through comprehensive knowledge and an innovative approach to design and contemporary technologies, we aim to make a novel contribution in these areas.`}
+              title={"Head of Department EEE, Dr. R.K. Pandey"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/rkpandey.jpg)"
               }
             />
           </div>
@@ -46,12 +45,13 @@ export default function MobileLayout() {
       >
         <div className="inner-container">
           <div className="inner-container">
-            <TestimonialCard
+          <TestimonialCard
               number={"05"}
-              title={"Title"}
-              info={"Content"}
+              info={`With Prastuti an effort will be made to provide a platform to the students, innovative industeries, startups
+              and interface sectors to showcase the development and demeonstration of the respective products.`}
+              title={"Mentor Professor, Dr. Soumya R Mohanty"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/srm.png)"
               }
             />
           </div>
@@ -64,12 +64,12 @@ export default function MobileLayout() {
       >
         <div className="inner-container">
           <div className="inner-container">
-            <TestimonialCard
+          <TestimonialCard
               number={"09"}
-              title={"Title"}
-              info={"Content"}
+              info={`Prastuti provided me with the platform and opportunity to grow and learn about technology and web development in particular.`}
+              title={"Prastuti'22 Participant, Himanshu Kaithal"}
               image={
-                "url(https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123__340.jpg)"
+                "url(./TestimonialImages/himanshu.jpg)"
               }
             />
           </div>

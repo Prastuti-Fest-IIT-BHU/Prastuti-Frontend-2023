@@ -155,13 +155,13 @@ const Profilepage = () => {
             <h2 className="mt-2 text-2xl text-center font-Manrope font-semibold text-gray-800 md:mt-0 md:text-3xl">
               About
             </h2>
-            <p className=" mt-2 font-Catamaran text-gray-600 ">
+            <p className=" mt-2 font-Nunito text-gray-600 ">
               {input.email_id}
             </p>
-            <p className=" profile-contact mt-2 font-Catamaran text-gray-600">
+            <p className=" profile-contact mt-2 font-Nunito text-gray-600">
               +91{input.Phone}
             </p>
-            <p className=" mt-2 font-Catamaran text-gray-600">
+            <p className=" mt-2 font-Nunito  text-gray-600">
               {input.College}
             </p>
 
