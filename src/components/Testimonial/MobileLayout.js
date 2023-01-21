@@ -84,8 +84,8 @@ export default function MobileLayout() {
           <div className="inner-container">
           <TestimonialCard
               number={"09"}
-              info={`Main Testimonial`}
-              title={"Prastuti'22 Organizer"}
+              info={`Attending the fest was an unforgettable experience. Not only did I have the opportunity to witness some of the most innovative and cutting-edge technology, but I also had the chance to network with like-minded individuals. The variety of events and competitions offered something for everyone, whether you were interested in programming, development, or even electronics.`}
+              title={"Prastuti'22 Organizer, Atul Kumar"}
               image={
                 "url(./TestimonialImages/atul.jpg)"
               }
@@ -100,10 +100,10 @@ export default function MobileLayout() {
       >
         <div className="inner-container">
           <div className="inner-container">
-            <TestimonialCard
+          <TestimonialCard
               number={"09"}
-              info={`Main Testimonial`}
-              title={"Prastuti'23 Senior Advisor"}
+              info={`The Prastuti Technical fest is a fantastic opportunity to learn, grow, and be inspired. I highly recommend it to anyone interested in technology and innovation.`}
+              title={"Prastuti'23 Senior Advisor, Shreyash Singh"}
               image={
                 "url(./TestimonialImages/shreyash.jpg)"
               }
