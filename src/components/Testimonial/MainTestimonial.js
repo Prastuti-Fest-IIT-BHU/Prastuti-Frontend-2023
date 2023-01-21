@@ -84,8 +84,8 @@ export default function MainTestimonial() {
           <div className="inner-container">
             <TestimonialCard
               number={"09"}
-              info={`Attending the fest was an unforgettable experience. Not only did I have the opportunity to witness some of the most innovative and cutting-edge technology, but I also had the chance to network with like-minded individuals. The variety of events and competitions offered something for everyone, whether you were interested in programming, development, or even electronics. I was particularly impressed by the level of organization and attention to detail.`}
-              title={"Prastuti'22 Organizer, Atul"}
+              info={`Attending the fest was an unforgettable experience. Not only did I have the opportunity to witness some of the most innovative and cutting-edge technology, but I also had the chance to network with like-minded individuals. The variety of events and competitions offered something for everyone, whether you were interested in programming, development, or even electronics.`}
+              title={"Prastuti'22 Organizer, Atul Kumar"}
               image={
                 "url(./TestimonialImages/atul.jpg)"
               }
