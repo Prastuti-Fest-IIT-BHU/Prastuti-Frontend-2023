@@ -92,7 +92,7 @@ const Profilepage = () => {
             <div className="min-w-full md:rounded-b-xl h-[160px] -mb-4 bg-black/60"></div>
           </div>
           {/* <img src={profileback} className=" relative -mb-36 object-cover opacity-90" /> */}
-          <div className="myprofile -mt-12 flex flex-col md:flex-row">
+          {/* <div className="myprofile -mt-12 flex flex-col md:flex-row">
             <div className="profilechild imgprofile">
               <img
                 className="imgprofile"
@@ -108,11 +108,11 @@ const Profilepage = () => {
                 {input.email_id}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div></div>
         <div className="pb-2 m-2 flex flex-col lg:items-center lg:flex-row lg:px-10">
-          <div className="about-user lg:min-h-[40vh] m-2 p-2 bg-sky-50 rounded-2xl flex flex-col lg:w-4/12">
+          {/* <div className="about-user lg:min-h-[40vh] m-2 p-2 bg-sky-50 rounded-2xl flex flex-col lg:w-4/12">
             <p className="about-header text-center">About</p>
             <hr className="Phr" />
             <div className="user-details">
@@ -136,6 +136,47 @@ const Profilepage = () => {
               >
                 Sign Out
               </button>
+            </div>
+          </div> */}
+
+          <div className="lg:w-full lg:max-w-md px-8 py-4 mt-16 mb-16 bg-white rounded-lg shadow-lg md:justify-center">
+            <div className="flex justify-center m-1 mb-4 md:justify-start">
+              <img
+                className="object-cover w-20 h-20 border-2 border-blue-500 rounded-full"
+                src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
+                alt="user"
+              />
+              <h2 className="ml-4 mt-4 flex text-2xl p-1 text-center align-middle font-Manrope font-semibold text-gray-800 md:text-3xl lg:text-end">
+                {input.Name}
+              </h2>
+            </div>
+
+            <hr className="Phr" />
+            <h2 className="mt-2 text-2xl text-center font-Manrope font-semibold text-gray-800 md:mt-0 md:text-3xl">
+              About
+            </h2>
+            <p className=" mt-2 font-Catamaran text-gray-600 ">
+              {input.email_id}
+            </p>
+            <p className=" profile-contact mt-2 font-Catamaran text-gray-600">
+              +91{input.Phone}
+            </p>
+            <p className=" mt-2 font-Catamaran text-gray-600">
+              {input.College}
+            </p>
+
+            <div className="flex justify-end mt-4">
+              <div className="sign-out-btn  flex justify-center">
+                <button
+                  className="link_404"
+                  onClick={() => {
+                    localStorage.removeItem("loginData");
+                    window.location.replace("/");
+                  }}
+                >
+                  Sign Out
+                </button>
+              </div>
             </div>
           </div>
 
