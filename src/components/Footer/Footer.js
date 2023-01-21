@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom'
 import './Footer.css'
 import {BsInstagram} from 'react-icons/bs'
@@ -15,15 +15,23 @@ const Footer = () => {
       behavior: 'smooth'
     });
   }
+
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <>
       <footer className='footer justify-center bg-[#003247] items-center min-h-[20vh]'>
       <div className='py-5 flex flex-col justify-center'>
         {/* <div className="up flex items-center justify-center max-w-[40vw]  mx-auto " > */}
-        <div className="up" >
+        <div className="up" onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)} >
             {/* <Link class-name="" to="/"></Link> */}
             {/* <img className="h-20 sm:max-w-[7vw] sm:drop-shadow-lg sm:w-full sm:h-full mx-auto cursor-pointer" onClick={handleScroll} src="https://files.catbox.moe/uqbxcf.png" alt="logo"></img> */}
+            <div className="top flex justify-center items-center cursor-pointer" >
+              {/* {isShown && <div className="toptext">Top</div>} */}
             <img className="cursor-pointer" onClick={handleScroll} src="https://files.catbox.moe/uqbxcf.png" alt="logo"></img>
+            </div>
+            
             
           <div className="vline"></div>
           <div className="conduct"> <a href="https://github.com/Prastuti-Fest-IIT-BHU/Prastuti-Frontend-2023/blob/main/public/code_of_conduct.md" target="_blank" rel="noreferrer">Code of Conduct</a></div>
