@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import axios from "axios";
 import Loader from "../../components/Loader/loader";
 
+
 const Profilepage = () => {
   const [addclass, setaddclass] = useState(["onclicknav", "", ""]);
   const [team, setteam] = useState(null);
@@ -17,6 +18,7 @@ const Profilepage = () => {
   const [formFilled, setFormFilled] = useState(null);
   const [showLoader, setShowLoader] = useState(false);
   const [loaderText, setLoaderText] = useState("");
+  const [eventData, setEventData] = useState(null);
 
   const showLoaderWithMessage = (message) => {
     setLoaderText(message);
@@ -50,6 +52,14 @@ const Profilepage = () => {
             "loginData"
           )}`
         );
+
+        const { dataE } = await axios.get(
+          `${process.env.REACT_APP_SECRET_KEY}/api/events`
+        );
+          
+
+        setEventData(dataE);
+
         setinput(data[0]);
         setteam(data[0].Teams);
         setFormFilled(data[0].isFormFilled);
@@ -109,6 +119,7 @@ const Profilepage = () => {
               </div>
             </div>
           </div> */}
+
         </div>
         <div></div>
         <div className="pb-2 m-2 flex flex-col lg:items-center lg:flex-row lg:px-10">
@@ -182,6 +193,7 @@ const Profilepage = () => {
 
           <div className="dynamic-content m-2 min-h-[60vh] bg-sky-50 rounded-2xl  lg:w-8/12">
             <div className="profilenav flex">
+            <p>{eventData}</p>
               <div
                 className={`Pnavchild px-4 ${addclass[0]}`}
                 onClick={() => {
