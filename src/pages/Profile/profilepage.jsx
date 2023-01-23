@@ -204,7 +204,7 @@ const Profilepage = () => {
               <div
                 className={`Pnavchild px-4 ${addclass[0]}`}
                 onClick={() => {
-                  setvalue(<Profileevent event={event} team={team} waLink={setEventData}/>);
+                  setvalue(<Profileevent event={event} team={team} waLink={eventData}/>);
                   handleevent(0);
                 }}
               >
