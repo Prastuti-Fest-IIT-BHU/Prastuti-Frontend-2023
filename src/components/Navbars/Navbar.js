@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaBars, FaArrowLeft } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
@@ -284,6 +284,14 @@ const Navbar = () => {
                   <BsGithub className="sm:hidden" />
                 </IconContext.Provider>
                 <p className="hidden sm:flex">Github</p>
+              </a>
+            </li>
+            <li className="social-links font-['Manrope'] text-white mx-5 text-l my-4">
+              <a href="https://www.youtube.com/@prastuti2023">
+                <IconContext.Provider value={{ className: "react-icons" }}>
+                  <BsYoutube className="sm:hidden" />
+                </IconContext.Provider>
+                <p className="hidden sm:flex">Youtube</p>
               </a>
             </li>
           </ul>
