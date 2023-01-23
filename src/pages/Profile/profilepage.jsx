@@ -20,6 +20,7 @@ const Profilepage = () => {
   const [loaderText, setLoaderText] = useState("");
   const [eventData, setEventData] = useState(null);
 
+
   const showLoaderWithMessage = (message) => {
     setLoaderText(message);
     setShowLoader(true);
@@ -53,12 +54,18 @@ const Profilepage = () => {
           )}`
         );
 
-        const { dataE } = await axios.get(
+        const datas = await axios.get(
           `${process.env.REACT_APP_SECRET_KEY}/api/events`
         );
           
 
-        setEventData(dataE);
+        let links = {};
+
+        datas.data.events.map((data, index) => {
+          links[data.Name] = data.whatsappLink;
+        })
+        
+        setEventData(links);
 
         setinput(data[0]);
         setteam(data[0].Teams);
@@ -68,6 +75,7 @@ const Profilepage = () => {
           <Profileevent
             event={data[0].Events_Participated}
             team={data[0].Teams}
+            waLink = {links}
           />
         );
         setrequest(data[0].Pending_Requests);
@@ -193,11 +201,10 @@ const Profilepage = () => {
 
           <div className="dynamic-content m-2 min-h-[60vh] bg-sky-50 rounded-2xl  lg:w-8/12">
             <div className="profilenav flex">
-            <p>{eventData}</p>
               <div
                 className={`Pnavchild px-4 ${addclass[0]}`}
                 onClick={() => {
-                  setvalue(<Profileevent event={event} team={team} />);
+                  setvalue(<Profileevent event={event} team={team} waLink={setEventData}/>);
                   handleevent(0);
                 }}
               >
