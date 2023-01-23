@@ -70,9 +70,9 @@ const Requestsent = (prop) => {
           type="text"
           name="member"
           autoComplete="off"
-          placeholder="Recipient email"
+          // placeholder="Recipient email"
           style={{ fontSize: "1rem" }}
-          value={email}
+          value={email} 
           onChange={(e) => {
             setemail(e.target.value);
           }}

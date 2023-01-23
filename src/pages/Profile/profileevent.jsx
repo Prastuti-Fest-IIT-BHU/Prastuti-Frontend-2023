@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./profilecss.css";
-import { Speedometer2 } from "react-bootstrap-icons";
-import { Calendar2Check } from "react-bootstrap-icons";
 import { BsWhatsapp } from 'react-icons/bs'
 import { IconContext } from "react-icons";
 import axios from "axios";
@@ -38,7 +36,6 @@ const GetTeamName = (prop) => {
       )
     }
 
-    return
   })
 
   teamName = teamName.filter(function (element) {
