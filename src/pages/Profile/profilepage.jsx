@@ -165,7 +165,7 @@ const Profilepage = () => {
                 src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
                 alt="user"
               />
-              <h2 className="ml-4 mt-4 flex text-2xl p-1 text-center align-middle font-Manrope font-semibold text-gray-800 md:text-3xl lg:text-end">
+              <h2 className="ml-4 mt-4 text-2xl p-1 text-center align-middle font-Manrope font-semibold text-gray-800 md:text-3xl lg:text-end truncate">
                 {input.Name}
               </h2>
             </div>
