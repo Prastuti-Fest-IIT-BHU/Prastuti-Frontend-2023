@@ -74,10 +74,8 @@ const Profileevent = (prop) => {
                 <div
                   className="psubchild1"
                   style={{
-                    // backgroundImage:
-                    //   'url("https://tse2.mm.bing.net/th?id=OIP.Wo0bMz8lk_fKOloqwx8OQQHaHa&pid=Api&P=0")',
                     backgroundRepeat: "no-repeat",
-                    backgroundImage: `url("/profile/event.png")`
+                    backgroundImage: `url("/profile/event.jpg")`
                   }}
                 ></div>
                 <div className="psubchild">
@@ -90,7 +88,7 @@ const Profileevent = (prop) => {
                       <div className="flex flex-row">
                         <a href={prop.waLink[data.Name]} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons', color: '#259966' }}><BsWhatsapp className="" /></IconContext.Provider>
                         </a>
-                        <p>Whatsapp Link</p>
+                        <a href={prop.waLink[data.Name]} target="_blank" rel="noreferrer">Whatsapp Link</a>
                       </div>
                       &nbsp; &nbsp; &nbsp;
                       <div>
