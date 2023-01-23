@@ -15,18 +15,38 @@ export default function Spons() {
                 </div>
             </div>
             <div className="line">
-                <div className="sponscard">
+            <div className="sponscard">
                     <a href="https://www.ieee.org/" target="_blank" rel="noreferrer noopener">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png" alt="" className='ieee' />
                     </a>
                     <h1 className='cardtitle'> Research Partner</h1>
                 </div>
+            <div className="sponscard">
+                    <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noreferrer noopener">
+                        <img src="./sponsorimage/gfg.png" alt="" className='gfg' />
+                    </a>
+                    <h1 className='cardtitle'> Event Sponsor</h1>
+                </div>
+            </div>
+            <div className="line">
+                
                 <div className="sponscard">
                     <a href="https://techanalogy.org/" target="_blank" rel="noreferrer noopener">
                         <img src="https://techanalogy.org/_next/image?url=%2Ficon.svg&w=256&q=75" alt="" className='tech' />
                     </a>
                     <h1 className='cardtitle'> Education Partner</h1>
-                
+                </div>
+                <div className="sponscard">
+                    <a href="https://www.iitbhu.ac.in/cf/tlc" target="_blank" rel="noreferrer noopener">
+                        <img src="./sponsorimage/tlc.png" alt="" className='tlc' />
+                    </a>
+                    <h1 className='cardtitle'> Learning Partner</h1>
+                </div>
+                <div className="sponscard">
+                    <a href="https://www.elearnmarkets.com/" target="_blank" rel="noreferrer noopener">
+                        <img src="./sponsorimage/elm.png" alt="" className='elearn' />
+                    </a>
+                    <h1 className='cardtitle'>Alanytics Partner</h1>
                 </div>
             </div>
 

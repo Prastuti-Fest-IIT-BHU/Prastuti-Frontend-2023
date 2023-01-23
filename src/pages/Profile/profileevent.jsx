@@ -77,7 +77,7 @@ const Profileevent = (prop) => {
                     // backgroundImage:
                     //   'url("https://tse2.mm.bing.net/th?id=OIP.Wo0bMz8lk_fKOloqwx8OQQHaHa&pid=Api&P=0")',
                     backgroundRepeat: "no-repeat",
-                    backgroundImage: `url("/profile/event.jpg")`
+                    backgroundImage: `url("/profile/event.png")`
                   }}
                 ></div>
                 <div className="psubchild">
@@ -87,9 +87,10 @@ const Profileevent = (prop) => {
                       ? <GetTeamName data={data.teams} team={prop.team} />
                       : "Solo"}</span>
                     <span className="eventinfo">
-                      <div>
-                        <a href={prop.waLink[data.Name]} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsWhatsapp className="" /></IconContext.Provider>
+                      <div className="flex flex-row">
+                        <a href={prop.waLink[data.Name]} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons', color: '#259966' }}><BsWhatsapp className="" /></IconContext.Provider>
                         </a>
+                        <p>Whatsapp Link</p>
                       </div>
                       &nbsp; &nbsp; &nbsp;
                       <div>
@@ -100,9 +101,9 @@ const Profileevent = (prop) => {
                             left: "-3px",
                           }}
                         >
-                          <Calendar2Check />
+                          {/* <Calendar2Check /> */}
                         </div>
-                        12/12/2022
+                        
                       </div>
                     </span>
                   </div>

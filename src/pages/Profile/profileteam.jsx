@@ -197,8 +197,7 @@ const Profileteam = (prop) => {
                   className="psubchild1team"
                   style={{
                     backgroundImage:
-                      'url("https://blog.vantagecircle.com/content/images/2020/08/teamwork-and-team-building.png")',
-                    backgroundRepeat: "no-repeat",
+                    `url("/profile/team.png")`,
                   }}
                 ></div>
                 <div className="psubchildteam">
