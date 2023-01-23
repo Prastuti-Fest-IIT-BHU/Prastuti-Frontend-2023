@@ -19,6 +19,7 @@ font-family: 'Manrope', sans-serif;
 }
 
 .SponsContainer .title{
+    mask-type: 2rem;
     font-family: "Nunito";
     height: 20%;
     font-size: 35px;
@@ -55,7 +56,7 @@ font-family: 'Manrope', sans-serif;
     /* filter: brightness(50%) */
 }
 .sponscard .cardtitle{
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-size: 26px;
     font-family: "Nunito";
     font-weight: bolder;
@@ -96,6 +97,10 @@ font-family: 'Manrope', sans-serif;
         padding: 0;
         background: url("../Design/light+circle.png") no-repeat top;
         background-size: cover;
+    }
+    .tlc{
+        width: 80vw;
+        height: auto;
     }
     .line{
         flex-direction: column;
