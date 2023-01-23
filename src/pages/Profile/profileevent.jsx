@@ -2,49 +2,54 @@ import React, { useState, useEffect } from "react";
 import "./profilecss.css";
 import { Speedometer2 } from "react-bootstrap-icons";
 import { Calendar2Check } from "react-bootstrap-icons";
+import { BsWhatsapp } from 'react-icons/bs'
+import { IconContext } from "react-icons";
+import axios from "axios";
 
 
-const GetTeam = (prop)=>{
-  let teamName =prop.team.map((data)=>{
-  
-    if(prop.data.find(({team})=>team===data._id))
-    {return(
-      prop.data.find(({team})=>team===data._id)
-    )}
-  
-    return 
+const GetTeam = (prop) => {
+  let teamName = prop.team.map((data) => {
+
+    if (prop.data.find(({ team }) => team === data._id)) {
+      return (
+        prop.data.find(({ team }) => team === data._id)
+      )
+    }
+
+    return
   })
 
-     teamName = teamName.filter(function( element ) {
-       return element !== undefined;
-})
+  teamName = teamName.filter(function (element) {
+    return element !== undefined;
+  })
 
   return <>
-  <span>
-   {teamName[0].score}
+    <span>
+      {teamName[0].score}
     </span>
-    </>
+  </>
 }
-const GetTeamName = (prop)=>{
-  let teamName =prop.data.map((data)=>{
-  
-    if(prop.team.find(({_id})=>_id===data.team))
-    {return(
-      prop.team.find(({_id})=>_id===data.team)
-    )}
-  
-    return 
+const GetTeamName = (prop) => {
+  let teamName = prop.data.map((data) => {
+
+    if (prop.team.find(({ _id }) => _id === data.team)) {
+      return (
+        prop.team.find(({ _id }) => _id === data.team)
+      )
+    }
+
+    return
   })
 
-     teamName = teamName.filter(function( element ) {
-       return element !== undefined;
-})
+  teamName = teamName.filter(function (element) {
+    return element !== undefined;
+  })
 
   return <>
- 
-   {teamName[0].Team_Name}
-   
-    </>
+
+    {teamName[0].Team_Name}
+
+  </>
 }
 
 
@@ -55,8 +60,11 @@ const GetTeamName = (prop)=>{
 
 const Profileevent = (prop) => {
   const [value, setvalue] = useState(prop.event);
+
   return (
     <>
+    {/* {alert(prop.waLink)} */}
+    
       <div className="Pmaincontainer">
         <div className="Pcontainer">
           {prop.event.map((data, index) => {
@@ -69,20 +77,20 @@ const Profileevent = (prop) => {
                     // backgroundImage:
                     //   'url("https://tse2.mm.bing.net/th?id=OIP.Wo0bMz8lk_fKOloqwx8OQQHaHa&pid=Api&P=0")',
                     backgroundRepeat: "no-repeat",
-                    backgroundImage: `url("/profile/event.jpg")` 
+                    backgroundImage: `url("/profile/event.jpg")`
                   }}
                 ></div>
                 <div className="psubchild">
                   <div className="pevent">
                     <span className="eventname">{data.Name}</span>
                     <span className="eventteam"> {data.team_event
-                          ?<GetTeamName data ={data.teams} team ={prop.team} />
-                          :"Solo"}</span>
+                      ? <GetTeamName data={data.teams} team={prop.team} />
+                      : "Solo"}</span>
                     <span className="eventinfo">
                       <div>
                         {/* data.teams.find(({_id})=>_id===localStorage.getItem("loginData")).score */}
-                        
-                        <div
+
+                        {/* <div
                           style={{
                             position: "relative",
                             top: "3px",
@@ -90,14 +98,16 @@ const Profileevent = (prop) => {
                           }}
                         >
                           <Speedometer2 />
-                        </div>
-                        {data.team_event
+                        </div> */}
+                        {/* {data.team_event
                           ?<GetTeam data ={data.teams} team ={prop.team} />
                           : data.Participants.find(
                               ({ participant }) =>
                                 participant ===
                                 localStorage.getItem("loginData")
-                            ).Score}
+                            ).Score} */}
+                        <a href={prop.waLink} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsWhatsapp className="" /></IconContext.Provider>
+                        </a>
                       </div>
                       &nbsp; &nbsp; &nbsp;
                       <div>
