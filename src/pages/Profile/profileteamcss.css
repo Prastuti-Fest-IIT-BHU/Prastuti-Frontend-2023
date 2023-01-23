@@ -27,7 +27,6 @@
 .teamname {
   display: block;
   font-size: 1.2rem;
-  width: fit-content;
 }
 .psubchildteam {
   position: relative;
