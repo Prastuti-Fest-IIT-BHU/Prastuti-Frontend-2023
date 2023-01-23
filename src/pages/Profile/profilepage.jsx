@@ -199,7 +199,7 @@ const Profilepage = () => {
             </div>
           </div>
 
-          <div className="dynamic-content m-2 min-h-[60vh] bg-sky-50 rounded-2xl  lg:w-8/12">
+          <div className="dynamic-content w-[100%] sm:m-2 min-h-[60vh] bg-sky-50 rounded-2xl  lg:w-8/12">
             <div className="profilenav flex">
               <div
                 className={`Pnavchild px-4 ${addclass[0]}`}

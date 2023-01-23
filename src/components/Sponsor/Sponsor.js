@@ -3,7 +3,7 @@ import "./Sponsor.css"
 export default function Spons() {
     return (
         <div className='SponsContainer' id="sponsors">
-            <div className="title">
+            <div className="title mt-[20px]">
                 <h1>Our Sponsors</h1>
             </div>
             <div className="line">

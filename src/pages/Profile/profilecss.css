@@ -196,6 +196,7 @@
 .eventname {
   display: block;
   font-size: 2rem;
+  background-image: none !important;
   /* padding-top: 1rem; */
 }
 
