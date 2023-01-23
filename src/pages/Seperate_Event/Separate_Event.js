@@ -137,9 +137,9 @@ const Separate_Event = ({ data }) => {
         });
 
                 //Shall I redirect ?????
-        // setTimeout(() => {
-        //   window.location.replace("/profile");
-        // }, 1500);
+        setTimeout(() => {
+          window.location.replace("/profile");
+        }, 1500);
       } catch (error) {
         hideLoader();
         toast.error(error.response.data.message, {
