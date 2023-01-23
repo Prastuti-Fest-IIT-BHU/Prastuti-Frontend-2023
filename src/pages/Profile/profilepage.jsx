@@ -85,7 +85,7 @@ const Profilepage = () => {
       gettingData();
       const interval = setInterval(() => {
         localStorage.removeItem("loginData");
-      }, 600000);
+      }, 6000000);
       return () => clearInterval(interval);
     } else {
       window.location.replace("/");

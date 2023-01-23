@@ -208,11 +208,11 @@ const Profileteam = (prop) => {
                     {data.Members.map((item, ind) => {
                       return (
                         <span
-                          className="teamname"
+                          className="teamname truncate"
                           key={ind}
                           style={{ fontSize: "1rem" }}
                         >
-                          {ind + 1} {item.Name}
+                          {ind + 1}. {item.Name}
                         </span>
                       );
                     })}
