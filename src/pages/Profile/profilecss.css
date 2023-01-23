@@ -191,9 +191,7 @@
   overflow: hidden;
 }
 
-.eventinfo div {
-  display: inline-block !important;
-}
+
 
 .eventname {
   display: block;
@@ -286,6 +284,16 @@
     margin: 0.8rem;
     font-size: 1.3rem;
   }
+  .eventinfo div {
+  display: inline-block !important;
+  
+}
+.eventinfo{
+  padding: 0px;
+}
+.pevent{
+  padding-left: 4rem;
+}
 }
 
 @media screen and (max-width: 300px) {

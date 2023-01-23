@@ -21,6 +21,12 @@ export default function Spons() {
                     </a>
                     <h1 className='cardtitle'> Research Partner</h1>
                 </div>
+            <div className="sponscard">
+                    <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noreferrer noopener">
+                        <img src="./sponsorimage/gfg.png" alt="" className='gfg' />
+                    </a>
+                    <h1 className='cardtitle'> Event Sponsor</h1>
+                </div>
             </div>
             <div className="line">
                 

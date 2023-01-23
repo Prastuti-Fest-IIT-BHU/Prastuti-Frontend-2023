@@ -42,7 +42,12 @@ font-family: 'Manrope', sans-serif;
 .tlc{
     filter: invert(1);
     height: auto;
+    width: 400px;
+    margin-left: 3rem;
+}
+.gfg{
     width: 300px;
+    height: auto;
 }
 .elearn{
     height: auto;
