@@ -218,7 +218,7 @@ const Profileteam = (prop) => {
                     })}
                     {/* {console.log("test")}
                     {console.log(data.Events_Participated.length)} */}
-                    {data.Members.length >= 3 || data.Events_Participated.length > 0 ? null : (
+                    {data.Members.length >= 3? null : (
                       <Requestsent id={data._id} />
                     )}
                   </div>
