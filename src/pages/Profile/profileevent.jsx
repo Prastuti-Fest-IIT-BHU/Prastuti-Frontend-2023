@@ -88,25 +88,7 @@ const Profileevent = (prop) => {
                       : "Solo"}</span>
                     <span className="eventinfo">
                       <div>
-                        {/* data.teams.find(({_id})=>_id===localStorage.getItem("loginData")).score */}
-
-                        {/* <div
-                          style={{
-                            position: "relative",
-                            top: "3px",
-                            left: "-3px",
-                          }}
-                        >
-                          <Speedometer2 />
-                        </div> */}
-                        {/* {data.team_event
-                          ?<GetTeam data ={data.teams} team ={prop.team} />
-                          : data.Participants.find(
-                              ({ participant }) =>
-                                participant ===
-                                localStorage.getItem("loginData")
-                            ).Score} */}
-                        <a href={prop.waLink} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsWhatsapp className="" /></IconContext.Provider>
+                        <a href={prop.waLink[data.Name]} target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsWhatsapp className="" /></IconContext.Provider>
                         </a>
                       </div>
                       &nbsp; &nbsp; &nbsp;
