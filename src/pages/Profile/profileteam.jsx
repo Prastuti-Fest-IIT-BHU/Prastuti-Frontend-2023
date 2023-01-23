@@ -113,7 +113,7 @@ const Profileteam = (prop) => {
     setShowLoader(false);
   };
 
-  console.log(prop);
+  // console.log(prop);
 
   const createTeam = async () => {
     // Checking if form filled
@@ -217,7 +217,9 @@ const Profileteam = (prop) => {
                         </span>
                       );
                     })}
-                    {data.Members.length === 3 ? null : (
+                    {/* {console.log("test")}
+                    {console.log(data.Events_Participated.length)} */}
+                    {data.Members.length >= 3 || data.Events_Participated.length > 0 ? null : (
                       <Requestsent id={data._id} />
                     )}
                   </div>
