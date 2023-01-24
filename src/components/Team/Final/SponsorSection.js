@@ -74,6 +74,14 @@ function PosSection(props) {
         </div>
       </div>
       <div className={classes.pos_title} id="pos_9">
+        <h1>Video Team</h1>
+        <div className={classes.cards}>
+          {data.video.map((item, index) => (
+            <Card img={item.img} position={item.position} name={item.name} key={index} />
+          ))}
+        </div>
+      </div>
+      <div className={classes.pos_title} id="pos_9">
         <h1>Content Team</h1>
         <div className={classes.cards}>
           {data.content.map((item, index) => (

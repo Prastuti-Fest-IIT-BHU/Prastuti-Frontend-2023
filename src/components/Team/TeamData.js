@@ -13,10 +13,11 @@ import c14 from './prastuti-photos/Sriraj.jpg'
 import c15 from './prastuti-photos/Sumant.jpg'
 import c16 from './prastuti-photos/Vidit.png'
 import c17 from './prastuti-photos/Vikram.png'
-import c18 from './prastuti-photos/Yash.jpeg'
+import c18 from './prastuti-photos/Harshvardhan.png'
 import c19 from './prastuti-photos/ayush.png'
 import c20 from './prastuti-photos/kunal.png'
 import c21 from './prastuti-photos/Hrishabh.jpg'
+import c22 from './prastuti-photos/Utkarsh.jpg'
 import d3 from './prastuti-photos/Ankit.jpg'
 const data = {
   convener: [
@@ -60,7 +61,7 @@ const data = {
       id: 6,
       img: c18,
       position: 'Marketing Head',
-      name: 'Yash Varshney'
+      name: 'Harshvardhan Sharma'
     },
   ],
   socialMedia: [
@@ -161,6 +162,14 @@ const data = {
       position: 'Oscillion',
       name:'Hrishabh Kumar Garg'
     },
+  ],
+  video: [
+    {
+      id: 20,
+      img: c22,
+      position: 'Video Head',
+      name:'Utkarsh Pandey'
+    }
   ],
 };
 
