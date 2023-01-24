@@ -165,7 +165,7 @@ const Profilepage = () => {
                 src={input.Profile_Photo}
                 alt="user"
               />
-              <h2 className="ml-4 mt-4 flex text-2xl p-1 text-center align-middle font-Manrope font-semibold text-gray-800 md:text-3xl lg:text-end">
+              <h2 className="ml-4 mt-4 text-2xl p-1 text-center align-middle font-Manrope font-semibold text-gray-800 md:text-3xl lg:text-end truncate">
                 {input.Name}
               </h2>
             </div>
