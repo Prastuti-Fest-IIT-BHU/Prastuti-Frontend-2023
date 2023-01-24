@@ -34,7 +34,8 @@ const Thank_you = () => {
             <a href="https://play.google.com/store/apps/details?id=com.prastuti.prastuti_23" target="_blank" rel="noreferrer" className="flex justify-center mt-10"><span className='AppText underline underline-offset-2'> Download our App for more Updates.</span></a>
           
         <span className='max-w-[400px] max-h-[400px] w-fit h-fit flex justify-center py-2 mx-auto'>
-          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="./app.png" alt="logo"></img>
+          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" 
+            src={require("../Thank_You/app.png")} alt="logo"></img>
         </span>
         <div className='flex flex-col justify-between align-middle '>
           <h1 className='flex justify-center py-2 text-2xl font-bold m-2 AppText2'>For more updates follow us on</h1>
