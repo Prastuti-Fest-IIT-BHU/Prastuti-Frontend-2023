@@ -212,7 +212,7 @@ const Profileteam = (prop) => {
                           key={ind}
                           style={{ fontSize: "1rem" }}
                         >
-                          {ind + 1} {item.Name}
+                          {ind + 1}. {item.Name}
                         </span>
                       );
                     })}
