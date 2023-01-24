@@ -32,7 +32,7 @@ const Thank_you = () => {
       <div className='flex w-full h-auto justify-items-start align-middle flex-col md:w-1/2 md:h-screen md:justify-evenly'>
           <div className="AppText flex justify-center mt-10"> Download our App for more Updates.</div>
         <span className='max-w-[400px] max-h-[400px] w-fit h-fit flex justify-center py-2 mx-auto'>
-          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="https://files.catbox.moe/uqbxcf.png" alt="logo"></img>
+          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="./app.jpg" alt="logo"></img>
         </span>
         <div className='flex flex-col justify-between align-middle '>
           <h1 className='flex justify-center py-2 text-2xl font-bold m-2 AppText2'>For more updates follow us on</h1>
