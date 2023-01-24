@@ -31,16 +31,16 @@ const Thank_you = () => {
       </div>
       <div className='flex w-full h-auto justify-items-start align-middle flex-col md:w-1/2 md:h-screen md:justify-evenly'>
                
-            <a href="https://play.google.com/store/apps/details?id=com.prastuti.prastuti_23" target="_blank" className="flex justify-center mt-10"><span className='AppText underline underline-offset-2'> Download our App for more Updates.</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.prastuti.prastuti_23" target="_blank" rel="noreferrer" className="flex justify-center mt-10"><span className='AppText underline underline-offset-2'> Download our App for more Updates.</span></a>
           
         <span className='max-w-[400px] max-h-[400px] w-fit h-fit flex justify-center py-2 mx-auto'>
-          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="./app.jpg" alt="logo"></img>
+          <img className="w-25 h-25 sm:drop-shadow-lg sm:w-full sm:h-full mx-auto" src="./app.png" alt="logo"></img>
         </span>
         <div className='flex flex-col justify-between align-middle '>
           <h1 className='flex justify-center py-2 text-2xl font-bold m-2 AppText2'>For more updates follow us on</h1>
           <ul className='flex justify-center py-2'>
             <li className="social-links font-['Manrope'] text-white mx-5 text-l my-4">
-              <a href="https://github.com/Prastuti-Fest-IIT-BHU" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsTwitter className="" /></IconContext.Provider>
+              <a href="https://twitter.com/fest_prastuti?t=KdlkevmuvhbFQHx63dibXA&s=08" target="_blank" rel="noreferrer"><IconContext.Provider value={{ className: 'react-icons' }}><BsTwitter className="" /></IconContext.Provider>
               </a>
             </li>
             <li className='social-links font-["Manrope"] text-white mx-5 text-l my-4 '>
