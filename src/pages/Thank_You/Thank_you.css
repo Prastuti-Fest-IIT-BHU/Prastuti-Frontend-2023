@@ -1,8 +1,13 @@
 .AppText{
     font-family: "Nunito";
     font-weight: bolder;
-    font-size: larger;
+    font-size: large;
+}
+.AppText:hover{
+    color: rgb(59, 182, 239);;
+    transition:all 0.1s ease-in-out;
 }
 .AppText2{
     font-family: "Nunito";
 }
+
