@@ -196,8 +196,8 @@ const Separate_Event = ({ data }) => {
           <h3 className="md:text-md xl:text-lg text-justify font-[Nunito] text-md">
             Participants : <span>{eventName}</span>
           </h3>
-          {result.team_event && <div className="font-[Nunito] mt-[1em] font-bold"> Team Event</div> }
-          {!result.team_event && <div className="font-[Nunito] mt-[1em] font-bold">  Solo Event</div> }
+          {/* {result.team_event && <div className="font-[Nunito] mt-[1em] font-bold"> Team Event</div> }
+          {!result.team_event && <div className="font-[Nunito] mt-[1em] font-bold">  Solo Event</div> } */}
           {localStorage.getItem("loginData") ? (
             <Link onClick={register}>
               <button
