@@ -20,7 +20,8 @@ export const Data = [
     infoinfo: 'Head: Ashwani Sisodiya (6367433427)',
     image: img1,
     slide: 'fade-up',
-    path:"/codigo"
+    path:"/codigo",
+    team: false
 
   },
   {
@@ -36,7 +37,8 @@ export const Data = [
     infoinfo: 'Head: Ayush Singh Pal (9923266285)',
     image: img2,
     slide: 'fade-down',
-    path:"/consilium"
+    path:"/consilium",
+    team: true
 
   },
   {
@@ -51,7 +53,8 @@ export const Data = [
     infoinfo: 'Head: Hrishabh Kumar Garg (88210448398)',
     image: img3,
     slide: 'fade-up',
-    path:"/oscillion"
+    path:"/oscillion",
+    team: false
 
   },
   {
@@ -66,7 +69,8 @@ export const Data = [
     infoinfo: 'Head: Nilay Mundra (9328208189)',
     image: img4,
     slide: 'fade-down',
-    path:"/hackoverflow"
+    path:"/hackoverflow",
+    team: true
 
   },
   {
@@ -80,7 +84,8 @@ export const Data = [
     infoinfo: 'Head: Vidit Agarwal (6352912056)',
     image: img5,
     slide: 'fade-up',
-    path:"/recognizance"
+    path:"/recognizance",
+    team: false
 
   },
   {
@@ -96,7 +101,8 @@ export const Data = [
     infoinfo: 'Head: Astitva Gupta (7828004967)',
     image: img6,
     slide: 'fade-down',
-    path: '/simulim'
+    path: '/simulim',
+    team: true
 
   },
   {
@@ -107,7 +113,8 @@ export const Data = [
     infoinfo: '',
     image: img7,
     slide: 'fade-up',
-    path: '/paper-presentation'
+    path: '/paper-presentation',
+    team: false
 
   },
 

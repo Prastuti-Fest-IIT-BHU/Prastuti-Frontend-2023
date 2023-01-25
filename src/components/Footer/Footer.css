@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-
 footer{
     display: flex;
     align-items: center;

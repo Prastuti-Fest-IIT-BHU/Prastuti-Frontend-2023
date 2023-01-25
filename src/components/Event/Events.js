@@ -8,7 +8,6 @@ import { motion} from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
-
 const Card = (prop) => {
   /*const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -17,7 +16,7 @@ const Card = (prop) => {
     restDelta: 0.001,
   });*/
 
-
+    
   return (
 
     // <div id="events" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}>
@@ -37,7 +36,7 @@ const Card = (prop) => {
           // whileInView={"visible"}
           
         >
-            <motion.div class="p-0 w-full min-h-[38vh] lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
+            <motion.div class="p-0 w-full min-h-[41vh] lg:w-4/5 mx-auto shadow-lg flex flex-col rounded-lg hover:shadow-xl" style={{background:'linear-gradient(90deg, rgba(219,242,255,1) 0%, rgba(185,250,255,1) 100%)'}}
             whileHover={{ scale: 1.05 }}
             >
               <Link
@@ -46,7 +45,7 @@ const Card = (prop) => {
                 class="flex flex-col md:flex-row overflow-hidden
                                     rounded-lg w-100"
               >
-                <div class="h-[38vh] w-auto md:w-1/2">
+                <div class="h-[41vh] w-auto md:w-1/2 ">
                   <img
                     class="inset-0 h-full w-full object-cover object-center rounded-l-lg" alt="event pic"
                     src={item.image}
@@ -60,17 +59,25 @@ const Card = (prop) => {
                     textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6', backgroundColor:"#003247"}}
                     
                   >
+                  
                {item.title}
+               
                   </h3>
                   <p class="mt-2 info">
                     {item.information}
+                    
                   </p>
                   <p
-                    class="text-xl text-gray-700 tracking-wide font-black mt-2"
-                    style={{ fontFamily: "Catarman",color: "#003247" }}
+                    className="text-xl text-gray-700 tracking-wide font-black mt-2"
+                    style={{ fontFamily: "Nunito",color: "#003247" }}
                   >
                     {item.infoinfo}
                   </p>
+                  <p className="text-base text-gray-700 tracking-wide font-black ">
+                  { item.team && <div className=""> Team Event</div> }
+                  { !item.team && <div className=""> Solo Event</div> }
+                  </p>
+                  
                 </div>
               </Link>
             </motion.div>

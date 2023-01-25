@@ -91,7 +91,7 @@ const Separate_Event = ({ data }) => {
       }
     } else {
       hideLoader();
-      toast.error("Please enter existing team name", {
+      toast.error("Please enter existing team name.", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -136,7 +136,7 @@ const Separate_Event = ({ data }) => {
           theme: "colored",
         });
 
-                //Shall I redirect ?????
+        //Shall I redirect ?????
         setTimeout(() => {
           window.location.replace("/profile");
         }, 1500);
@@ -184,18 +184,20 @@ const Separate_Event = ({ data }) => {
         style={{ backgroundImage: `url(${data.imgpath})` }}
       >
         <div className=" min-h-screen w-full md:w-3/5 lg:w-[45%] bg-black md:opacity-[0.8] opacity-[0.7] text-white p-[3rem]">
-          <h1 className="font-bold text-3xl md:text-2xl mt-10 mb-4 font-Manrope">
+          <h1 className="font-bold text-3xl md:text-2xl mt-10 mb-4 font-[Poppins]">
             {data.title}
           </h1>
-          <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-Manrope text-lg">
+          <h2 className="md:text-xl xl:text-2xl mb-4 text-[#29ffff] font-[Poppins] text-lg">
             {data.subtitle}
           </h2>
-          <p className="md:text-md xl:text-lg text-justify font-Catamaran text-md mb-4">
+          <p className="md:text-md xl:text-lg text-justify font-[Nunito] text-md mb-4">
             {data.eventInfo}
           </p>
-          <h3 className="md:text-md xl:text-lg text-justify font-Catamaran text-md">
+          <h3 className="md:text-md xl:text-lg text-justify font-[Nunito] text-md">
             Participants : <span>{eventName}</span>
           </h3>
+          {result.team_event && <div className="font-[Nunito] mt-[1em] font-bold"> Team Event</div> }
+          {!result.team_event && <div className="font-[Nunito] mt-[1em] font-bold">  Solo Event</div> }
           {localStorage.getItem("loginData") ? (
             <Link onClick={register}>
               <button
@@ -217,14 +219,14 @@ const Separate_Event = ({ data }) => {
           )}
         </div>
       </div>
-      <Modal modal = {modal}
-            handleModal = {handleModal}>
-              <div className="flex flex-col rounded-md">
-                <label for = "user-team" className="p-2">Please enter your team name that you have created in profilepage</label>
-                <input onChange={(e)=>setTeamName(e.target.value)} id = "user-team" type="text" className="p-2" placeholder="TeamName"></input>
-                <button className="p-2 flex  justify-end" onClick = {()=>{handleModal(false);findingteam(teamName)}}>Submit</button>
-              </div>
-            </Modal>
+      <Modal modal={modal}
+        handleModal={handleModal}>
+        <div className="flex flex-col rounded-md">
+          <label for="user-team" className="p-2">Please enter your team name that you have created in profilepage</label>
+          <input onChange={(e) => setTeamName(e.target.value)} id="user-team" type="text" className="p-2" placeholder="TeamName"></input>
+          <button className="p-2 flex  justify-end" onClick={() => { handleModal(false); findingteam(teamName) }}>Submit</button>
+        </div>
+      </Modal>
     </>
   );
 };

@@ -80,13 +80,13 @@ const Faq = () => {
 
     <div className="app" id="faqs">
       <header>
-        <h1>Frequently <br/> <spam className="ask">Asked</spam> <br/> Questions</h1>
+        <h1>Frequently <br/> <span className="ask">Asked</span> <br/> Questions</h1>
 
       </header>
 
       <div className="faq">
         {faqs.map((faq, i) => (
-          <FAQ faq={faq} index={i}
+          <FAQ key={i} faq={faq} index={i}
             toggleFAQ={toggleFAQ}
           />
         ))}
