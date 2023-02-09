@@ -196,6 +196,7 @@ const Separate_Event = ({ data }) => {
           <h3 className="md:text-md xl:text-lg text-justify font-[Nunito] text-md">
             Participants : <span>{eventName}</span>
           </h3>
+          
           {/* {result.team_event && <div className="font-[Nunito] mt-[1em] font-bold"> Team Event</div> }
           {!result.team_event && <div className="font-[Nunito] mt-[1em] font-bold">  Solo Event</div> } */}
           {localStorage.getItem("loginData") ? (
@@ -217,7 +218,9 @@ const Separate_Event = ({ data }) => {
               </button>
             </Link>
           )}
+          <div className="conduct"> <a href="https://github.com/Prastuti-Fest-IIT-BHU/Prastuti-Frontend-2023/blob/main/public/code_of_conduct.md" target="_blank" rel="noreferrer">Code of Conduct</a></div>
         </div>
+        
       </div>
       <Modal modal={modal}
         handleModal={handleModal}>
@@ -227,6 +230,7 @@ const Separate_Event = ({ data }) => {
           <button className="p-2 flex  justify-end" onClick={() => { handleModal(false); findingteam(teamName) }}>Submit</button>
         </div>
       </Modal>
+      
     </>
   );
 };

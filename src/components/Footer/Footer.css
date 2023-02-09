@@ -33,17 +33,6 @@ footer{
     margin-right: 10px;
 }
 
-.conduct{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-    width: auto;
-    color: white;
-    font-weight: bold;
-    font-size:  14px;
-    font-family: "Nunito";
-}
 li{
     font-family: "Nunito";
 }

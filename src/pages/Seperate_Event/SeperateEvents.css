@@ -3,3 +3,18 @@
  @tailwind utilities;
  @import url('https:fonts.googleapis.com/css2?family=Catamaran&display=swap');
  @import url('https:fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+ 
+.conduct{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin-left: 20px; */
+    margin-top: 10rem;
+    margin-left: 8px;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size:  14px;
+    font-family: "Nunito";
+}
