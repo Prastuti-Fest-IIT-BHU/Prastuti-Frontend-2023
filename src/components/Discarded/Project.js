@@ -24,7 +24,7 @@ function Project({ }) {
     <div style={{position:'relative'}}>
         {Data.map((item, index) => (
     <>
-    <div
+    <div key={index}
       className={`flex ${
         item.slide && `flex-row-reverse`
       }  w-full py-10 px-2 relative lg:space-x-10 h-[50vh] overflow-hidden`}
