@@ -36,14 +36,14 @@ const Footer = () => {
             
             
           <div className="vline"></div>
-          {/* <div className="conduct"> <a href="https://github.com/Prastuti-Fest-IIT-BHU/Prastuti-Frontend-2023/blob/main/public/code_of_conduct.md" target="_blank" rel="noreferrer">Code of Conduct</a></div> */}
-          <li className="social-links font-['Nunito'] text-[#003247] mx-5 text-l my-4 flex">
+          <div className="conduct"> <a href="https://github.com/Prastuti-Fest-IIT-BHU/Prastuti-Frontend-2023/blob/main/public/code_of_conduct.md" target="_blank" rel="noreferrer">Code of Conduct</a></div>
+          {/* <li className="social-links font-['Nunito'] text-[#003247] mx-5 text-l my-4 flex">
           <a href="https://play.google.com/store/apps/details?id=com.prastuti.prastuti_23" target="_blank" rel="noreferrer" 
           className=' h-[20px] w-auto'>
             <IconContext.Provider value={{ className: 'react-icons', size: "2em"  }}><IoLogoGooglePlaystore className=""/></IconContext.Provider>
               </a> 
-              </li>
-              <p className="text-white font-['Nunito'] mt-[5px]">Our App</p>
+              </li> */}
+              {/* <p className="text-white font-['Nunito'] mt-[5px]">Our App</p> */}
           </div>
           
           <ul className='flex justify-center py-2'>
